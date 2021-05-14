@@ -4,13 +4,13 @@ namespace Repository
 {
    public class UserRepository
    {
-      public Patient Save(Patient newPatient)
+      public User Save(User newPatient)
       {
          
          return null;
       }
       
-      public List<Patient> GetAll()
+      public List<User> GetAll()
       {
          
          return null;

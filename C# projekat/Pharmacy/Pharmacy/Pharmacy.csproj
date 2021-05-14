@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,18 +58,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controller\BillController.cs" />
-    <Compile Include="Controller\ComponentController.cs" />
-    <Compile Include="Controller\MedicineController.cs" />
-    <Compile Include="Controller\UserController.cs" />
-    <Compile Include="Repository\BillRepository.cs" />
-    <Compile Include="Repository\ComponentRepository.cs" />
-    <Compile Include="Repository\MedicineRepository.cs" />
-    <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="Service\BillService.cs" />
-    <Compile Include="Service\ComponentService.cs" />
-    <Compile Include="Service\MedicineService.cs" />
-    <Compile Include="Service\UserService.cs" />
+    <Page Include="Interface\AddPatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\AllPatients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\DoctorHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,17 +78,40 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Controller\BillController.cs" />
+    <Compile Include="Classes\Controller\ComponentController.cs" />
+    <Compile Include="Classes\Controller\MedicineController.cs" />
+    <Compile Include="Classes\Controller\SearchController.cs" />
+    <Compile Include="Classes\Controller\UserController.cs" />
+    <Compile Include="Classes\Model\Bill.cs" />
+    <Compile Include="Classes\Model\Component.cs" />
+    <Compile Include="Classes\Model\Medicine.cs" />
+    <Compile Include="Classes\Model\User.cs" />
+    <Compile Include="Classes\Repository\BillRepository.cs" />
+    <Compile Include="Classes\Repository\ComponentRepository.cs" />
+    <Compile Include="Classes\Repository\MedicineRepository.cs" />
+    <Compile Include="Classes\Repository\SearchRepository.cs" />
+    <Compile Include="Classes\Repository\UserRepository.cs" />
+    <Compile Include="Classes\Service\BillService.cs" />
+    <Compile Include="Classes\Service\ComponentService.cs" />
+    <Compile Include="Classes\Service\MedicineService.cs" />
+    <Compile Include="Classes\Service\SearchService.cs" />
+    <Compile Include="Classes\Service\UserService.cs" />
+    <Compile Include="Interface\AddPatient.xaml.cs">
+      <DependentUpon>AddPatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AllPatients.xaml.cs">
+      <DependentUpon>AllPatients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\DoctorHome.xaml.cs">
+      <DependentUpon>DoctorHome.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Bill.cs" />
-    <Compile Include="Model\Component.cs" />
-    <Compile Include="Model\Medicine.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +129,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

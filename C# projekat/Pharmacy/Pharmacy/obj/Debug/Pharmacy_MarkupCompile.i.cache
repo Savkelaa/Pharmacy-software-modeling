@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\App.xaml
-11151548125
+4-534428773
 
-23-336638923
-13-1505183044
-MainWindow.xaml;
+28-1166574112
+14831664478
+Interface\AddPatient.xaml;Interface\AllPatients.xaml;Interface\DoctorHome.xaml;MainWindow.xaml;
 
-False
+True
 

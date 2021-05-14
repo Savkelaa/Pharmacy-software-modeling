@@ -4,13 +4,13 @@ namespace Service
 {
    public class UserService
    {
-      public Patient Save(Patient newPatient)
+      public Model.User Save(Model.User newPatient)
       {
          
          return null;
       }
       
-      public List<Patient> GetAll()
+      public List<User> GetAll()
       {
          
          return null;
