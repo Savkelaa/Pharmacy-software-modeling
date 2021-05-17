@@ -58,7 +58,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Interface\AcceptedMedicines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\AddMedicine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\AddPatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\AllMedicines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -66,7 +78,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Interface\DeleteMedicines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\DoctorHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\MedicinesRequests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\PharmacistHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\RejectedMedicines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +115,7 @@
     <Compile Include="Classes\Model\Component.cs" />
     <Compile Include="Classes\Model\Medicine.cs" />
     <Compile Include="Classes\Model\User.cs" />
+    <Compile Include="Classes\Repository\RejectedMedicineRepository.cs" />
     <Compile Include="Classes\Repository\BillRepository.cs" />
     <Compile Include="Classes\Repository\ComponentRepository.cs" />
     <Compile Include="Classes\Repository\MedicineRepository.cs" />
@@ -97,14 +126,35 @@
     <Compile Include="Classes\Service\MedicineService.cs" />
     <Compile Include="Classes\Service\SearchService.cs" />
     <Compile Include="Classes\Service\UserService.cs" />
+    <Compile Include="Interface\AcceptedMedicines.xaml.cs">
+      <DependentUpon>AcceptedMedicines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AddMedicine.xaml.cs">
+      <DependentUpon>AddMedicine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\AddPatient.xaml.cs">
       <DependentUpon>AddPatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AllMedicines.xaml.cs">
+      <DependentUpon>AllMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\AllPatients.xaml.cs">
       <DependentUpon>AllPatients.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\DeleteMedicines.xaml.cs">
+      <DependentUpon>DeleteMedicines.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\DoctorHome.xaml.cs">
       <DependentUpon>DoctorHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\MedicinesRequests.xaml.cs">
+      <DependentUpon>MedicinesRequests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\PharmacistHome.xaml.cs">
+      <DependentUpon>PharmacistHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\RejectedMedicines.xaml.cs">
+      <DependentUpon>RejectedMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -13,26 +13,26 @@ namespace Model
         public String Manufacturer { get; set; }
         public float Price { get; set; }
         public int Quantity { get; set; }
-        public Dictionary<Component, String> Components { get; set; }
+        //public Dictionary<Component, String> Components { get; set; }
         public bool Accepted { get; set; }
         public bool Deleted { get; set; }
 
-        public System.Collections.ArrayList component;
+       // public System.Collections.ArrayList component;
 
-        public Medicine(string id, string name, string manufacturer, float price, int quantity, Dictionary<Component, string> components, bool accepted, bool deleted, ArrayList component)
+        public Medicine(string id, string name, string manufacturer, float price, int quantity,  bool accepted, bool deleted)
         {
             Id = id;
             Name = name;
             Manufacturer = manufacturer;
             Price = price;
             Quantity = quantity;
-            Components = components;
+            //Components = components;
             Accepted = accepted;
             Deleted = deleted;
-            this.component = component;
+           // this.component = component;
         }
 
-        public System.Collections.ArrayList GetComponent()
+     /*   public System.Collections.ArrayList GetComponent()
       {
          if (component == null)
             component = new System.Collections.ArrayList();
@@ -74,6 +74,6 @@ namespace Model
          if (component != null)
             component.Clear();
       }
-   
+   */
    }
 }

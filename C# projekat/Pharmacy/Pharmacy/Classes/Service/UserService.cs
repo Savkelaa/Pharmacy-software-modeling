@@ -36,15 +36,9 @@ namespace Service
          foreach (User u in users)
             {
                 if ((u.Email == email) && (u.Password == password))
-                {
-                    
+                {  
                     return u;
-                }
-                else
-                {
-                   MessageBox.Show("Pogresna sifra");
-                   return null; 
-                }
+                }        
             }
             return null;
       }

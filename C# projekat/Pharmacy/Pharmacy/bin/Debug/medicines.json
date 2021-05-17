@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "4",
+    "Name": "Laktuloza",
+    "Manufacturer": "Farmakomafija",
+    "Price": 500.0,
+    "Quantity": 10,
+    "Accepted": false,
+    "Deleted": false
+  },
+  {
+    "Id": "6",
+    "Name": "Laktuloza",
+    "Manufacturer": "Farmakomafija",
+    "Price": 500.0,
+    "Quantity": 10,
+    "Accepted": false,
+    "Deleted": false
+  }
+]

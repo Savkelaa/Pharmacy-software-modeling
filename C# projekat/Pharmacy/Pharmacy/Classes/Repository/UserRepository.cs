@@ -11,12 +11,12 @@ namespace Repository
 {
    public class UserRepository
    {
-        private String Path;
+        private String path= "patients.json";
         public List<User> patients = new List<User>();
 
         public UserRepository()
         {
-            using (StreamReader r = new StreamReader("patients.json"))
+            using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
                 if (json != "")
@@ -41,7 +41,7 @@ namespace Repository
         public void writeInJson()
         {
             String json = JsonConvert.SerializeObject(patients, Formatting.Indented);
-            File.WriteAllText("patients.json", json);
+            File.WriteAllText(path, json);
         }
 
         public void Save(User newPatient)
@@ -53,7 +53,7 @@ namespace Repository
       public List<User> GetAll()
       {
             return patients;
-        }
+       }
       
       public List<Medicine> GetNumberOfOwned(int patientId)
       {

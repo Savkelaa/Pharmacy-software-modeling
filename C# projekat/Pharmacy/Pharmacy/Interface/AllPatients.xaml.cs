@@ -24,13 +24,13 @@ namespace Pharmacy.Interface
     public partial class AllPatients : Window
     {
 
-        List<User> patients = new List<User>();
+        
         UserController userController = new UserController();
 
         public AllPatients()
         {
             InitializeComponent();
-            this.DataContext = this;
+           // this.DataContext = this;
 
             ObservableCollection<User> patients = new ObservableCollection<User>(userController.GetAll());
 
@@ -39,10 +39,6 @@ namespace Pharmacy.Interface
 
       
 
-        private void Add_Patient_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new AddPatient();
-            s.Show();
-        }
+        
     }
 }

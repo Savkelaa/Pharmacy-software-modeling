@@ -1,62 +1,103 @@
-/***********************************************************************
- * Module:  Lek.cs
- * Author:  Nikola
- * Purpose: Definition of the Class Lek
- ***********************************************************************/
 
 using Model;
+using Repository;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace Service
 {
    public class MedicineService
    {
-      public void Accept(int medicineId)
-      {
+
+      MedicineRepository medicineRepository = new MedicineRepository();
+      RejectedMedicineRepository rejectedMedicineRepository = new RejectedMedicineRepository();
+
+        public void UpdateAccepted(Medicine medicine)
+        {
+            medicineRepository.UpdateAccepted(medicine);  
+        }
+
+        public void UpdateDeleted(String medicineId)
+        {
+           try
+           {
+             medicineRepository.UpdateDeleted(medicineId);
+           }
+            catch (Exception ex)
+           {
+             MessageBox.Show(ex.Message,"Error");
+           }
+         }
+
+            public void Reject(int medicineId)
+        {
          
-      }
-      
-      public void Reject(int medicineId)
-      {
-         
-      }
+        }
       
       public List<Medicine> GetAll()
       {
          
-         return null;
+         return medicineRepository.GetAll();
       }
-      
-      public List<Medicine> GetAllRejected()
+
+        public List<Medicine> GetAllRequests()
+        {
+            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> requests = new List<Medicine>();
+
+            foreach(Medicine m in allMedicines)
+               {
+                    if(m.Accepted == false)
+                    {
+                       requests.Add(m);
+                    }
+               }
+               return requests;
+        }
+
+
+        public List<Medicine> GetAllRejected()
       {
-         
-         return null;
+         return rejectedMedicineRepository.GetAll();
       }
       
       public List<Medicine> GetAllAccepted()
       {
-         
-         return null;
-      }
+           List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+           List<Medicine> accepted = new List<Medicine>();
+           foreach (Medicine m in allMedicines)
+           {
+              if (m.Accepted == true && m.Deleted==false)
+              {
+                   accepted.Add(m);
+              }
+           }
+           return accepted;
+        
+    }
       
-      public List<Medicine> GetAllPending()
-      {
-         
-         return null;
-      }
+     
       
       public void Save(Medicine newMedicine)
       {
-         
+            medicineRepository.Save(newMedicine);
       }
-      
-      public void Delete(int medicineId)
+
+      public void SaveRejected(Medicine newMedicine)
       {
-         
+           rejectedMedicineRepository.Save(newMedicine);
       }
+
+      public void Delete(String medicineId)
+      {
+            medicineRepository.Delete(medicineId);
+      }
+
       
-      public void AddMedicineToCart(int medicineId)
+
+        public void AddMedicineToCart(int medicineId)
       {
          
       }
@@ -67,7 +108,7 @@ namespace Service
          return null;
       }
    
-      public Repository.MedicineRepository medicineRepository;
+    
    
    }
 }

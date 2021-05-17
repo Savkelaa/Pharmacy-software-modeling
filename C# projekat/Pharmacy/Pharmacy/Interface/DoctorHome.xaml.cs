@@ -32,6 +32,24 @@ namespace Pharmacy.Interface
             
         }
 
+        private void Medicines_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AllMedicines();
+            s.Show();
+        }
+
+        private void Add_Patient_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AddPatient();
+            s.Show();
+        }
+
        
+
+        private void MedicinesRequests_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new MedicinesRequests();
+            s.Show();
+        }
     }
 }

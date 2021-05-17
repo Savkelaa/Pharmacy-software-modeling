@@ -8,18 +8,27 @@
         Title="DoctorHome" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="62*"/>
-            <RowDefinition Height="33*"/>
-            <RowDefinition Height="280*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="205*"/>
 
         </Grid.RowDefinitions>
-        <Button Content="Patients" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0"  Click="Patients_Click" Width="46" />
-        
+        <Button Content="Patients" Grid.Row="1" Grid.Column="1"  Click="Patients_Click"  />
+        <Button Content="Medicines" Grid.Row="3" Grid.Column="1"  Click="Medicines_Click"  />
+        <Button Content="Add Patient" Grid.Row="1" Grid.Column="3" Click="Add_Patient_Click" />
+        <Button Content="Medicines requests" Grid.Row="3" Grid.Column="3" Click="MedicinesRequests_Click" />
+
 
     </Grid>
 </Window>

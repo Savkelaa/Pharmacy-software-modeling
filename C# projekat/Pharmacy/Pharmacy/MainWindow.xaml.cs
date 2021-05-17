@@ -36,21 +36,27 @@ namespace Pharmacy
 
             User tacnost = new User();
             tacnost =  userController.Registration(email, password);
-            
 
 
 
             if (tacnost != null)
-            { 
-                var s = new Interface.DoctorHome();
-                s.Show();
+            {
+                if (tacnost.Type == "doctor")
+                {
+                    var s = new Interface.DoctorHome();
+                    s.Show();
+                }
+                else if (tacnost.Type == "pharmacist")
+                {
+                    var s = new Interface.PharmacistHome();
+                    s.Show();
+                }
             }
-
-
+            else
+            {
+                MessageBox.Show("Wrong password or email!", "Error");
+            }
             
-
-
-
 
         }
     }

@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "8",
+    "Name": "Omeprol",
+    "Manufacturer": "Farmakomafija",
+    "Price": 400.0,
+    "Quantity": 6,
+    "Accepted": false,
+    "Deleted": false
+  },
+  {
+    "Id": "5",
+    "Name": "Laktuloza",
+    "Manufacturer": "Farmakomafija",
+    "Price": 500.0,
+    "Quantity": 10,
+    "Accepted": false,
+    "Deleted": false
+  }
+]

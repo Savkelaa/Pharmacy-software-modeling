@@ -1,110 +1,47 @@
 [
   {
-    "Jmbg": "24312",
-    "Email": "qweq4",
-    "Password": "wsafsaf",
-    "Name": "asfas",
-    "Surname": "fsafa",
-    "MobilePhone": "fasfa",
-    "Type": "patient"
+    "Jmbg": "140319507080",
+    "Email": "1",
+    "Password": "1",
+    "Name": "Dragan",
+    "Surname": "Djordjevic",
+    "MobilePhone": "0653242123",
+    "Type": "doctor"
   },
   {
-    "Jmbg": "123213",
-    "Email": "qeweq",
-    "Password": "ee",
-    "Name": "qweq",
-    "Surname": "we",
-    "MobilePhone": "qwe",
-    "Type": "patient"
+    "Jmbg": "120519517080",
+    "Email": "2",
+    "Password": "2",
+    "Name": "Nevena",
+    "Surname": "Slavkovic",
+    "MobilePhone": "0623446236",
+    "Type": "pharmacist"
   },
   {
-    "Jmbg": "44234",
-    "Email": "fsdfsd",
-    "Password": "dfsdf",
-    "Name": "sdfsdf",
-    "Surname": "dfsd",
-    "MobilePhone": "dfssdfds",
+    "Jmbg": "120519517080",
+    "Email": "niko@gmail",
+    "Password": "niko",
+    "Name": "Nikola",
+    "Surname": "Savic",
+    "MobilePhone": "0645702335",
     "Type": "patient"
-  },
+  }, 
   {
-    "Jmbg": "44234",
-    "Email": "fsdfsd",
-    "Password": "dfsdf",
-    "Name": "sdfsdf",
-    "Surname": "dfsd",
-    "MobilePhone": "dfssdfds",
+    "Jmbg": "120719237080",
+    "Email": "milan@gmail.com",
+    "Password": "milan",
+    "Name": "Milan",
+    "Surname": "Dragosavac",
+    "MobilePhone": "0632355478",
     "Type": "patient"
-  },
+  },  
   {
-    "Jmbg": "234214",
-    "Email": "asf",
-    "Password": "saffsa",
-    "Name": "faa",
-    "Surname": "sfsaf",
-    "MobilePhone": "safas",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "234214",
-    "Email": "asf",
-    "Password": "saffsa",
-    "Name": "faa",
-    "Surname": "sfsaf",
-    "MobilePhone": "safas",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "2432",
-    "Email": "sdf",
-    "Password": "sdfs",
-    "Name": "dfsd",
-    "Surname": "fdg",
-    "MobilePhone": "df",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "2432",
-    "Email": "sdf",
-    "Password": "sdfs",
-    "Name": "dfsd",
-    "Surname": "fdg",
-    "MobilePhone": "df",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "423423",
-    "Email": "rww",
-    "Password": "fwesd",
-    "Name": "sdfsf",
-    "Surname": "sdfsdf",
-    "MobilePhone": "sdfsdf",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "12312",
-    "Email": "qwda",
-    "Password": "sfaf",
-    "Name": "safsa",
-    "Surname": "asffa",
-    "MobilePhone": "fasfa",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "213",
-    "Email": "dasd",
-    "Password": "qweasd",
-    "Name": "asfasf",
-    "Surname": "asfasf",
-    "MobilePhone": "asfasf",
-    "Type": "patient"
-  },
-  {
-    "Jmbg": "11111",
-    "Email": "wsfdas",
-    "Password": "asadf",
-    "Name": "afssaf",
-    "Surname": "asfsaf",
-    "MobilePhone": "asfasf",
+    "Jmbg": "132123",
+    "Email": "ada",
+    "Password": "asda",
+    "Name": "sdas",
+    "Surname": "dasas",
+    "MobilePhone": "dsdad",
     "Type": "patient"
   }
 ]
