@@ -64,35 +64,26 @@ namespace Repository
             WriteInJson();
          
       }
-      public void UpdateAccepted(Medicine medicine)
-      {
-            //int index = medicines.IndexOf(obj => obj.Id == medicine.Id);
-           
-            medicine = medicines.FirstOrDefault(obj => obj.Id.Equals(medicine.Id));
-            medicine.Accepted = true;
+        public void UpdateAccepted(Medicine medicine)
+        {
+            int index = medicines.FindIndex(obj => obj.Id == medicine.Id);
+            medicines[index].Accepted = true;
             WriteInJson();
-
-           // medicine= medicines.FirstOrDefault(obj => obj.Id == medicine.Id);
-
-
         }
 
         public void UpdateDeleted(String medicineId)
         {
-            Medicine founded = medicines.FirstOrDefault(obj => obj.Id.Equals(medicineId));
-            founded.Deleted = true;
-
-            //int index = medicines.IndexOf(obj => obj.Id == medicineId);
-            //medicines[index].Deleted = true;
+            int index = medicines.FindIndex(obj => obj.Id==medicineId);
+            medicines[index].Deleted = true;
             MessageBox.Show("You have successfully deleted the medicine", "Successful");
             WriteInJson();
         }
 
         public void Delete(String medicineId)
         {
-            Medicine founded = medicines.FirstOrDefault(obj => obj.Id.Equals(medicineId));
-            //  int index = medicines.IndexOf(obj => obj.Id == medicineId);
-            medicines.Remove(founded);
+            int index = medicines.FindIndex(obj => obj.Id == medicineId);
+           
+            medicines.RemoveAt(index);
             WriteInJson();
         }
 

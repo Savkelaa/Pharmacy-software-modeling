@@ -25,7 +25,7 @@
     "Surname": "Savic",
     "MobilePhone": "0645702335",
     "Type": "patient"
-  }, 
+  },
   {
     "Jmbg": "120719237080",
     "Email": "milan@gmail.com",
@@ -34,14 +34,23 @@
     "Surname": "Dragosavac",
     "MobilePhone": "0632355478",
     "Type": "patient"
-  },  
+  },
   {
-    "Jmbg": "132123",
-    "Email": "ada",
-    "Password": "asda",
-    "Name": "sdas",
-    "Surname": "dasas",
-    "MobilePhone": "dsdad",
+    "Jmbg": "12432154235",
+    "Email": "nikolaakv@gmail.com",
+    "Password": "nikola",
+    "Name": "Nikola",
+    "Surname": "Savic",
+    "MobilePhone": "0645346521",
+    "Type": "patient"
+  },
+  {
+    "Jmbg": "5235235234",
+    "Email": "milos@gmail.com",
+    "Password": "milos",
+    "Name": "Milos",
+    "Surname": "Novakovic",
+    "MobilePhone": "0653453632",
     "Type": "patient"
   }
 ]

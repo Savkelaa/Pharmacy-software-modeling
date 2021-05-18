@@ -30,11 +30,8 @@ namespace Pharmacy.Interface
         public AllPatients()
         {
             InitializeComponent();
-           // this.DataContext = this;
 
-            ObservableCollection<User> patients = new ObservableCollection<User>(userController.GetAll());
-
-            this.gridPatient.ItemsSource = patients;
+            this.gridPatient.ItemsSource = userController.GetAll();
         }
 
       

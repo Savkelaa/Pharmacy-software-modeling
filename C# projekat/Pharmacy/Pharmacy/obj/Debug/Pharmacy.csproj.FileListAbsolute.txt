@@ -36,3 +36,11 @@ C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Deb
 C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\RejectedMedicines.baml
 C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\DeleteMedicines.g.cs
 C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\DeleteMedicines.baml
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\PharmacistAllMedicines.g.cs
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\PharmacistAllMedicines.baml
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AllComponents.g.cs
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AllComponents.baml
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AllProducts.g.cs
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AllProducts.baml
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\PatientHome.g.cs
+C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\PatientHome.baml

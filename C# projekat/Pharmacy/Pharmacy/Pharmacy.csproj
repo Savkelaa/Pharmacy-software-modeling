@@ -70,11 +70,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Interface\AllBills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\AllComponents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\AllMedicines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\AllPatients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\AllProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\BuyMedicines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +103,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\MedicinesRequests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\PatientHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\PharmacistAllMedicines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,11 +159,23 @@
     <Compile Include="Interface\AddPatient.xaml.cs">
       <DependentUpon>AddPatient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\AllBills.xaml.cs">
+      <DependentUpon>AllBills.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AllComponents.xaml.cs">
+      <DependentUpon>AllComponents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\AllMedicines.xaml.cs">
       <DependentUpon>AllMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\AllPatients.xaml.cs">
       <DependentUpon>AllPatients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AllProducts.xaml.cs">
+      <DependentUpon>AllProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\BuyMedicines.xaml.cs">
+      <DependentUpon>BuyMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\DeleteMedicines.xaml.cs">
       <DependentUpon>DeleteMedicines.xaml</DependentUpon>
@@ -149,6 +185,12 @@
     </Compile>
     <Compile Include="Interface\MedicinesRequests.xaml.cs">
       <DependentUpon>MedicinesRequests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\PatientHome.xaml.cs">
+      <DependentUpon>PatientHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\PharmacistAllMedicines.xaml.cs">
+      <DependentUpon>PharmacistAllMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\PharmacistHome.xaml.cs">
       <DependentUpon>PharmacistHome.xaml</DependentUpon>

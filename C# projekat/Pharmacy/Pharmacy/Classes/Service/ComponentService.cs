@@ -1,9 +1,5 @@
-/***********************************************************************
- * Module:  Sastojak.cs
- * Author:  Nikola
- * Purpose: Definition of the Class Sastojak
- ***********************************************************************/
 
+using Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,10 +8,11 @@ namespace Service
 {
    public class ComponentService
    {
-      public List<Component> GetAll()
+        ComponentRepository componentRepository = new ComponentRepository();
+
+      public List<Model.Component> GetAll()
       {
-         
-         return null;
+            return componentRepository.GetAll();
       }
       
       public void Save(Model.Component newComponent)
@@ -28,7 +25,6 @@ namespace Service
          
       }
    
-      public Repository.ComponentRepository componentRepository;
    
    }
 }

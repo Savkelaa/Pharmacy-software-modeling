@@ -30,8 +30,8 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Accept" Grid.Column="2" HorizontalAlignment="Left" Margin="99,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Accept_Click"/>
-        <Button Content="Reject" Grid.Column="2" HorizontalAlignment="Left" Margin="99,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Reject_Click"/>
+        <Button Content="Accept" Grid.Column="2" HorizontalAlignment="Left" Margin="99,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Accept_Click" FontSize="16"/>
+        <Button Content="Reject" Grid.Column="2" HorizontalAlignment="Left" Margin="99,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Reject_Click" FontSize="16"/>
     </Grid>
 
 </Window>

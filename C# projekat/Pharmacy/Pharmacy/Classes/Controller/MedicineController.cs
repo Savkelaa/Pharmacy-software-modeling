@@ -28,10 +28,10 @@ namespace Controller
          
       }
       
-      public List<Medicine> GetAll()
+      public List<Medicine> GetAllProducts()
       {
 
-            return medicineService.GetAll();
+            return medicineService.GetAllProducts();
       }
 
         public List<Medicine> GetAllRequests()
@@ -44,14 +44,16 @@ namespace Controller
 
             return medicineService.GetAllRejected();
       }
-      
+    
       public List<Medicine> GetAllAccepted()
       {
 
             return medicineService.GetAllAccepted();
       }
-      
-      public void Save(Medicine newMedicine)
+
+     
+
+        public void Save(Medicine newMedicine)
       {
             medicineService.Save(newMedicine);
       }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\App.xaml
-111983034506
+15-677374114
 
-35-1075093618
+391919797416
 14831664478
-Interface\AcceptedMedicines.xaml;Interface\AddMedicine.xaml;Interface\AddPatient.xaml;Interface\AllMedicines.xaml;Interface\AllPatients.xaml;Interface\DeleteMedicines.xaml;Interface\DoctorHome.xaml;Interface\MedicinesRequests.xaml;Interface\PharmacistHome.xaml;Interface\RejectedMedicines.xaml;MainWindow.xaml;
+Interface\AcceptedMedicines.xaml;Interface\AddMedicine.xaml;Interface\AddPatient.xaml;Interface\AllComponents.xaml;Interface\AllMedicines.xaml;Interface\AllPatients.xaml;Interface\AllProducts.xaml;Interface\DeleteMedicines.xaml;Interface\DoctorHome.xaml;Interface\MedicinesRequests.xaml;Interface\PatientHome.xaml;Interface\PharmacistAllMedicines.xaml;Interface\PharmacistHome.xaml;Interface\RejectedMedicines.xaml;MainWindow.xaml;
 
 False
 

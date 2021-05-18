@@ -34,7 +34,7 @@ namespace Pharmacy.Interface
 
         private void Medicines_Click(object sender, RoutedEventArgs e)
         {
-            var s = new AllMedicines();
+            var s = new AllProducts();
             s.Show();
         }
 
@@ -49,6 +49,12 @@ namespace Pharmacy.Interface
         private void MedicinesRequests_Click(object sender, RoutedEventArgs e)
         {
             var s = new MedicinesRequests();
+            s.Show();
+        }
+
+        private void AllComponents_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AllComponents();
             s.Show();
         }
     }

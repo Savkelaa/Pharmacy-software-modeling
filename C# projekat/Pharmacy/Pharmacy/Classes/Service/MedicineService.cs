@@ -36,11 +36,19 @@ namespace Service
          
         }
       
-      public List<Medicine> GetAll()
-      {
-         
-         return medicineRepository.GetAll();
-      }
+         public List<Medicine> GetAllProducts()
+         {
+            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> products = new List<Medicine>();
+            foreach (Medicine m in allMedicines)
+            {
+                if (m.Accepted == true && m.Deleted == false)
+                {
+                    products.Add(m);
+                }
+            }
+            return products;
+        }
 
         public List<Medicine> GetAllRequests()
         {
@@ -49,7 +57,7 @@ namespace Service
 
             foreach(Medicine m in allMedicines)
                {
-                    if(m.Accepted == false)
+                    if(m.Accepted == false && m.Deleted==false)
                     {
                        requests.Add(m);
                     }
@@ -69,7 +77,7 @@ namespace Service
            List<Medicine> accepted = new List<Medicine>();
            foreach (Medicine m in allMedicines)
            {
-              if (m.Accepted == true && m.Deleted==false)
+              if (m.Accepted == true)
               {
                    accepted.Add(m);
               }
@@ -77,10 +85,9 @@ namespace Service
            return accepted;
         
     }
-      
-     
-      
-      public void Save(Medicine newMedicine)
+
+       
+        public void Save(Medicine newMedicine)
       {
             medicineRepository.Save(newMedicine);
       }
@@ -96,15 +103,13 @@ namespace Service
       }
 
       
-
         public void AddMedicineToCart(int medicineId)
-      {
+          {
          
-      }
+          }
       
       public List<Medicine> Buy()
       {
-         
          return null;
       }
    

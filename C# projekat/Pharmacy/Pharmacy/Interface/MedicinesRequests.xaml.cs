@@ -39,10 +39,20 @@ namespace Pharmacy.Interface
 
         private void Accept_Click(object sender, RoutedEventArgs e)
         {
-            Medicine selectedItem = (Medicine)gridRequests.SelectedItems[0];
-            medicineController.UpdateAccepted(selectedItem);
-            this.gridRequests.ItemsSource = medicineController.GetAllRequests();
-            MessageBox.Show("The medicine has been successfully confirmed", "Accepted");
+            try
+            {
+                Medicine selectedItem = (Medicine)gridRequests.SelectedItems[0];
+
+                medicineController.UpdateAccepted(selectedItem);
+                this.gridRequests.ItemsSource = medicineController.GetAllRequests();
+                MessageBox.Show("The medicine has been successfully confirmed", "Accepted");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+           
         }
     }
 }

@@ -26,7 +26,19 @@ namespace Service
       
       public List<User> GetAll()
       {
-            return userRepository.GetAll();
+            List<User> allEmployees = new List<User>(userRepository.GetAll());
+            List<User> patients = new List<User>();
+
+            foreach(User u in allEmployees)
+            {
+                if(u.Type=="patient")
+                {
+                    patients.Add(u);
+                }
+            }
+
+            return patients;
+
       }
       
       public User Registration(String email, String password)

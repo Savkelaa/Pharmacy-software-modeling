@@ -3,15 +3,16 @@
 using System;
 using System.Collections.Generic;
 using Model;
+using Service;
 
 namespace Controller
 {
    public class ComponentController
    {
-      public List<Component> GetAll()
+        ComponentService componentService = new ComponentService();
+        public List<Model.Component> GetAll()
       {
-         
-         return null;
+            return componentService.GetAll();
       }
       
       public void Save(Model.Component newComponent)
@@ -25,7 +26,6 @@ namespace Controller
          return false;
       }
    
-      public Service.ComponentService componentService;
    
    }
 }

@@ -7,27 +7,27 @@
         mc:Ignorable="d"
         Title="DoctorHome" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="46*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="46*"/>
-            <ColumnDefinition Width="37*"/>
-            <ColumnDefinition Width="35*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="60*"/>
-            <RowDefinition Height="205*"/>
-
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
         </Grid.RowDefinitions>
-        <Button Content="Patients" Grid.Row="1" Grid.Column="1"  Click="Patients_Click"  />
-        <Button Content="Medicines" Grid.Row="3" Grid.Column="1"  Click="Medicines_Click"  />
-        <Button Content="Add Patient" Grid.Row="1" Grid.Column="3" Click="Add_Patient_Click" />
-        <Button Content="Medicines requests" Grid.Row="3" Grid.Column="3" Click="MedicinesRequests_Click" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="120*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Patients" Grid.Row="1" Grid.Column="1"  Click="Patients_Click" FontSize="16"  />
+        <Button Content="Medicines" Grid.Row="3" Grid.Column="1"  Click="Medicines_Click" FontSize="16"  />
+        <Button Content="Add Patient" Grid.Row="1" Grid.Column="3" Click="Add_Patient_Click" FontSize="16" />
+        <Button Content="Medicines requests" Grid.Row="3" Grid.Column="3" Click="MedicinesRequests_Click" FontSize="16" />
+        <Button Content="Components" Grid.Row="5" Grid.Column="1" Click="AllComponents_Click" FontSize="16" />
 
 
     </Grid>

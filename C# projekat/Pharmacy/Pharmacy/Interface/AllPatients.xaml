@@ -18,7 +18,7 @@
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridPatient"   SelectionMode="Single"  AutoGenerateColumns="False"    Grid.Column="1" Grid.Row="1"  >
+        <DataGrid x:Name="gridPatient"   SelectionMode="Single"  AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Jmbg" Binding="{Binding Jmbg}" />
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" />

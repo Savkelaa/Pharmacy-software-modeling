@@ -8,13 +8,13 @@
         Title="PharmacistHome" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="71*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="30*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="30*"/>
             <RowDefinition Height="70*"/>
-            <RowDefinition Height="117*"/>
+            <RowDefinition Height="70*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -23,10 +23,10 @@
             <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Medicines" Grid.Row="1" Grid.Column="1"  Click="Medicines_Click" />
-        <Button Content="Add Medicine" Grid.Row="1" Grid.Column="3"  Click="AddMedicine_Click"/>
-        <Button Content="Accepted medicines" Grid.Row="3" Grid.Column="1"  Click="AcceptedMedicines_Click" />
-        <Button Content="Rejected medicines" Grid.Row="5" Grid.Column="1"  Click="RejectedMedicines_Click"/>
-        <Button Content="Delete medicines" Grid.Row="3" Grid.Column="3"  Click="DeleteMedicines_Click"/>
+        <Button Content="Medicines" Grid.Row="1" Grid.Column="1"  Click="Medicines_Click" FontSize="16" />
+        <Button Content="Add Medicine" Grid.Row="1" Grid.Column="3"  Click="AddMedicine_Click" FontSize="16"/>
+        <Button Content="Accepted medicines" Grid.Row="3" Grid.Column="1"  Click="AcceptedMedicines_Click" FontSize="16" />
+        <Button Content="Rejected medicines" Grid.Row="5" Grid.Column="1"  Click="RejectedMedicines_Click" FontSize="16"/>
+        <Button Content="Delete medicines" Grid.Row="3" Grid.Column="3"  Click="DeleteMedicines_Click" FontSize="16"/>
     </Grid>
 </Window>
