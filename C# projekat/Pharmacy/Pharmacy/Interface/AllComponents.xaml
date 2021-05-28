@@ -22,9 +22,16 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
-                
+
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="searchId" HorizontalAlignment="Left" Height="23" Margin="62,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="searchName" HorizontalAlignment="Left" Height="23" Margin="71,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="searchManufacturer" HorizontalAlignment="Left" Height="23" Margin="208,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,47,0,0" FontSize="14"/>
+        <Label Content="Search by:" HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="69,46,0,0" Grid.Column="1" FontSize="14"/>
+        <Label Content="Medicine:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="208,47,0,0" Grid.Column="1" FontSize="14"/>
 
     </Grid>
 </Window>

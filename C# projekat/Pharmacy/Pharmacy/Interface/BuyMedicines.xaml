@@ -7,7 +7,35 @@
         mc:Ignorable="d"
         Title="BuyMedicines" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="308" Margin="112,143,0,0"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="280*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="gridAccepted" SelectionMode="Single" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+            </DataGrid.Columns>
+        </DataGrid>
+            <DataGrid   Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3"/>
+        <Button Content="Add to cart" Grid.Column="2"   Grid.Row="1" FontSize="16"  />
+        <Button Content="Buy" Grid.Column="6"   Grid.Row="1" FontSize="16"  />
     </Grid>
 </Window>

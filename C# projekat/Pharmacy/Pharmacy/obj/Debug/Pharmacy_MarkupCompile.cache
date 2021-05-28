@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\
+C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\
 Pharmacy
 none
 false
 DEBUG;TRACE
-C:\Users\Darko PC\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\App.xaml
-15-677374114
+C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\App.xaml
+17149821649
 
-391919797416
-14831664478
-Interface\AcceptedMedicines.xaml;Interface\AddMedicine.xaml;Interface\AddPatient.xaml;Interface\AllComponents.xaml;Interface\AllMedicines.xaml;Interface\AllPatients.xaml;Interface\AllProducts.xaml;Interface\DeleteMedicines.xaml;Interface\DoctorHome.xaml;Interface\MedicinesRequests.xaml;Interface\PatientHome.xaml;Interface\PharmacistAllMedicines.xaml;Interface\PharmacistHome.xaml;Interface\RejectedMedicines.xaml;MainWindow.xaml;
+411542935134
+142131938600
+Interface\AcceptedMedicines.xaml;Interface\AddMedicine.xaml;Interface\AddPatient.xaml;Interface\AllBills.xaml;Interface\AllComponents.xaml;Interface\AllMedicines.xaml;Interface\AllPatients.xaml;Interface\AllProducts.xaml;Interface\BuyMedicines.xaml;Interface\DeleteMedicines.xaml;Interface\DoctorHome.xaml;Interface\MedicinesRequests.xaml;Interface\PatientHome.xaml;Interface\PharmacistAllMedicines.xaml;Interface\PharmacistHome.xaml;Interface\RejectedMedicines.xaml;MainWindow.xaml;
 
 False
 

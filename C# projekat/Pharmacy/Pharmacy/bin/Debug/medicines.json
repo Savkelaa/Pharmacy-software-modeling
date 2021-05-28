@@ -61,5 +61,41 @@
     "Quantity": 20,
     "Accepted": true,
     "Deleted": false
+  },
+  {
+    "Id": "2323",
+    "Name": "dsfds",
+    "Manufacturer": "dsfsds",
+    "Price": 423.0,
+    "Quantity": 23,
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "123",
+    "Name": "dsgsdg",
+    "Manufacturer": "sdgsdg",
+    "Price": 423.0,
+    "Quantity": 21,
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "1312",
+    "Name": "eqwe",
+    "Manufacturer": "asda",
+    "Price": 321.0,
+    "Quantity": 1231,
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "34",
+    "Name": "dasdasd",
+    "Manufacturer": "asdsad",
+    "Price": 42.0,
+    "Quantity": 421,
+    "Accepted": false,
+    "Deleted": false
   }
 ]

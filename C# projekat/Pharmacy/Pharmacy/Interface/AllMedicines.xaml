@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pharmacy.Interface"
         mc:Ignorable="d"
         Title="AllMedicines" Height="450" Width="800">
-    <Grid>
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="91*"/>
@@ -14,11 +14,11 @@
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="117*"/>
-            <RowDefinition Height="255*"/>
-            <RowDefinition Height="47*"/>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="273*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="gridMedicines" SelectionMode="Single"  AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1" >
+        <DataGrid x:Name="gridMedicines" SelectionMode="Single" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
@@ -30,6 +30,17 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="searchId" HorizontalAlignment="Left" Height="23" Margin="62,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="searchId_TextChanged"/>
+        <TextBox x:Name="searchName" HorizontalAlignment="Left" Height="23" Margin="13,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="searchManufacturer" HorizontalAlignment="Left" Height="23" Margin="150,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="searchPrice" HorizontalAlignment="Left" Height="23" Margin="290,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="searchQuantity" HorizontalAlignment="Left" Height="23" Margin="9,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <Label Content="Id:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,47,0,0" FontSize="14" Height="29" Width="25"/>
+        <Label Content="Search by:" HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="82"/>
+        <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,46,0,0" Grid.Column="1" FontSize="14" Height="29" Width="50"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,47,0,0" Grid.Column="1" FontSize="14" Height="29" Width="96"/>
+        <Label Content="Price:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,47,0,0" Grid.Column="1" FontSize="14" Height="29" Width="43"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,47,0,0" Grid.Column="2" FontSize="14" Height="29" Width="66"/>
 
 
     </Grid>

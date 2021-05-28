@@ -2,16 +2,39 @@ using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows.Controls;
 using Component = Model.Component;
+using Repository;
+using Service;
 
 namespace Service
 {
    public class SearchService
    {
-      public List<Medicine> MedicineByPassword(String password)
+        MedicineRepository medicineRepository = new MedicineRepository();
+        MedicineService medicineService = new MedicineService();
+
+        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch)
       {
-         
-         return null;
+            if (idSearch.Length >= 3)
+            {
+                gridMedicines.ItemsSource = null;
+                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+                List<Medicine> searchedMedicines = new List<Medicine>();
+                foreach (Medicine m in allMedicines)
+                {
+                   if((m.Id.Contains(idSearch)))
+                    {
+                        searchedMedicines.Add(m);
+                    }
+                }
+                return searchedMedicines;
+            }
+            else
+            { 
+                return medicineService.GetAllAccepted();   //vidi za ovo
+            }
+                
       }
       
       public List<Medicine> MedicineByName(String name)
@@ -44,26 +67,25 @@ namespace Service
          return null;
       }
       
-      public List<Component> ComponentSearchByName(String name)
+      public List<Component> ComponentByName(String name)
       {
          
          return null;
       }
       
-      public List<Component> ComponentSearchyDescription(String description)
+      public List<Component> ComponentByDescription(String description)
       {
          
          return null;
       }
       
-      public List<Component> ComponentSearchByMedicine()
+      public List<Component> ComponentByMedicine()
       {
          
          return null;
       }
    
-      public Repository.MedicineRepository medicineRepository;
-      public Repository.ComponentRepository componentRepository;
+     
    
    }
 }

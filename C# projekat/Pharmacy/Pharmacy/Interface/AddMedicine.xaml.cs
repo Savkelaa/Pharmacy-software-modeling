@@ -37,8 +37,16 @@ namespace Pharmacy.Interface
 
         private void SendRequest_Click(object sender, RoutedEventArgs e)
         {
-           Medicine medicineRequest = new Medicine(Id.Text, Name.Text, Manufacturer.Text,Convert.ToSingle(Price.Text),Convert.ToInt32(Quantity.Text), false, false);
-           medicineController.Save(medicineRequest);
+            try
+            {
+                Medicine medicineRequest = new Medicine(Id.Text, Name.Text, Manufacturer.Text, Convert.ToSingle(Price.Text), Convert.ToInt32(Quantity.Text), false, false);
+                medicineController.Save(medicineRequest);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             MessageBox.Show("You have successfully sent the request", "Successful");
         }
     }

@@ -19,7 +19,7 @@
   },
   {
     "Jmbg": "120519517080",
-    "Email": "niko@gmail",
+    "Email": "niko",
     "Password": "niko",
     "Name": "Nikola",
     "Surname": "Savic",
@@ -51,6 +51,15 @@
     "Name": "Milos",
     "Surname": "Novakovic",
     "MobilePhone": "0653453632",
+    "Type": "patient"
+  },
+  {
+    "Jmbg": "211223523",
+    "Email": "dgvdfb",
+    "Password": "fdfgd",
+    "Name": "fgdfgdfgdfg",
+    "Surname": "dfgdgdfg",
+    "MobilePhone": "234324325",
     "Type": "patient"
   }
 ]

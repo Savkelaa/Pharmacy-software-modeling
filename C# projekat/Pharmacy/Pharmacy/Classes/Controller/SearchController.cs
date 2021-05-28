@@ -1,17 +1,19 @@
 using Model;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows.Controls;
 using Component = Model.Component;
 
 namespace Controller
 {
    public class SearchController
    {
-      public List<Medicine> MedicineByPassword(String password)
+        SearchService searchService = new SearchService();
+        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch)
       {
-         
-         return null;
+           return searchService.MedicineById(gridMedicines, idSearch);
       }
       
       public List<Medicine> MedicineByName(String name)
@@ -44,25 +46,25 @@ namespace Controller
          return null;
       }
       
-      public List<Component> ComponentSearchByName(String name)
+      public List<Component> ComponentByName(String name)
       {
          
          return null;
       }
       
-      public List<Component> ComponentSearchyDescription(String description)
+      public List<Component> ComponentByDescription(String description)
       {
          
          return null;
       }
       
-      public List<Component> ComponentSearchByMedicine()
+      public List<Component> ComponentByMedicine()
       {
          
          return null;
       }
    
-      public Service.SearchService searchService;
+      
    
    }
 }

@@ -15,11 +15,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Pharmacy.Interface
 {
     public partial class AllMedicines : Window
     {
         MedicineController medicineController = new MedicineController();
+        SearchController searchController = new SearchController();
 
         public AllMedicines()
         {
@@ -27,8 +29,18 @@ namespace Pharmacy.Interface
 
 
             ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>(medicineController.GetAllAccepted());
-
+           
             this.gridMedicines.ItemsSource = medicines;
+            gridMedicines.SelectedValue = 4 ;
         }
+
+        private void searchId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById(gridMedicines, searchId.Text));
+                this.gridMedicines.ItemsSource = searchMedicines;
+        }
+
+        
+
     }
 }

@@ -51,6 +51,11 @@ namespace Pharmacy
                     var s = new Interface.PharmacistHome();
                     s.Show();
                 }
+                else if (tacnost.Type == "patient")
+                {
+                    var s = new Interface.PatientHome();
+                    s.Show();
+                }
             }
             else
             {

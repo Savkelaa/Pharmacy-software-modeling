@@ -18,8 +18,9 @@
             <ColumnDefinition Width="323*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="gridRequests" SelectionMode="Single"  AutoGenerateColumns="False"  Grid.Column="1" Grid.Row="1">
-            <DataGrid.Columns>
+        <DataGrid x:Name="gridRequests"     Grid.Column="1" Grid.Row="1">
+            <!--AutoGenerateColumns="False" SelectionMode="Single"-->
+            <!--<DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
@@ -28,7 +29,7 @@
                 <DataGridTextColumn Header="Accepted" Binding="{Binding Accepted}" />
                 <DataGridTextColumn Header="Deleted" Binding="{Binding Deleted}" />
 
-            </DataGrid.Columns>
+            </DataGrid.Columns>-->
         </DataGrid>
         <Button Content="Accept" Grid.Column="2" HorizontalAlignment="Left" Margin="99,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Accept_Click" FontSize="16"/>
         <Button Content="Reject" Grid.Column="2" HorizontalAlignment="Left" Margin="99,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Reject_Click" FontSize="16"/>
