@@ -27,8 +27,13 @@ namespace Controller
       {
          
       }
-      
-      public List<Medicine> GetAllProducts()
+
+        public List<Medicine> GetAll()
+        {
+            return medicineService.GetAll();
+        }
+
+        public List<Medicine> GetAllProducts()
       {
 
             return medicineService.GetAllProducts();

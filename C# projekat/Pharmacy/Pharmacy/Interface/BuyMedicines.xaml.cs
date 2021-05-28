@@ -25,7 +25,7 @@ namespace Pharmacy.Interface
         public BuyMedicines()
         {
             InitializeComponent();
-            ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllAccepted());
+            ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllProducts());
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
     }

@@ -64,7 +64,10 @@ namespace Service
                }
                return requests;
         }
-
+        public List<Medicine> GetAll()
+        {
+            return medicineRepository.GetAll();
+        }
 
         public List<Medicine> GetAllRejected()
       {

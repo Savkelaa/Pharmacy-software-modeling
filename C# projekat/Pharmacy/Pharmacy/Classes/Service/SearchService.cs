@@ -16,8 +16,6 @@ namespace Service
 
         public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch)
       {
-            if (idSearch.Length >= 3)
-            {
                 gridMedicines.ItemsSource = null;
                 List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
                 List<Medicine> searchedMedicines = new List<Medicine>();
@@ -29,37 +27,82 @@ namespace Service
                     }
                 }
                 return searchedMedicines;
+      }
+      
+      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch)
+        {
+            if (nameSearch.Length >= 3)
+            {
+                gridMedicines.ItemsSource = null;
+                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+                List<Medicine> searchedMedicines = new List<Medicine>();
+                foreach (Medicine m in allMedicines)
+                {
+                    if ((m.Name.Contains(nameSearch)))
+                    {
+                        searchedMedicines.Add(m);
+                    }
+                }
+                return searchedMedicines;
             }
             else
-            { 
-                return medicineService.GetAllAccepted();   //vidi za ovo
+            {
+                return medicineRepository.GetAll();   //vidi za ovo
             }
-                
-      }
+        }
       
-      public List<Medicine> MedicineByName(String name)
-      {
-         
-         return null;
-      }
+      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch)
+        { 
+            if(manufacturerSearch.Length >= 3)
+            {
+                gridMedicines.ItemsSource = null;
+                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+                List<Medicine> searchedMedicines = new List<Medicine>();
+                foreach (Medicine m in allMedicines)
+                {
+                    if ((m.Manufacturer.Contains(manufacturerSearch)))
+                    {
+                        searchedMedicines.Add(m);
+                    }
+                }
+                return searchedMedicines;
+            }
+            else
+            {
+                return medicineRepository.GetAll();   //vidi za ovo
+            }
+        }
       
-      public List<Medicine> MedicineByManufacturer(String manufacturer)
-      {
-         
-         return null;
-      }
+      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo)
+        {
+
+            gridMedicines.ItemsSource = null;
+            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> searchedMedicines = new List<Medicine>();
+            foreach (Medicine m in allMedicines)
+            {
+                if (m.Price>= priceFrom && m.Price<=priceTo)
+                {
+                    searchedMedicines.Add(m);
+                }
+            }
+            return searchedMedicines;
+        }
       
-      public List<Medicine> MedicineByPriceRange(int priceRange)
-      {
-         
-         return null;
-      }
-      
-      public List<Medicine> MedicineByQuantity(int quantity)
-      {
-         
-         return null;
-      }
+      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch)
+        {
+            gridMedicines.ItemsSource = null;
+            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> searchedMedicines = new List<Medicine>();
+            foreach (Medicine m in allMedicines)
+            {
+                if ((Convert.ToString(m.Quantity).Contains(quantitySearch)))
+                {
+                    searchedMedicines.Add(m);
+                }
+            }
+            return searchedMedicines;
+        }
       
       public List<Medicine> MedicineByComponents()
       {

@@ -110,10 +110,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\PharmacistAllMedicines.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Interface\PharmacistHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -188,9 +184,6 @@
     </Compile>
     <Compile Include="Interface\PatientHome.xaml.cs">
       <DependentUpon>PatientHome.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\PharmacistAllMedicines.xaml.cs">
-      <DependentUpon>PharmacistAllMedicines.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\PharmacistHome.xaml.cs">
       <DependentUpon>PharmacistHome.xaml</DependentUpon>

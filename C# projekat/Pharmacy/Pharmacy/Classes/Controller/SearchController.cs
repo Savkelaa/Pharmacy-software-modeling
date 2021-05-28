@@ -16,29 +16,29 @@ namespace Controller
            return searchService.MedicineById(gridMedicines, idSearch);
       }
       
-      public List<Medicine> MedicineByName(String name)
+      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch)
+        {
+
+            return searchService.MedicineByName(gridMedicines, nameSearch);
+        }
+      
+      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch)
       {
-         
-         return null;
+
+            return searchService.MedicineByManufacturer(gridMedicines, manufacturerSearch);
       }
       
-      public List<Medicine> MedicineByManufacturer(String manufacturer)
-      {
-         
-         return null;
-      }
+      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo)
+        {
+
+            return searchService.MedicineByPriceRange(gridMedicines, priceFrom, priceTo);
+        }
       
-      public List<Medicine> MedicineByPriceRange(int priceRange)
-      {
-         
-         return null;
-      }
-      
-      public List<Medicine> MedicineByQuantity(int quantity)
-      {
-         
-         return null;
-      }
+      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch)
+        {
+
+            return searchService.MedicineByQuantity(gridMedicines, quantitySearch);
+        }
       
       public List<Medicine> MedicineByComponents()
       {

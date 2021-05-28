@@ -28,10 +28,10 @@ namespace Pharmacy.Interface
             InitializeComponent();
 
 
-            ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>(medicineController.GetAllAccepted());
+            ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>(medicineController.GetAll());
            
             this.gridMedicines.ItemsSource = medicines;
-            gridMedicines.SelectedValue = 4 ;
+           
         }
 
         private void searchId_TextChanged(object sender, TextChangedEventArgs e)
@@ -40,7 +40,37 @@ namespace Pharmacy.Interface
                 this.gridMedicines.ItemsSource = searchMedicines;
         }
 
-        
+        private void searchName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName(gridMedicines, searchName.Text));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
 
+        private void searchManufacturer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer(gridMedicines, searchManufacturer.Text));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
+
+        private void searchQuantity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity(gridMedicines, searchQuantity.Text));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange(gridMedicines, Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text)));
+                this.gridMedicines.ItemsSource = searchMedicines;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error");
+            }
+        }
+
+        
     }
 }

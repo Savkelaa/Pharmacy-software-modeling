@@ -95,7 +95,7 @@
     "Manufacturer": "asdsad",
     "Price": 42.0,
     "Quantity": 421,
-    "Accepted": false,
+    "Accepted": true,
     "Deleted": false
   }
 ]

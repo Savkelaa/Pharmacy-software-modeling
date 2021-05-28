@@ -31,6 +31,39 @@ namespace Pharmacy.Interface
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
 
-       
+        private void searchId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void searchName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void searchManufacturer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void searchQuantity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void searchPrice1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void searchPrice2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
