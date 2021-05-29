@@ -142,3 +142,5 @@ C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csproj.CopyComplete
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.exe
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.pdb
+C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\SelectValue.g.cs
+C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\SelectValue.baml

@@ -28,5 +28,37 @@ namespace Pharmacy.Interface
             ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllProducts());
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
+
+        private void Add_To_Cart_Click(object sender, RoutedEventArgs e)
+        {
+           
+            if (gridAccepted.SelectedItems.Count > 0)
+            {
+              
+                var cellInfo = gridAccepted.SelectedCells[4];    
+                var s = new SelectValue();
+                s.quantity = Convert.ToInt32((cellInfo.Column.GetCellContent(cellInfo.Item) as TextBlock).Text);
+                s.ShowDialog();
+                if(s.isBought)
+                cart.Items.Add(gridAccepted.SelectedItem);  
+            }
+            else
+            {
+                MessageBox.Show("You need to select one of medicine", "Error");
+            }
+               
+
+
+        }
+
+        private void Delete_From_Cart_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Items.Remove(cart.SelectedItem);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

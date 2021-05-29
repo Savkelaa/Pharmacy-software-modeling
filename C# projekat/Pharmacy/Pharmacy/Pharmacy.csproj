@@ -118,6 +118,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Interface\SelectValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -190,6 +194,9 @@
     </Compile>
     <Compile Include="Interface\RejectedMedicines.xaml.cs">
       <DependentUpon>RejectedMedicines.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\SelectValue.xaml.cs">
+      <DependentUpon>SelectValue.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
