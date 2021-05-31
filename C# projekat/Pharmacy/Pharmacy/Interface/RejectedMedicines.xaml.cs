@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 
 namespace Pharmacy.Interface
 {
-    /// <summary>
-    /// Interaction logic for RejectedMedicines.xaml
-    /// </summary>
+    
     public partial class RejectedMedicines : Window
     {
 
@@ -28,8 +26,6 @@ namespace Pharmacy.Interface
         public RejectedMedicines()
         {
             InitializeComponent();
-
-
             ObservableCollection<Medicine> rejectedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllRejected());
             this.gridRejected.ItemsSource = rejectedMedicines;
         }

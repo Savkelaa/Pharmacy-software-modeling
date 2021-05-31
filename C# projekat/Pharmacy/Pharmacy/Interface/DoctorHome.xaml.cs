@@ -43,9 +43,6 @@ namespace Pharmacy.Interface
             var s = new AddPatient();
             s.Show();
         }
-
-       
-
         private void MedicinesRequests_Click(object sender, RoutedEventArgs e)
         {
             var s = new MedicinesRequests();

@@ -17,7 +17,7 @@ namespace Model
         public bool Accepted { get; set; }
         public bool Deleted { get; set; }
 
-       // public System.Collections.ArrayList component;
+       
 
         public Medicine(string id, string name, string manufacturer, float price, int quantity,  bool accepted, bool deleted)
         {
@@ -29,7 +29,7 @@ namespace Model
             //Components = components;
             Accepted = accepted;
             Deleted = deleted;
-           // this.component = component;
+          
         }
 
      /*   public System.Collections.ArrayList GetComponent()

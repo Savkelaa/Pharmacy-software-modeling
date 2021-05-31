@@ -63,22 +63,6 @@ namespace Pharmacy.Interface
 
             MessageBox.Show("You have successfully purchased the medication.", "Successful");
             cart.ItemsSource = null;
-
-            //Dictionary<string, int> medicineAndQuantity = new Dictionary<string, int>();
-            //float totalPrice = 0;
-
-            //foreach (Medicine m in cartMedicines)
-            //{
-            //    medicineAndQuantity.Add(m.Name, m.Quantity);
-            //    totalPrice += m.Price * m.Quantity;
-            //}
-
-            //string pharmacist = "Pedja";
-            //Bill bill = new Bill(billController.GenerateId(), "Pedja", DateTime.Now.ToString("MM/dd/yyyy h:mm tt"), medicineAndQuantity, totalPrice);
-            //billController.Save(bill);
-            //MessageBox.Show("You have successfully purchased the medication.", "Successful");
-            //cart.ItemsSource = null;
-
         }
     }
 }

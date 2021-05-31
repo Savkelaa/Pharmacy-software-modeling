@@ -49,9 +49,7 @@ namespace Pharmacy.Interface
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-
-           
+            }  
         }
     }
 }

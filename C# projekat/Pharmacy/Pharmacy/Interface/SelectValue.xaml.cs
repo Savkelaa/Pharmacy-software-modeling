@@ -13,10 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace Pharmacy.Interface
-{
-    /// <summary>
-    /// Interaction logic for SelectValue.xaml
-    /// </summary>
+{  
     public partial class SelectValue : Window
     {
         public int quantity { get; set; }

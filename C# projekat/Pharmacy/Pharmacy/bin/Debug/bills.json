@@ -73,5 +73,15 @@
       "Hidrogen": 10
     },
     "TotalPrice": 414034.0
+  },
+  {
+    "Id": 9,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 6:30 PM",
+    "MedicineAndQuantity": {
+      "dsfds": 23,
+      "Insulin": 20
+    },
+    "TotalPrice": 14729.0
   }
 ]

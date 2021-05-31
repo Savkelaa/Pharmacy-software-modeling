@@ -34,24 +34,23 @@ namespace Pharmacy
             String email = LogInEmail.Text;
             String password = LogInPassw.Text;
 
-            User tacnost = new User();
-            tacnost =  userController.Registration(email, password);
+            User user = new User();
+            user =  userController.Registration(email, password);
 
 
-
-            if (tacnost != null)
+            if (user != null)
             {
-                if (tacnost.Type == "doctor")
+                if (user.Type == "doctor")
                 {
                     var s = new Interface.DoctorHome();
                     s.Show();
                 }
-                else if (tacnost.Type == "pharmacist")
+                else if (user.Type == "pharmacist")
                 {
                     var s = new Interface.PharmacistHome();
                     s.Show();
                 }
-                else if (tacnost.Type == "patient")
+                else if (user.Type == "patient")
                 {
                     var s = new Interface.PatientHome();
                     s.Show();

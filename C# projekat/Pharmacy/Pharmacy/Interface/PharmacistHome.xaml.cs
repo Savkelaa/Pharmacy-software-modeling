@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace Pharmacy.Interface
 {
-    /// <summary>
-    /// Interaction logic for PharmacistHome.xaml
-    /// </summary>
+   
     public partial class PharmacistHome : Window
     {
         public PharmacistHome()

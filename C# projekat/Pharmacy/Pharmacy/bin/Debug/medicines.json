@@ -97,5 +97,23 @@
     "Quantity": 421,
     "Accepted": true,
     "Deleted": false
+  },
+  {
+    "Id": "232",
+    "Name": "gsfs",
+    "Manufacturer": "dsff",
+    "Price": 100.0,
+    "Quantity": 5,
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "242",
+    "Name": "werwetw",
+    "Manufacturer": "tsgsd",
+    "Price": 34.0,
+    "Quantity": 23,
+    "Accepted": true,
+    "Deleted": false
   }
 ]

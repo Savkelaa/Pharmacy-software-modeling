@@ -42,12 +42,8 @@ namespace Service
                 totalPrice += m.Price * m.Quantity;
             }
 
-            string pharmacist = "Pedja";
             Bill bill = new Bill(GenerateId(), "Pedja", DateTime.Now.ToString("MM/dd/yyyy h:mm tt"), medicineAndQuantity, totalPrice);
             billRepository.Save(bill);
-            
         }
-
-
     }
 }
