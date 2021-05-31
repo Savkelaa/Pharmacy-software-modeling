@@ -1,6 +1,7 @@
 
 
 using Model;
+using Service;
 using System;
 using System.Collections.Generic;
 
@@ -8,18 +9,21 @@ namespace Controller
 {
    public class BillController
    {
-      public List<Bill> GetAll()
-      {
-         
-         return null;
-      }
+        BillService billService = new BillService();
+        public int GenerateId()
+        {
+           return billService.GenerateId();
+        }
+
+        public List<Bill> GetAll()
+        {
+          return billService.GetAll();   
+        }
       
-      public void Save(Model.Bill newBill)
-      {
-         
-      }
-   
-      public Service.BillService billService;
-   
-   }
+
+        public void Buy(List<Medicine> medicines)
+        {
+            billService.Buy(medicines);
+        }
+    }
 }

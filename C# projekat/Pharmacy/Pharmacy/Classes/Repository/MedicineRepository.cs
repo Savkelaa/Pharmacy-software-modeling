@@ -15,24 +15,7 @@ namespace Repository
    {
 
         private String path = "medicines.json";
-       
-
-      //  private static MedicineRepository _instance;
         public List<Medicine> medicines= new List<Medicine>();
-
-        //public static MedicineRepository Instance
-        //{
-        //    get
-        //    {
-        //        if (_instance == null)
-        //        {
-        //            _instance = new MedicineRepository();
-
-        //        }
-        //        return _instance;
-        //    }
-        //}
-
 
         public MedicineRepository()
         {

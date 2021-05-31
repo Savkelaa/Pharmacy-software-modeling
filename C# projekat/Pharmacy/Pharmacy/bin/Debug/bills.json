@@ -1,0 +1,77 @@
+[
+  {
+    "Id": 1,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 3:19 PM",
+    "MedicineAndQuantity": {
+      "dsfds": 23
+    },
+    "TotalPrice": 9729.0
+  },
+  {
+    "Id": 2,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 3:19 PM",
+    "MedicineAndQuantity": {
+      "Insulin": 20
+    },
+    "TotalPrice": 5000.0
+  },
+  {
+    "Id": 3,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 3:20 PM",
+    "MedicineAndQuantity": {
+      "Insulin": 20
+    },
+    "TotalPrice": 5000.0
+  },
+  {
+    "Id": 4,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 3:20 PM",
+    "MedicineAndQuantity": {
+      "Insulin": 20
+    },
+    "TotalPrice": 5000.0
+  },
+  {
+    "Id": 5,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 4:20 PM",
+    "MedicineAndQuantity": {},
+    "TotalPrice": 0.0
+  },
+  {
+    "Id": 6,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 4:28 PM",
+    "MedicineAndQuantity": {
+      "Hidrogen": 10,
+      "dsfds": 23
+    },
+    "TotalPrice": 14729.0
+  },
+  {
+    "Id": 7,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 4:32 PM",
+    "MedicineAndQuantity": {
+      "Hidrogen": 10,
+      "dsfds": 23
+    },
+    "TotalPrice": 14729.0
+  },
+  {
+    "Id": 8,
+    "Pharmacist": "Pedja",
+    "DateTime": "05/31/2021 4:41 PM",
+    "MedicineAndQuantity": {
+      "Insulin": 20,
+      "dsgsdg": 21,
+      "eqwe": 1231,
+      "Hidrogen": 10
+    },
+    "TotalPrice": 414034.0
+  }
+]

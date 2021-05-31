@@ -21,6 +21,7 @@ namespace Pharmacy.Interface
     public partial class BuyMedicines : Window
     {
         MedicineController medicineController = new MedicineController();
+        BillController billController = new BillController();
 
         public BuyMedicines()
         {
@@ -46,9 +47,6 @@ namespace Pharmacy.Interface
             {
                 MessageBox.Show("You need to select one of medicine", "Error");
             }
-               
-
-
         }
 
         private void Delete_From_Cart_Click(object sender, RoutedEventArgs e)
@@ -56,8 +54,30 @@ namespace Pharmacy.Interface
             cart.Items.Remove(cart.SelectedItem);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+
+        private void Buy_Click(object sender, RoutedEventArgs e)
         {
+
+            List<Medicine> cartMedicines = cart.Items.OfType<Medicine>().ToList();
+            billController.Buy(cartMedicines);
+
+            MessageBox.Show("You have successfully purchased the medication.", "Successful");
+            cart.ItemsSource = null;
+
+            //Dictionary<string, int> medicineAndQuantity = new Dictionary<string, int>();
+            //float totalPrice = 0;
+
+            //foreach (Medicine m in cartMedicines)
+            //{
+            //    medicineAndQuantity.Add(m.Name, m.Quantity);
+            //    totalPrice += m.Price * m.Quantity;
+            //}
+
+            //string pharmacist = "Pedja";
+            //Bill bill = new Bill(billController.GenerateId(), "Pedja", DateTime.Now.ToString("MM/dd/yyyy h:mm tt"), medicineAndQuantity, totalPrice);
+            //billController.Save(bill);
+            //MessageBox.Show("You have successfully purchased the medication.", "Successful");
+            //cart.ItemsSource = null;
 
         }
     }

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +17,17 @@ using System.Windows.Shapes;
 
 namespace Pharmacy.Interface
 {
-    /// <summary>
-    /// Interaction logic for AllBills.xaml
-    /// </summary>
     public partial class AllBills : Window
     {
+        BillController billController = new BillController();
         public AllBills()
         {
             InitializeComponent();
+
+
+            ObservableCollection<Bill> bills = new ObservableCollection<Bill>(billController.GetAll());
+
+            this.gridBills.ItemsSource = bills;
         }
     }
 }

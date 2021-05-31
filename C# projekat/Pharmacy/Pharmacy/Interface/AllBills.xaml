@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AllBills" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="447" Margin="110,108,0,0"/>
+        <DataGrid x:Name="gridBills" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="447" Margin="110,108,0,0"/>
 
     </Grid>
 </Window>
