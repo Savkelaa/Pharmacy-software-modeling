@@ -36,13 +36,13 @@
         </DataGrid>
         <DataGrid  x:Name="cart"   Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-            <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
-            <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-            <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
-            <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
-            <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
             </DataGrid.Columns>
-            </DataGrid>
+        </DataGrid>
         <Button Content="Add to cart" Grid.Column="2"   Grid.Row="1" FontSize="16" Click="Add_To_Cart_Click"  />
         <Button Content="Delete from cart" Grid.Column="5"   Grid.Row="1" FontSize="16" Click="Delete_From_Cart_Click"  />
         <Button Content="Buy" Grid.Column="7"   Grid.Row="1" FontSize="16" Click="Buy_Click"  />

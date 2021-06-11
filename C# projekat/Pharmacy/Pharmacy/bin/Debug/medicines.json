@@ -115,5 +115,14 @@
     "Quantity": 23,
     "Accepted": true,
     "Deleted": false
+  },
+  {
+    "Id": "12412",
+    "Name": "wqedasd",
+    "Manufacturer": "qweda",
+    "Price": 243.0,
+    "Quantity": 232,
+    "Accepted": true,
+    "Deleted": false
   }
 ]

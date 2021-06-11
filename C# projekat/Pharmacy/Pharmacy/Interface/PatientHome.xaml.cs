@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,22 @@ namespace Pharmacy.Interface
 
     public partial class PatientHome : Window
     {
-        public PatientHome()
+        User u = new User();
+
+
+
+        public PatientHome(User user)
         {
             InitializeComponent();
+            u = user;
+            
+            surname.Content = u.Name + " " + u.Surname;
+
         }
 
         private void BuyMedicine_Click(object sender, RoutedEventArgs e)
         {
-            var s = new BuyMedicines();
+            var s = new BuyMedicines(u);
             s.Show();
         }
 

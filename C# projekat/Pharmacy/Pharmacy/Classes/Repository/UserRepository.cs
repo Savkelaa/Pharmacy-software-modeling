@@ -25,17 +25,22 @@ namespace Repository
                 }
             }
         }
-
-        //public void SaveAll(ObservableCollection<User> users)
-        //{
-        //    JsonSerializer serializer = new JsonSerializer();
-        //    serializer.Formatting = Formatting.Indented;
-        //    StreamWriter writer = new StreamWriter("patients.json");
-        //    JsonWriter jWriter = new JsonTextWriter(writer);
-        //    serializer.Serialize(jWriter, users);
-        //    jWriter.Close();
-        //    writer.Close();
-        //}
+        public User getByEmail(String email)
+        {
+            foreach (User u in GetAll())
+            {
+                if(u.Email==email)
+                {
+                    return u;
+                }
+            }
+            return null;
+        }
+        public void SaveBill(List<User> korisnici)
+        {
+            patients = korisnici;
+            writeInJson();
+        }
 
 
         public void writeInJson()
@@ -46,6 +51,7 @@ namespace Repository
 
         public void Save(User newPatient)
       {
+            
             patients.Add(newPatient);
             writeInJson();
         }

@@ -20,15 +20,23 @@ namespace Pharmacy.Interface
     
     public partial class BuyMedicines : Window
     {
+        User u = new User();
         MedicineController medicineController = new MedicineController();
         BillController billController = new BillController();
+        UserController userController = new UserController();
 
-        public BuyMedicines()
+        public BuyMedicines(User user)
         {
             InitializeComponent();
+            u = user;
+            
             ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllProducts());
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
+
+        
+
+
 
         private void Add_To_Cart_Click(object sender, RoutedEventArgs e)
         {
@@ -59,9 +67,20 @@ namespace Pharmacy.Interface
         {
 
             List<Medicine> cartMedicines = cart.Items.OfType<Medicine>().ToList();
-            billController.Buy(cartMedicines);
 
-            MessageBox.Show("You have successfully purchased the medication.", "Successful");
+            if (userController.CheckOwnedWeek(u.Email) == true && userController.CheckOwnedOne(u.Email))
+            {
+                billController.Buy(cartMedicines, u);
+                MessageBox.Show("You have successfully purchased the medication.", "Successful");
+            }
+            else
+            {
+                MessageBox.Show("You cannot buy more than 50 medications a week");
+            }
+
+
+
+           
             cart.ItemsSource = null;
         }
     }

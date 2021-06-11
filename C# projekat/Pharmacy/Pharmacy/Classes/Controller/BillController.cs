@@ -15,15 +15,19 @@ namespace Controller
            return billService.GenerateId();
         }
 
+       
+
+
+
         public List<Bill> GetAll()
         {
           return billService.GetAll();   
         }
       
 
-        public void Buy(List<Medicine> medicines)
+        public void Buy(List<Medicine> medicines,User u)
         {
-            billService.Buy(medicines);
+            billService.Buy(medicines,u);
         }
     }
 }

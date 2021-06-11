@@ -25,7 +25,7 @@ namespace Pharmacy.Interface
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BuyMedicines buy = new BuyMedicines();
+           
             if (quantity > Convert.ToInt32(tbQuantity.Text))
             {
                 isBought = true;

@@ -20,6 +20,7 @@ namespace Pharmacy.Interface
         public PharmacistHome()
         {
             InitializeComponent();
+            
         }
 
         private void Medicines_Click(object sender, RoutedEventArgs e)

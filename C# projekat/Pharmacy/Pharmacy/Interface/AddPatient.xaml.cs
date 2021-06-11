@@ -42,7 +42,7 @@ namespace Pharmacy.Interface
 
            if(userController.IsJmbgValid(Jmbg)==true && userController.IsEmailValid(Email)==true)
             {
-                User newPatient = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, userType.Text);
+                User newPatient = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, userType.Text, new List<Bill>());
                 userController.Save(newPatient);
             }
            else

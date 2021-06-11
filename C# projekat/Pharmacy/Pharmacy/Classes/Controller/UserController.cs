@@ -37,16 +37,16 @@ namespace Controller
             return userService.IsEmailValid(email);
         }
       
-      public Boolean CheckOwnedWeek()
+      public Boolean CheckOwnedWeek(String email)
       {
-         
-         return false;
+            return userService.CheckOwnedWeek(email);
       }
       
-      public Boolean CheckOwnedOne()
+      public Boolean CheckOwnedOne(String email)
       {
-         
-         return false;
+
+            return userService.CheckOwnedOne(email);
+        
       }
    
    

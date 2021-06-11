@@ -10,6 +10,7 @@ namespace Service
    public class BillService
    {
         BillRepository billRepository = new BillRepository();
+        UserRepository userRepository = new UserRepository();
 
       public int GenerateId()
         {
@@ -31,8 +32,9 @@ namespace Service
       }
       
 
-        public void Buy(List<Medicine> medicines)
+        public void Buy(List<Medicine> medicines, User u)
         {
+
             Dictionary<string, int> medicineAndQuantity = new Dictionary<string, int>();
             float totalPrice = 0;
 
@@ -42,8 +44,24 @@ namespace Service
                 totalPrice += m.Price * m.Quantity;
             }
 
-            Bill bill = new Bill(GenerateId(), "Pedja", DateTime.Now.ToString("MM/dd/yyyy h:mm tt"), medicineAndQuantity, totalPrice);
+            Bill bill = new Bill(GenerateId(), "Pedja", DateTime.Now, medicineAndQuantity, totalPrice);
             billRepository.Save(bill);
+            SaveBill(u,bill);
+
+        }
+
+        public void SaveBill(User patient, Bill bill)
+        {
+
+            List<User> korisnici = userRepository.GetAll();
+            foreach (User u in korisnici)
+            {
+                if (u.Email == patient.Email)
+                {
+                    u.Bills.Add(bill);   
+                }
+            }
+            userRepository.SaveBill(korisnici);
         }
     }
 }

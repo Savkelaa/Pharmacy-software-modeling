@@ -28,6 +28,7 @@ namespace Repository
 
         public void WriteInJson()
         {
+
             String json = JsonConvert.SerializeObject(bills, Formatting.Indented);
             File.WriteAllText(path, json);
         }
@@ -43,6 +44,8 @@ namespace Repository
             bills.Add(newBill);
             WriteInJson();
       }
+
+    
    
       
    

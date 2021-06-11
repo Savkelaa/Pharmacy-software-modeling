@@ -15,11 +15,7 @@ namespace Service
         UserRepository userRepository = new UserRepository();
       
         public void Save(User newPatient)
-      {
-           // List<User> users = userRepository.GetAll();
-           // users.Add(newPatient);
-           // userRepository.SaveAll(users);
-
+        {
             userRepository.Save(newPatient);
             MessageBox.Show("Successfully created new patient!");
         }
@@ -70,7 +66,7 @@ namespace Service
         }
 
         public Boolean IsEmailValid(String email)
-      {
+        {
             User patient = userRepository.GetAll().SingleOrDefault(s => (s.Email.Equals(email)));
             if (patient != null)
             {
@@ -82,17 +78,36 @@ namespace Service
             }
 
         }
-      
-      public Boolean CheckOwnedWeek()
-      {
-         
-         return false;
+
+        public Boolean CheckOwnedWeek(String email)
+        {
+            User user = new User();
+            user = userRepository.getByEmail(email);
+            int count = 0;
+            DateTime sevenDays = DateTime.Today.AddDays(-7);
+
+            foreach (Bill b in user.Bills)
+            {
+                if(b.DateTime>sevenDays)
+                count+=b.MedicineAndQuantity.Count;   
+            }
+
+           if(count>50)
+            {
+                return false;
+            }
+            else
+            { 
+                return true;
+            }
       }
       
-      public Boolean CheckOwnedOne()
+      public Boolean CheckOwnedOne(String email)
       {
-         
-         return false;
+            User user = new User();
+            user = userRepository.getByEmail(email);
+            int count = 0;
+            return false;
       }
    
      

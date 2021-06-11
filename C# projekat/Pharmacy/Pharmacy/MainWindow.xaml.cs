@@ -52,7 +52,8 @@ namespace Pharmacy
                 }
                 else if (user.Type == "patient")
                 {
-                    var s = new Interface.PatientHome();
+                    
+                    var s = new Interface.PatientHome(user);
                     s.Show();
                 }
             }
@@ -60,6 +61,8 @@ namespace Pharmacy
             {
                 MessageBox.Show("Wrong password or email!", "Error");
             }
+            
+
             
 
         }

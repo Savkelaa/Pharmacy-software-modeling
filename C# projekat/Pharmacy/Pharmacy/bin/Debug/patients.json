@@ -6,7 +6,8 @@
     "Name": "Dragan",
     "Surname": "Djordjevic",
     "MobilePhone": "0653242123",
-    "Type": "doctor"
+    "Type": "doctor",
+    "Bills": []
   },
   {
     "Jmbg": "120519517080",
@@ -15,7 +16,8 @@
     "Name": "Nevena",
     "Surname": "Slavkovic",
     "MobilePhone": "0623446236",
-    "Type": "pharmacist"
+    "Type": "pharmacist",
+    "Bills": []
   },
   {
     "Jmbg": "120519517080",
@@ -24,7 +26,127 @@
     "Name": "Nikola",
     "Surname": "Savic",
     "MobilePhone": "0645702335",
-    "Type": "patient"
+    "Type": "patient",
+    "Bills": [
+      {
+        "Id": 24,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T11:48:00",
+        "MedicineAndQuantity": {
+          "Insulin": 20
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 25,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T11:51:00",
+        "MedicineAndQuantity": {
+          "Omeprol": 10
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 26,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T11:52:00",
+        "MedicineAndQuantity": {
+          "Insulin": 20
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 26,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T13:33:00",
+        "MedicineAndQuantity": {
+          "Insulin": 20
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 27,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T13:33:00",
+        "MedicineAndQuantity": {
+          "werwetw": 23
+        },
+        "TotalPrice": 782.0
+      },
+      {
+        "Id": 28,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T13:34:00",
+        "MedicineAndQuantity": {
+          "Omeprol": 10
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 29,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T13:40:00",
+        "MedicineAndQuantity": {
+          "eqwe": 1231
+        },
+        "TotalPrice": 395151.0
+      },
+      {
+        "Id": 30,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T13:40:00",
+        "MedicineAndQuantity": {
+          "Insulin": 20
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 31,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T14:03:00",
+        "MedicineAndQuantity": {
+          "eqwe": 1231
+        },
+        "TotalPrice": 395151.0
+      },
+      {
+        "Id": 32,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T14:59:00",
+        "MedicineAndQuantity": {
+          "eqwe": 1231
+        },
+        "TotalPrice": 395151.0
+      },
+      {
+        "Id": 33,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T14:59:00",
+        "MedicineAndQuantity": {
+          "eqwe": 1231,
+          "dsgsdg": 21
+        },
+        "TotalPrice": 404034.0
+      },
+      {
+        "Id": 34,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T18:45:00",
+        "MedicineAndQuantity": {
+          "Omeprol": 10
+        },
+        "TotalPrice": 5000.0
+      },
+      {
+        "Id": 35,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-11T19:18:38.3756159+02:00",
+        "MedicineAndQuantity": {
+          "dsfds": 23
+        },
+        "TotalPrice": 9729.0
+      }
+    ]
   },
   {
     "Jmbg": "120719237080",
@@ -33,7 +155,8 @@
     "Name": "Milan",
     "Surname": "Dragosavac",
     "MobilePhone": "0632355478",
-    "Type": "patient"
+    "Type": "patient",
+    "Bills": []
   },
   {
     "Jmbg": "12432154235",
@@ -42,7 +165,8 @@
     "Name": "Nikola",
     "Surname": "Savic",
     "MobilePhone": "0645346521",
-    "Type": "patient"
+    "Type": "patient",
+    "Bills": []
   },
   {
     "Jmbg": "5235235234",
@@ -51,7 +175,8 @@
     "Name": "Milos",
     "Surname": "Novakovic",
     "MobilePhone": "0653453632",
-    "Type": "patient"
+    "Type": "patient",
+    "Bills": []
   },
   {
     "Jmbg": "211223523",
@@ -60,6 +185,37 @@
     "Name": "fgdfgdfgdfg",
     "Surname": "dfgdgdfg",
     "MobilePhone": "234324325",
-    "Type": "patient"
+    "Type": "patient",
+    "Bills": []
+  },
+  {
+    "Jmbg": "12124",
+    "Email": "weqweadasd",
+    "Password": "adasa",
+    "Name": "asda",
+    "Surname": "asd",
+    "MobilePhone": "",
+    "Type": "patient",
+    "Bills": []
+  },
+  {
+    "Jmbg": "1412421",
+    "Email": "pero",
+    "Password": "pero",
+    "Name": "Petar",
+    "Surname": "Bogdanovic",
+    "MobilePhone": "065434632",
+    "Type": "patient",
+    "Bills": []
+  },
+  {
+    "Jmbg": "3252352",
+    "Email": "kiks",
+    "Password": "kiks",
+    "Name": "Kiksara",
+    "Surname": "Kiksara",
+    "MobilePhone": "0645235125",
+    "Type": "patient",
+    "Bills": []
   }
 ]
