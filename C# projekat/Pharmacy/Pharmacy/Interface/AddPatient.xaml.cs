@@ -40,9 +40,12 @@ namespace Pharmacy.Interface
             String Jmbg = jmbg.Text;
             String Email = email.Text;
 
-           if(userController.IsJmbgValid(Jmbg)==true && userController.IsEmailValid(Email)==true)
+            List<Bill> bills = new List<Bill>();
+
+
+           if (userController.IsJmbgValid(Jmbg)==true && userController.IsEmailValid(Email)==true)
             {
-                User newPatient = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, userType.Text, new List<Bill>());
+                User newPatient = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, userType.Text);
                 userController.Save(newPatient);
             }
            else

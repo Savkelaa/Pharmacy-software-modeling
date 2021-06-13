@@ -68,7 +68,16 @@ namespace Pharmacy.Interface
 
             List<Medicine> cartMedicines = cart.Items.OfType<Medicine>().ToList();
 
-            if (userController.CheckOwnedWeek(u.Email) == true && userController.CheckOwnedOne(u.Email))
+            Dictionary<String, int> dictCart = new Dictionary<String, int>();
+
+            foreach (Medicine m in cartMedicines)
+            {
+                dictCart.Add(m.Name, m.Quantity);
+            }
+
+            //userController.CheckOwnedOne(u.Email, dictCart)   UBACITI OVO U SLEDECI IF KADA SREDIS VREDNOST
+
+            if (userController.CheckOwnedWeek(u.Email) == true  )
             {
                 billController.Buy(cartMedicines, u);
                 MessageBox.Show("You have successfully purchased the medication.", "Successful");

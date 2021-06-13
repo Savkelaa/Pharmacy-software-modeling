@@ -1,4 +1,6 @@
 
+using Controller;
+using Service;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +9,9 @@ namespace Model
 {
     public class User
     {
+
+        //UserController userController = new UserController();
+
         public String Jmbg { get; set; }
         public String Email { get; set; }
         public String Password { get; set; }
@@ -15,9 +20,12 @@ namespace Model
         public String MobilePhone { get; set; }
         public String Type { get; set; }
 
-        public List<Bill> Bills  {get; set;}
+        public Dictionary<String,int> MedicineOwnedCounter { get; set; }
 
-        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type, List<Bill> bills)
+        public List<Bill> Bills  {get; set;}
+        public BillService billService { get; set; }
+
+        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type)
         {
             Jmbg = jmbg;
             Email = email;
@@ -26,11 +34,15 @@ namespace Model
             Surname = surname;
             MobilePhone = mobilePhone;
             Type = type;
-            Bills = bills;
+            Bills = new List<Bill>();
+           // MedicineOwnedCounter  = userController.getOwnedMedicine(email);
+
         }
 
+        
 
-        // List<Bill> bills = new ArrayList<Bill>();
+
+
         // public System.Collections.ArrayList bills { get; set; }
 
 

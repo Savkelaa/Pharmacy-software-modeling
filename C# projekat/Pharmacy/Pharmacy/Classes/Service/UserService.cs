@@ -100,17 +100,70 @@ namespace Service
             { 
                 return true;
             }
-      }
-      
-      public Boolean CheckOwnedOne(String email)
+        }
+
+
+
+
+
+      public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
       {
             User user = new User();
             user = userRepository.getByEmail(email);
-            int count = 0;
-            return false;
+
+            foreach (KeyValuePair<string, int> countExisting in user.MedicineOwnedCounter)
+            {
+                foreach(KeyValuePair<string, int> countCart in dictCart)
+                {
+                    if(countExisting.Key==countCart.Key)
+                    {
+                        user.MedicineOwnedCounter[countExisting.Key] += dictCart[countCart.Key];
+                    }
+                }   
+
+            }
+    
+            foreach (KeyValuePair<string, int> countExisting in user.MedicineOwnedCounter)
+            {
+                if (countExisting.Value > 5)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+
+            return true; ////PORAZMISLITI U VEZI POVRATNE VREDNOSTI
       }
-   
-     
-   
-   }
+
+
+
+        public Dictionary<String, int> getOwnedMedicine(String email)
+        {
+            User user = new User();
+            user = userRepository.getByEmail(email);
+            Dictionary<String, int> MedicineOwned = new Dictionary<string, int>();
+            
+            foreach (Bill b in user.Bills)
+            {
+                foreach(String t in b.MedicineAndQuantity.Keys)
+                {
+                    if (MedicineOwned.Keys.FirstOrDefault(x => x==t)!=null)
+                    {
+                        MedicineOwned[t] += MedicineOwned[t];
+                    }
+                    else
+                    {
+                        MedicineOwned.Add(t, b.MedicineAndQuantity[t]);
+                    }
+                } 
+            }
+
+            return MedicineOwned;
+        }
+
+    }
 }
