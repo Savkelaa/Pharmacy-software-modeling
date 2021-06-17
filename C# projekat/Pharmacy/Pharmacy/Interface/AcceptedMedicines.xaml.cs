@@ -22,6 +22,7 @@ namespace Pharmacy.Interface
     {
 
         MedicineController medicineController = new MedicineController();
+        SearchController searchController = new SearchController();
 
         public AcceptedMedicines()
         {
@@ -32,37 +33,54 @@ namespace Pharmacy.Interface
 
         private void searchId_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            List<Medicine> medicines = medicineController.GetAllAccepted();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById(gridAccepted, searchId.Text, medicines));
+            this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchName_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName(gridAccepted, searchName.Text, medicines));
+            this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchManufacturer_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer(gridAccepted, searchManufacturer.Text, medicines));
+            this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchQuantity_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity(gridAccepted, searchQuantity.Text, medicines));
+            this.gridAccepted.ItemsSource = searchMedicines;
         }
 
-        private void searchPrice1_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        //private void searchPrice1_TextChanged(object sender, TextChangedEventArgs e)
+        //{
 
-        }
+        //}
 
-        private void searchPrice2_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        //private void searchPrice2_TextChanged(object sender, TextChangedEventArgs e)
+        //{
 
-        }
+        //}
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                List<Medicine> medicines = medicineController.GetAll();
+                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange(gridAccepted, Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text), medicines));
+                this.gridAccepted.ItemsSource = searchMedicines;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

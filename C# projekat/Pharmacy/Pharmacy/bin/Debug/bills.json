@@ -318,5 +318,43 @@
       "dsfds": 23
     },
     "TotalPrice": 9729.0
+  },
+  {
+    "Id": 36,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-18T00:49:28.1798173+02:00",
+    "MedicineAndQuantity": {
+      "Hidrogen": 10,
+      "eqwe": 1231
+    },
+    "TotalPrice": 400151.0
+  },
+  {
+    "Id": 37,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-18T00:49:49.2553481+02:00",
+    "MedicineAndQuantity": {
+      "dsfds": 23
+    },
+    "TotalPrice": 9729.0
+  },
+  {
+    "Id": 38,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-18T00:49:56.96756+02:00",
+    "MedicineAndQuantity": {
+      "dsfds": 23,
+      "gsfs": 5
+    },
+    "TotalPrice": 10229.0
+  },
+  {
+    "Id": 39,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-18T00:50:52.1007553+02:00",
+    "MedicineAndQuantity": {
+      "dsfds": 23
+    },
+    "TotalPrice": 9729.0
   }
 ]

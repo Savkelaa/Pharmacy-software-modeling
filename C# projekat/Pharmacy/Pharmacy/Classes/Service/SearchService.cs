@@ -12,14 +12,12 @@ namespace Service
    public class SearchService
    {
         MedicineRepository medicineRepository = new MedicineRepository();
-        MedicineService medicineService = new MedicineService();
-
-        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch)
-      {
-                gridMedicines.ItemsSource = null;
-                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+     
+        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch, List<Medicine> medicines)
+      {     
+                List<Medicine> listMedicines = new List<Medicine>(medicines);
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in allMedicines)
+                foreach (Medicine m in listMedicines)
                 {
                    if((m.Id.Contains(idSearch)))
                     {
@@ -29,14 +27,14 @@ namespace Service
                 return searchedMedicines;
       }
       
-      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch)
+      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch, List<Medicine> medicines)
         {
             if (nameSearch.Length >= 3)
             {
                 gridMedicines.ItemsSource = null;
-                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+                List<Medicine> listMedicines = new List<Medicine>(medicines);
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in allMedicines)
+                foreach (Medicine m in listMedicines)
                 {
                     if ((m.Name.Contains(nameSearch)))
                     {
@@ -47,18 +45,18 @@ namespace Service
             }
             else
             {
-                return medicineRepository.GetAll();   //vidi za ovo
+                return medicines;   
             }
         }
       
-      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch)
+      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch, List<Medicine> medicines)
         { 
             if(manufacturerSearch.Length >= 3)
             {
                 gridMedicines.ItemsSource = null;
-                List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+                List<Medicine> listMedicines = new List<Medicine>(medicines);
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in allMedicines)
+                foreach (Medicine m in listMedicines)
                 {
                     if ((m.Manufacturer.Contains(manufacturerSearch)))
                     {
@@ -69,17 +67,17 @@ namespace Service
             }
             else
             {
-                return medicineRepository.GetAll();   //vidi za ovo
+                return medicines;   
             }
         }
       
-      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo)
+      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo, List<Medicine> medicines)
         {
 
             gridMedicines.ItemsSource = null;
-            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> listMedicines = new List<Medicine>(medicines);
             List<Medicine> searchedMedicines = new List<Medicine>();
-            foreach (Medicine m in allMedicines)
+            foreach (Medicine m in listMedicines)
             {
                 if (m.Price>= priceFrom && m.Price<=priceTo)
                 {
@@ -89,12 +87,12 @@ namespace Service
             return searchedMedicines;
         }
       
-      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch)
+      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch, List<Medicine> medicines)
         {
             gridMedicines.ItemsSource = null;
-            List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
+            List<Medicine> listMedicines = new List<Medicine>(medicines);
             List<Medicine> searchedMedicines = new List<Medicine>();
-            foreach (Medicine m in allMedicines)
+            foreach (Medicine m in listMedicines)
             {
                 if ((Convert.ToString(m.Quantity).Contains(quantitySearch)))
                 {

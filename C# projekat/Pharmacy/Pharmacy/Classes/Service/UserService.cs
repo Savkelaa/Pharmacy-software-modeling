@@ -111,19 +111,19 @@ namespace Service
             User user = new User();
             user = userRepository.getByEmail(email);
 
-            foreach (KeyValuePair<string, int> countExisting in user.MedicineOwnedCounter)
+            foreach (KeyValuePair<string, int> countExisting in user.OwnedMedicineCounter)
             {
                 foreach(KeyValuePair<string, int> countCart in dictCart)
                 {
                     if(countExisting.Key==countCart.Key)
                     {
-                        user.MedicineOwnedCounter[countExisting.Key] += dictCart[countCart.Key];
+                        user.OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
                     }
                 }   
 
             }
     
-            foreach (KeyValuePair<string, int> countExisting in user.MedicineOwnedCounter)
+            foreach (KeyValuePair<string, int> countExisting in user.OwnedMedicineCounter)
             {
                 if (countExisting.Value > 5)
                 {

@@ -25,7 +25,7 @@ namespace Pharmacy.Interface
         public AllComponents()
         {
             InitializeComponent();
-            this.gridPatient.ItemsSource = componentController.GetAll();
+            this.gridComponent.ItemsSource = componentController.GetAll();
 
         }
     }

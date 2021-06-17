@@ -42,5 +42,11 @@ namespace Pharmacy.Interface
             var s = new AllBills();
             s.Show();
         }
+
+        private void AllProductsClick(object sender, RoutedEventArgs e)
+        {
+            var s = new AllProducts();
+            s.Show();
+        }
     }
 }

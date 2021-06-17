@@ -46,7 +46,7 @@ namespace Repository
          
       }
    
-      private String Path;
+     
    
    }
 }

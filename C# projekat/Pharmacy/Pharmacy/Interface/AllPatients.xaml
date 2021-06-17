@@ -20,12 +20,12 @@
 
         <DataGrid x:Name="gridPatient"   SelectionMode="Single"  AutoGenerateColumns="False" Grid.Column="1" Grid.Row="1"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Jmbg" Binding="{Binding Jmbg}" />
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
-                <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" />
-                <DataGridTextColumn Header="MobilePhone" Binding="{Binding MobilePhone}" />
+                <DataGridTextColumn Header="Jmbg" Binding="{Binding Jmbg}" Width="50*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"  Width="40*"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}"  Width="40*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="30*"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"  Width="30*"/>
+                <DataGridTextColumn Header="MobilePhone" Binding="{Binding MobilePhone}"  Width="50*"/>
             </DataGrid.Columns>
         </DataGrid>
 

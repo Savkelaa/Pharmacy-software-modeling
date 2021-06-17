@@ -27,20 +27,20 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="gridAccepted"  SelectedItem="{Binding SelectedMedicine, Mode=TwoWay}" SelectionMode="Single" AutoGenerateColumns="False" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
-                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"  Width="12*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"  Width="50*"/>
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="70*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"  Width="25*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}"  Width="35*"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid  x:Name="cart"   Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
-                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"  Width="12*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="50*" />
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}"  Width="70*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"  Width="25*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="35*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add to cart" Grid.Column="2"   Grid.Row="1" FontSize="16" Click="Add_To_Cart_Click"  />

@@ -42,6 +42,7 @@ namespace Repository
             writeInJson();
         }
 
+//NAPRAVITI FUNKCIJU ZA UNOS DICIONARY JSON -- UPDATE OWNEDMEDICINECOUNT
 
         public void writeInJson()
         {

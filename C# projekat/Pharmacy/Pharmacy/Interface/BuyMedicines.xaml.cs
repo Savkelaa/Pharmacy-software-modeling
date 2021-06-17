@@ -29,7 +29,9 @@ namespace Pharmacy.Interface
         {
             InitializeComponent();
             u = user;
-            
+
+          //  u.OwnedMedicineCounter = userController.getOwnedMedicine(u.Email);    ---- Probati da ove podatke upises u json
+
             ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllProducts());
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
@@ -67,7 +69,7 @@ namespace Pharmacy.Interface
         {
 
             List<Medicine> cartMedicines = cart.Items.OfType<Medicine>().ToList();
-
+           
             Dictionary<String, int> dictCart = new Dictionary<String, int>();
 
             foreach (Medicine m in cartMedicines)

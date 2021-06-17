@@ -7,6 +7,7 @@
     "Surname": "Djordjevic",
     "MobilePhone": "0653242123",
     "Type": "doctor",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -17,6 +18,7 @@
     "Surname": "Slavkovic",
     "MobilePhone": "0623446236",
     "Type": "pharmacist",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -27,6 +29,7 @@
     "Surname": "Savic",
     "MobilePhone": "0645702335",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": [
       {
         "Id": 24,
@@ -156,6 +159,7 @@
     "Surname": "Dragosavac",
     "MobilePhone": "0632355478",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -166,6 +170,7 @@
     "Surname": "Savic",
     "MobilePhone": "0645346521",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -176,6 +181,7 @@
     "Surname": "Novakovic",
     "MobilePhone": "0653453632",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -186,6 +192,7 @@
     "Surname": "dfgdgdfg",
     "MobilePhone": "234324325",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -196,6 +203,7 @@
     "Surname": "asd",
     "MobilePhone": "",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -206,6 +214,7 @@
     "Surname": "Bogdanovic",
     "MobilePhone": "065434632",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
   },
   {
@@ -216,6 +225,68 @@
     "Surname": "Kiksara",
     "MobilePhone": "0645235125",
     "Type": "patient",
+    "OwnedMedicineCounter": null,
     "Bills": []
+  },
+  {
+    "Jmbg": "4124214",
+    "Email": "nikolica",
+    "Password": "prikolica",
+    "Name": "Nidza",
+    "Surname": "Smiljanic",
+    "MobilePhone": "064542626",
+    "Type": "patient",
+    "OwnedMedicineCounter": {},
+    "Bills": []
+  },
+  {
+    "Jmbg": "23124314",
+    "Email": "maki",
+    "Password": "maki",
+    "Name": "maki",
+    "Surname": "Savic",
+    "MobilePhone": "0654523525",
+    "Type": "patient",
+    "OwnedMedicineCounter": {},
+    "Bills": [
+      {
+        "Id": 36,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-18T00:49:28.1798173+02:00",
+        "MedicineAndQuantity": {
+          "Hidrogen": 10,
+          "eqwe": 1231
+        },
+        "TotalPrice": 400151.0
+      },
+      {
+        "Id": 37,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-18T00:49:49.2553481+02:00",
+        "MedicineAndQuantity": {
+          "dsfds": 23
+        },
+        "TotalPrice": 9729.0
+      },
+      {
+        "Id": 38,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-18T00:49:56.96756+02:00",
+        "MedicineAndQuantity": {
+          "dsfds": 23,
+          "gsfs": 5
+        },
+        "TotalPrice": 10229.0
+      },
+      {
+        "Id": 39,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-18T00:50:52.1007553+02:00",
+        "MedicineAndQuantity": {
+          "dsfds": 23
+        },
+        "TotalPrice": 9729.0
+      }
+    ]
   }
 ]

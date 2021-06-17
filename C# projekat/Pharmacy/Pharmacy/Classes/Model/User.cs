@@ -7,10 +7,11 @@ using System.Collections.Generic;
 
 namespace Model
 {
+    //UserController userController = new UserController();
     public class User
     {
 
-        //UserController userController = new UserController();
+        
 
         public String Jmbg { get; set; }
         public String Email { get; set; }
@@ -20,12 +21,11 @@ namespace Model
         public String MobilePhone { get; set; }
         public String Type { get; set; }
 
-        public Dictionary<String,int> MedicineOwnedCounter { get; set; }
+        public Dictionary<String,int> OwnedMedicineCounter { get; set; }
 
         public List<Bill> Bills  {get; set;}
-        public BillService billService { get; set; }
-
-        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type)
+        //Dictionary<string, int> ownedMedicineCounter
+        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type, Dictionary<string, int> ownedMedicineCounter)
         {
             Jmbg = jmbg;
             Email = email;
@@ -34,16 +34,31 @@ namespace Model
             Surname = surname;
             MobilePhone = mobilePhone;
             Type = type;
+            //UserController userController = new UserController();
+            OwnedMedicineCounter = ownedMedicineCounter ;
             Bills = new List<Bill>();
-           // MedicineOwnedCounter  = userController.getOwnedMedicine(email);
-
         }
 
-        
+
+        //public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type)
+        //{
+        //    Jmbg = jmbg;
+        //    Email = email;
+        //    Password = password;
+        //    Name = name;
+        //    Surname = surname;
+        //    MobilePhone = mobilePhone;
+        //    Type = type;
+        //    Bills = new List<Bill>();
+        //   // MedicineOwnedCounter  = userController.getOwnedMedicine(email);
+
+        //}
 
 
 
-        // public System.Collections.ArrayList bills { get; set; }
+
+
+
 
 
 
