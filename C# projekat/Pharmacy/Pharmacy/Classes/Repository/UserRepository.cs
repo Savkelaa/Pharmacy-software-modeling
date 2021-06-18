@@ -36,6 +36,7 @@ namespace Repository
             }
             return null;
         }
+
         public void SaveBill(List<User> korisnici)
         {
             patients = korisnici;

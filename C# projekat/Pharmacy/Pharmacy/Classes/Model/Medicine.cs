@@ -16,20 +16,20 @@ namespace Model
 
 
 
-        //public Dictionary<Component, String> Components { get; set; }
+        public Dictionary<int, String> Components { get; set; }
         public bool Accepted { get; set; }
         public bool Deleted { get; set; }
 
        
 
-        public Medicine(string id, string name, string manufacturer, float price, int quantity,  bool accepted, bool deleted)
+        public Medicine(string id, string name, string manufacturer, float price, int quantity,  bool accepted, bool deleted, Dictionary<int,String> components)
         {
             Id = id;
             Name = name;
             Manufacturer = manufacturer;
             Price = price;
             Quantity = quantity;
-            //Components = components;
+            Components = components;
             Accepted = accepted;
             Deleted = deleted;
           

@@ -13,29 +13,31 @@
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="48*"/>
-            <RowDefinition Height="66*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
-        <Label Content="Id:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="26" Margin="0,2" Width="37" FontSize="14"/>
-        <Label Content="Name:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="26" Margin="0,2" Width="69" FontSize="14"/>
-        <Label Content="Manufacturer:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="26" Margin="0,2" Width="93" FontSize="14"/>
-        <Label Content="Price:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Height="26" Margin="0,2" Width="69" FontSize="14"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Height="26" Margin="0,2" Width="69" FontSize="14"/>
+        <Label Content="Id:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Height="26" Margin="0,42,0,8" Width="37" FontSize="14"/>
+        <Label Content="Name:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="26" Margin="0,0,0,6" Width="69" FontSize="14"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="26" Margin="0,0,0,7" Width="93" FontSize="14"/>
+        <Label Content="Price:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="26" Margin="0,32,0,8" Width="69" FontSize="14" Grid.RowSpan="2"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="26" Margin="0,31,0,9" Width="69" FontSize="14" Grid.RowSpan="2"/>
 
-        <TextBox x:Name="Id"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="22" Margin="128,4,0,4" />
-        <TextBox x:Name="Name"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="22" Margin="128,4,0,4"/>
-        <TextBox x:Name="Manufacturer"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="22" Margin="128,4,0,4"/>
-        <TextBox x:Name="Price"  TextWrapping="Wrap" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="4" Height="22" Margin="128,4,0,4" />
-        <TextBox x:Name="Quantity"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" Height="22" Margin="128,4,0,4"/>
+        <TextBox x:Name="Id"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Height="22" Margin="118,46,10,8" />
+        <TextBox x:Name="Name"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="22" Margin="118,2,10,8"/>
+        <TextBox x:Name="Manufacturer"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Height="22" Margin="118,4,10,7"/>
+        <TextBox x:Name="Price"  TextWrapping="Wrap" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="3" Height="22" Margin="118,3,10,8" />
+        <TextBox x:Name="Quantity"  TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" Height="22" Margin="118,2,10,9"/>
         <Button Content="Send a request"    Grid.Column="1" Grid.Row="7"  Click="SendRequest_Click" Margin="138,0,0,0" FontSize="14"  />
         <Button Content="Back"   Grid.Row="7"  Click="Back_Click" Grid.Column="1" Margin="0,0,141,0" FontSize="14"  />
+        <Label Content="Components:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" FontSize="16"/>
+        <ListBox x:Name="lbComponents" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="118,8,0,0" Grid.Row="5" Grid.RowSpan="2" VerticalAlignment="Top" Width="119" SelectionMode="Multiple"/>
 
     </Grid>
 </Window>

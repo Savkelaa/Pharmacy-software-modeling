@@ -32,6 +32,7 @@ namespace Pharmacy.Interface
             InitializeComponent();
 
             this.gridPatient.ItemsSource = userController.GetAll();
+            
         }
         
     }

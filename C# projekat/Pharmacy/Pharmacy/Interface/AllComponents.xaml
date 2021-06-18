@@ -20,7 +20,8 @@
 
         <DataGrid x:Name="gridComponent"   SelectionMode="Single"  AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="36,59,266,35" Grid.RowSpan="3"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="30*" />
+                <DataGridTextColumn Header="Id" Binding="{Binding Name}" Width="20*" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="40*" />
                 <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="200*" />
 
             </DataGrid.Columns>

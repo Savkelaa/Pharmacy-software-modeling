@@ -31,6 +31,7 @@ namespace Service
                 {
                     patients.Add(u);
                 }
+                //u.OwnedMedicineCounter = getOwnedMedicine(u.Email);
             }
 
             return patients;
@@ -136,7 +137,7 @@ namespace Service
 
             }
 
-            return true; ////PORAZMISLITI U VEZI POVRATNE VREDNOSTI
+            return true; 
       }
 
 

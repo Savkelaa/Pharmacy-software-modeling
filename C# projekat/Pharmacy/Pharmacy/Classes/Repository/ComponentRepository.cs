@@ -25,6 +25,19 @@ namespace Repository
             }
         }
 
+
+        public Model.Component getById(int id)
+        {
+            foreach (Model.Component c in GetAll())
+            {
+                if (c.Id == id)
+                {
+                    return c;
+                }
+            }
+            return null;
+        }
+
         public void writeInJson()
         {
             String json = JsonConvert.SerializeObject(components, Formatting.Indented);

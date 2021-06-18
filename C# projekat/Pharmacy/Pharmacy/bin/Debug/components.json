@@ -1,9 +1,11 @@
 [
   {
+	"Id" : 1,
     "Name": "Cink",
     "Description": "Mineral",
   },
   {
+  "Id" : 2,
    "Name": "H20",
    "Description": "Voda",
   }
