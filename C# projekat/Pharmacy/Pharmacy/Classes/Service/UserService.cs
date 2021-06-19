@@ -17,7 +17,6 @@ namespace Service
         public void Save(User newPatient)
         {
             userRepository.Save(newPatient);
-            MessageBox.Show("Successfully created new patient!");
         }
       
       public List<User> GetAll()
@@ -31,7 +30,7 @@ namespace Service
                 {
                     patients.Add(u);
                 }
-                //u.OwnedMedicineCounter = getOwnedMedicine(u.Email);
+             
             }
 
             return patients;
@@ -93,7 +92,7 @@ namespace Service
                 count+=b.MedicineAndQuantity.Count;   
             }
 
-           if(count>50)
+            if(count>50)
             {
                 return false;
             }
@@ -104,57 +103,54 @@ namespace Service
         }
 
 
-
-
-
       public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
       {
             User user = new User();
             user = userRepository.getByEmail(email);
 
-            foreach (KeyValuePair<string, int> countExisting in user.OwnedMedicineCounter)
+            foreach (KeyValuePair<String, int> countExisting in user.OwnedMedicineCounter)
             {
-                foreach(KeyValuePair<string, int> countCart in dictCart)
+                foreach(KeyValuePair<String, int> countCart in dictCart)
                 {
                     if(countExisting.Key==countCart.Key)
                     {
                         user.OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
                     }
+                    updateOwnedMedicineCounter(email);
                 }   
-
             }
     
-            foreach (KeyValuePair<string, int> countExisting in user.OwnedMedicineCounter)
-            {
-                if (countExisting.Value > 5)
-                {
-                    return false;
-                }
+           foreach (KeyValuePair<String, int> countExisting in user.OwnedMedicineCounter)
+           {
+               if (countExisting.Value > 5)
+               {
+                   return false;
+               }
                 else
-                {
-                    return true;
-                }
-
+               {
+                   return true;
+               }
             }
 
             return true; 
       }
 
+     
 
-
-        public Dictionary<String, int> getOwnedMedicine(String email)
+        public void updateOwnedMedicineCounter(String email)
         {
             User user = new User();
             user = userRepository.getByEmail(email);
             Dictionary<String, int> MedicineOwned = new Dictionary<string, int>();
             
+
             foreach (Bill b in user.Bills)
             {
                 foreach(String t in b.MedicineAndQuantity.Keys)
                 {
                     if (MedicineOwned.Keys.FirstOrDefault(x => x==t)!=null)
                     {
-                        MedicineOwned[t] += MedicineOwned[t];
+                        MedicineOwned[t] += b.MedicineAndQuantity[t]; 
                     }
                     else
                     {
@@ -162,8 +158,7 @@ namespace Service
                     }
                 } 
             }
-
-            return MedicineOwned;
+            userRepository.UpdateOwnedMedicineCounter(MedicineOwned,email);
         }
 
     }

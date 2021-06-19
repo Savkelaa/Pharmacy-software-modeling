@@ -5,7 +5,7 @@
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
     "Quantity": 10,
-    "Components": null,
+    "Components": {},
     "Accepted": true,
     "Deleted": true
   },
@@ -15,7 +15,7 @@
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
     "Quantity": 10,
-    "Components": null,
+    "Components": {},
     "Accepted": true,
     "Deleted": true
   },
@@ -24,8 +24,8 @@
     "Name": "Omeprol",
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
-    "Quantity": 10,
-    "Components": null,
+    "Quantity": 0,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -35,7 +35,7 @@
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
     "Quantity": 10,
-    "Components": null,
+    "Components": {},
     "Accepted": true,
     "Deleted": true
   },
@@ -44,8 +44,8 @@
     "Name": "Hidrogen",
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
-    "Quantity": 10,
-    "Components": null,
+    "Quantity": 0,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -55,7 +55,7 @@
     "Manufacturer": "Dureks",
     "Price": 241.0,
     "Quantity": 12,
-    "Components": null,
+    "Components": {},
     "Accepted": false,
     "Deleted": true
   },
@@ -65,7 +65,7 @@
     "Manufacturer": "Farmakomafija",
     "Price": 250.0,
     "Quantity": 20,
-    "Components": null,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -74,8 +74,8 @@
     "Name": "dsfds",
     "Manufacturer": "dsfsds",
     "Price": 423.0,
-    "Quantity": 23,
-    "Components": null,
+    "Quantity": 20,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -84,8 +84,8 @@
     "Name": "dsgsdg",
     "Manufacturer": "sdgsdg",
     "Price": 423.0,
-    "Quantity": 21,
-    "Components": null,
+    "Quantity": 20,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -94,8 +94,8 @@
     "Name": "eqwe",
     "Manufacturer": "asda",
     "Price": 321.0,
-    "Quantity": 1231,
-    "Components": null,
+    "Quantity": 20,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -104,8 +104,8 @@
     "Name": "dasdasd",
     "Manufacturer": "asdsad",
     "Price": 42.0,
-    "Quantity": 421,
-    "Components": null,
+    "Quantity": 20,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -114,8 +114,8 @@
     "Name": "gsfs",
     "Manufacturer": "dsff",
     "Price": 100.0,
-    "Quantity": 5,
-    "Components": null,
+    "Quantity": 0,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -124,8 +124,8 @@
     "Name": "werwetw",
     "Manufacturer": "tsgsd",
     "Price": 34.0,
-    "Quantity": 23,
-    "Components": null,
+    "Quantity": 0,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -134,8 +134,8 @@
     "Name": "wqedasd",
     "Manufacturer": "qweda",
     "Price": 243.0,
-    "Quantity": 232,
-    "Components": null,
+    "Quantity": 0,
+    "Components": {},
     "Accepted": true,
     "Deleted": false
   },
@@ -146,7 +146,7 @@
     "Price": 431.0,
     "Quantity": 2,
     "Components": {},
-    "Accepted": false,
+    "Accepted": true,
     "Deleted": false
   },
   {

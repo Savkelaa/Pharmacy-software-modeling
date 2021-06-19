@@ -25,19 +25,24 @@ namespace Pharmacy.Interface
         BillController billController = new BillController();
         UserController userController = new UserController();
 
+      //  int cartQuantity;
+
         public BuyMedicines(User user)
         {
+           
             InitializeComponent();
             u = user;
-
-          //  u.OwnedMedicineCounter = userController.getOwnedMedicine(u.Email);    ---- Probati da ove podatke upises u json
-
+          //  cartQuantity = newQuantity;
             ObservableCollection<Medicine> acceptedMedicines = new ObservableCollection<Medicine>(medicineController.GetAllProducts());
             this.gridAccepted.ItemsSource = acceptedMedicines;
         }
 
         
-
+        //public void TransferQuantity(int newQuantity)
+        //{
+        //    cartQuantity = newQuantity;
+            
+        //}
 
 
         private void Add_To_Cart_Click(object sender, RoutedEventArgs e)
@@ -45,13 +50,21 @@ namespace Pharmacy.Interface
            
             if (gridAccepted.SelectedItems.Count > 0)
             {
-              
+               
                 var cellInfo = gridAccepted.SelectedCells[4];    
-                var s = new SelectValue();
+                var s = new SelectValue(u);
                 s.quantity = Convert.ToInt32((cellInfo.Column.GetCellContent(cellInfo.Item) as TextBlock).Text);
                 s.ShowDialog();
+
                 if(s.isBought)
-                cart.Items.Add(gridAccepted.SelectedItem);  
+                {
+                    Medicine medicine = (Medicine)gridAccepted.SelectedItem;
+                    medicine.Quantity = s.quantity; 
+                    cart.Items.Add(medicine);
+                }
+               
+                
+
             }
             else
             {
@@ -74,25 +87,30 @@ namespace Pharmacy.Interface
 
             foreach (Medicine m in cartMedicines)
             {
-                dictCart.Add(m.Name, m.Quantity);
+                dictCart.Add(m.Name, m.Quantity);     
             }
 
-            //userController.CheckOwnedOne(u.Email, dictCart)   UBACITI OVO U SLEDECI IF KADA SREDIS VREDNOST
+         
 
-            if (userController.CheckOwnedWeek(u.Email) == true  )
+            if ((userController.CheckOwnedWeek(u.Email))  && (userController.CheckOwnedOne(u.Email, dictCart)))
             {
                 billController.Buy(cartMedicines, u);
+                foreach (Medicine m in cartMedicines)
+                {
+                    medicineController.UpdateQuantity(m, m.Quantity);
+                }
                 MessageBox.Show("You have successfully purchased the medication.", "Successful");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("You cannot buy more than 50 medications a week");
+                MessageBox.Show("You cannot buy more than 50 medications a week, or more than 5 of the same medicine.");
             }
+
 
 
 
            
-            cart.ItemsSource = null;
         }
     }
 }

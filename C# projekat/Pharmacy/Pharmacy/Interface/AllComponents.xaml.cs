@@ -1,6 +1,7 @@
 ﻿using Controller;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,16 +17,37 @@ using System.Windows.Shapes;
 
 namespace Pharmacy.Interface
 {
-    /// <summary>
-    /// Interaction logic for AllComponents.xaml
-    /// </summary>
+    
+
+
+
     public partial class AllComponents : Window
     {
-        ComponentController componentController = new Controller.ComponentController();
+        Controller.ComponentController componentController = new Controller.ComponentController();
+        SearchController searchController = new SearchController();
         public AllComponents()
         {
             InitializeComponent();
             this.gridComponent.ItemsSource = componentController.GetAll();
+
+        }
+
+        private void tbName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+              List<Model.Component> components = componentController.GetAll();
+              ObservableCollection<Model.Component> searchComponents = new ObservableCollection<Model.Component>(searchController.ComponentByName(tbName.Text,components));
+              this.gridComponent.ItemsSource = searchComponents;
+        }
+
+        private void tbDesc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+              List<Model.Component> components = componentController.GetAll();
+              ObservableCollection<Model.Component> searchComponents = new ObservableCollection<Model.Component>(searchController.ComponentByDescription(tbDesc.Text, components));
+              this.gridComponent.ItemsSource = searchComponents;
+        }
+
+        private void tbMedicine_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }

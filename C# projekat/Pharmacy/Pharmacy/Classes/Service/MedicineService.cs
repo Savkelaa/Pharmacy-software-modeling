@@ -21,23 +21,24 @@ namespace Service
 
         public void UpdateDeleted(String medicineId)
         {
-           try
-           {
+          
              medicineRepository.UpdateDeleted(medicineId);
-           }
-            catch (Exception ex)
-           {
-             MessageBox.Show(ex.Message,"Error");
-           }
+           
+           
          }
 
             public void Reject(int medicineId)
         {
          
         }
-      
-         public List<Medicine> GetAllProducts()
-         {
+
+        public void UpdateQuantity(Medicine m, int selectedQuantity)
+        { 
+            medicineRepository.UpdateQuantity(m.Id, m.Quantity - selectedQuantity);
+        }
+
+        public List<Medicine> GetAllProducts()
+        {
             List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
             List<Medicine> products = new List<Medicine>();
             foreach (Medicine m in allMedicines)
@@ -64,15 +65,16 @@ namespace Service
                }
                return requests;
         }
+
         public List<Medicine> GetAll()
         {
             return medicineRepository.GetAll();
         }
 
         public List<Medicine> GetAllRejected()
-      {
+        {
          return rejectedMedicineRepository.GetAll();
-      }
+        }
       
       public List<Medicine> GetAllAccepted()
       {
@@ -85,9 +87,8 @@ namespace Service
                    accepted.Add(m);
               }
            }
-           return accepted;
-        
-    }
+           return accepted;       
+      }
 
        
         public void Save(Medicine newMedicine)
@@ -105,18 +106,7 @@ namespace Service
             medicineRepository.Delete(medicineId);
       }
 
-      
-        public void AddMedicineToCart(int medicineId)
-          {
-         
-          }
-      
-      public List<Medicine> Buy()
-      {
-         return null;
-      }
-   
-    
+
    
    }
 }

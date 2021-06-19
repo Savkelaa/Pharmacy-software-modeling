@@ -49,11 +49,11 @@ namespace Controller
 
         }
 
-
-        public Dictionary<String, int> getOwnedMedicine(String email)
-            {
-            return userService.getOwnedMedicine(email);
-            }
+       
+        public void updateOwnedMedicine(String email)
+        {
+             userService.updateOwnedMedicineCounter(email);
+        }
 
 
 }

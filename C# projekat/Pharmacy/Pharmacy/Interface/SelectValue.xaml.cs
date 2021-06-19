@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,19 +17,27 @@ namespace Pharmacy.Interface
 {  
     public partial class SelectValue : Window
     {
+        User u = new User();
         public int quantity { get; set; }
         public bool isBought = false;
-        public SelectValue()
+        public SelectValue(User user)
         {
+            u = user;
+
             InitializeComponent();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
            
-            if (quantity > Convert.ToInt32(tbQuantity.Text))
+            if (quantity >= Convert.ToInt32(tbQuantity.Text))
             {
+                quantity = Convert.ToInt32(tbQuantity.Text);
                 isBought = true;
+                
+          //      var q = new BuyMedicines(Convert.ToInt32(tbQuantity.Text),u);
+               // q.TransferQuantity(Convert.ToInt32(tbQuantity.Text));
                 this.Close();
             }
             else

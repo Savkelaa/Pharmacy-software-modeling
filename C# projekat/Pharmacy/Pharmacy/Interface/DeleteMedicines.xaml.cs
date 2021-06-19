@@ -34,7 +34,14 @@ namespace Pharmacy.Interface
         private void DeleteMedicine_Click(object sender, RoutedEventArgs e)
         {
             String medicineId = textBox1.Text;
-            medicineController.UpdateDeleted(medicineId);
+            try
+            {
+                medicineController.UpdateDeleted(medicineId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

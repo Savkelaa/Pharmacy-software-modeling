@@ -13,13 +13,12 @@ namespace Service
    {
         MedicineRepository medicineRepository = new MedicineRepository();
      
-        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch, List<Medicine> medicines)
+        public List<Medicine> MedicineById(String id, List<Medicine> medicines)
       {     
-                List<Medicine> listMedicines = new List<Medicine>(medicines);
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in listMedicines)
+                foreach (Medicine m in medicines)
                 {
-                   if((m.Id.Contains(idSearch)))
+                   if((m.Id.Contains(id)))
                     {
                         searchedMedicines.Add(m);
                     }
@@ -27,16 +26,14 @@ namespace Service
                 return searchedMedicines;
       }
       
-      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByName(String name, List<Medicine> medicines)
         {
-            if (nameSearch.Length >= 3)
-            {
-                gridMedicines.ItemsSource = null;
-                List<Medicine> listMedicines = new List<Medicine>(medicines);
+            if (name.Length >= 3)
+            {            
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in listMedicines)
+                foreach (Medicine m in medicines)
                 {
-                    if ((m.Name.Contains(nameSearch)))
+                    if ((m.Name.Contains(name)))
                     {
                         searchedMedicines.Add(m);
                     }
@@ -49,16 +46,14 @@ namespace Service
             }
         }
       
-      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByManufacturer(String manufacturer, List<Medicine> medicines)
         { 
-            if(manufacturerSearch.Length >= 3)
-            {
-                gridMedicines.ItemsSource = null;
-                List<Medicine> listMedicines = new List<Medicine>(medicines);
+            if(manufacturer.Length >= 3)
+            { 
                 List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in listMedicines)
+                foreach (Medicine m in medicines)
                 {
-                    if ((m.Manufacturer.Contains(manufacturerSearch)))
+                    if ((m.Manufacturer.Contains(manufacturer)))
                     {
                         searchedMedicines.Add(m);
                     }
@@ -71,13 +66,12 @@ namespace Service
             }
         }
       
-      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo, List<Medicine> medicines)
+      public List<Medicine> MedicineByPriceRange(int priceFrom, int priceTo, List<Medicine> medicines)
         {
 
-            gridMedicines.ItemsSource = null;
-            List<Medicine> listMedicines = new List<Medicine>(medicines);
+            
             List<Medicine> searchedMedicines = new List<Medicine>();
-            foreach (Medicine m in listMedicines)
+            foreach (Medicine m in medicines)
             {
                 if (m.Price>= priceFrom && m.Price<=priceTo)
                 {
@@ -87,12 +81,12 @@ namespace Service
             return searchedMedicines;
         }
       
-      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByQuantity(string quantitySearch, List<Medicine> medicines)
         {
-            gridMedicines.ItemsSource = null;
-            List<Medicine> listMedicines = new List<Medicine>(medicines);
+            
+            
             List<Medicine> searchedMedicines = new List<Medicine>();
-            foreach (Medicine m in listMedicines)
+            foreach (Medicine m in medicines)
             {
                 if ((Convert.ToString(m.Quantity).Contains(quantitySearch)))
                 {
@@ -102,25 +96,76 @@ namespace Service
             return searchedMedicines;
         }
       
-      public List<Medicine> MedicineByComponents()
+      public List<Medicine> MedicineByComponents(string componentName, List<Medicine> medicines)
       {
-         
-         return null;
+            if (componentName.Length >= 3)
+            {
+                List<Medicine> searchedMedicines = new List<Medicine>();
+                foreach (Medicine m in medicines)
+                {
+                   foreach (KeyValuePair<int, String> c in m.Components)
+                    {
+                        if(c.Value.Contains(componentName))
+                        {
+                            searchedMedicines.Add(m);
+                        }
+                    }
+                }
+                return searchedMedicines;
+            }
+            else
+            {
+                return medicines;
+            }
+
+            return null;
       }
       
-      public List<Component> ComponentByName(String name)
+      public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
       {
-         
-         return null;
+            if (name.Length >= 3)
+            {
+                List<Model.Component> searchedComponents = new List<Model.Component>();
+
+                foreach (Model.Component c in components)
+                {
+                    if (c.Name.Contains(name))
+                    {
+                        searchedComponents.Add(c);
+                    }
+                }
+                return searchedComponents;
+            }
+            else
+            {
+                  return components;
+            }
+
+            return null;
+        }
+
+      public List<Component> ComponentByDescription(String description, List<Model.Component> components)
+      { 
+            if (description.Length >= 3)
+            {
+                List<Model.Component> searchedComponents = new List<Model.Component>();
+                foreach (Model.Component c in components)
+                {
+                    if (c.Description.Contains(description))
+                    {
+                        searchedComponents.Add(c);
+                    }
+                }
+                return searchedComponents;
+            }
+            else
+            {
+                return components;
+            }
+            return null;
       }
       
-      public List<Component> ComponentByDescription(String description)
-      {
-         
-         return null;
-      }
-      
-      public List<Component> ComponentByMedicine()
+      public List<Model.Component> ComponentByMedicine()
       {
          
          return null;

@@ -22,7 +22,7 @@ namespace Pharmacy
     {
 
         UserController userController = new UserController();
-        private object toString;
+      
 
         public MainWindow()
         {

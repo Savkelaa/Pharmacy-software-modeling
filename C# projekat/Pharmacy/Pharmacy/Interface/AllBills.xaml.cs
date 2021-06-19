@@ -19,15 +19,20 @@ namespace Pharmacy.Interface
 {
     public partial class AllBills : Window
     {
+        User u = new User();
+
         BillController billController = new BillController();
-        public AllBills()
+
+
+        public AllBills(User user)
         {
+            u = user;
             InitializeComponent();
+            
 
+          //  ObservableCollection<Bill> bills = new ObservableCollection<Bill>(billController.GetAll());
 
-            ObservableCollection<Bill> bills = new ObservableCollection<Bill>(billController.GetAll());
-
-            this.gridBills.ItemsSource = bills;
+            this.gridBills.ItemsSource = u.Bills;
         }
     }
 }

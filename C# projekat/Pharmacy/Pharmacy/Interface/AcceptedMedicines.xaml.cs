@@ -34,28 +34,28 @@ namespace Pharmacy.Interface
         private void searchId_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAllAccepted();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById(gridAccepted, searchId.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById( searchId.Text, medicines));
             this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchName_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName(gridAccepted, searchName.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName( searchName.Text, medicines));
             this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchManufacturer_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer(gridAccepted, searchManufacturer.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer( searchManufacturer.Text, medicines));
             this.gridAccepted.ItemsSource = searchMedicines;
         }
 
         private void searchQuantity_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity(gridAccepted, searchQuantity.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity( searchQuantity.Text, medicines));
             this.gridAccepted.ItemsSource = searchMedicines;
         }
 
@@ -74,7 +74,7 @@ namespace Pharmacy.Interface
             try
             {
                 List<Medicine> medicines = medicineController.GetAll();
-                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange(gridAccepted, Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text), medicines));
+                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange( Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text), medicines));
                 this.gridAccepted.ItemsSource = searchMedicines;
             }
             catch (Exception ex)

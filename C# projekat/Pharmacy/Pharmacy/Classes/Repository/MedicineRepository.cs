@@ -62,6 +62,13 @@ namespace Repository
             WriteInJson();
         }
 
+        public void UpdateQuantity(String medicineId,int newQuantity)
+        {
+            int index = medicines.FindIndex(obj => obj.Id == medicineId);
+            medicines[index].Quantity = newQuantity;
+            WriteInJson();
+        }
+
         public void Delete(String medicineId)
         {
             int index = medicines.FindIndex(obj => obj.Id == medicineId);

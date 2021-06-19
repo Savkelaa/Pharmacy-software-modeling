@@ -11,51 +11,49 @@ namespace Controller
    public class SearchController
    {
         SearchService searchService = new SearchService();
-        public List<Medicine> MedicineById(DataGrid gridMedicines, String idSearch, List<Medicine> medicines)
+        public List<Medicine> MedicineById(String id, List<Medicine> medicines)
       {
-           return searchService.MedicineById(gridMedicines, idSearch, medicines);
+           return searchService.MedicineById( id, medicines);
       }
       
-      public List<Medicine> MedicineByName(DataGrid gridMedicines, String nameSearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByName(String name, List<Medicine> medicines)
         {
 
-            return searchService.MedicineByName(gridMedicines, nameSearch, medicines);
+            return searchService.MedicineByName(name, medicines);
         }
       
-      public List<Medicine> MedicineByManufacturer(DataGrid gridMedicines, String manufacturerSearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByManufacturer( String manufacturer, List<Medicine> medicines)
       {
 
-            return searchService.MedicineByManufacturer(gridMedicines, manufacturerSearch, medicines);
+            return searchService.MedicineByManufacturer( manufacturer, medicines);
       }
       
-      public List<Medicine> MedicineByPriceRange(DataGrid gridMedicines, int priceFrom, int priceTo, List<Medicine> medicines)
+      public List<Medicine> MedicineByPriceRange( int priceFrom, int priceTo, List<Medicine> medicines)
         {
 
-            return searchService.MedicineByPriceRange(gridMedicines, priceFrom, priceTo, medicines);
+            return searchService.MedicineByPriceRange( priceFrom, priceTo, medicines);
         }
       
-      public List<Medicine> MedicineByQuantity(DataGrid gridMedicines, string quantitySearch, List<Medicine> medicines)
+      public List<Medicine> MedicineByQuantity( string quantity, List<Medicine> medicines)
         {
 
-            return searchService.MedicineByQuantity(gridMedicines, quantitySearch, medicines);
+            return searchService.MedicineByQuantity(quantity, medicines);
         }
       
-      public List<Medicine> MedicineByComponents()
+      public List<Medicine> MedicineByComponents(string componentName, List<Medicine> medicines)
       {
          
-         return null;
+         return searchService.MedicineByComponents(componentName, medicines); ;
       }
       
-      public List<Component> ComponentByName(String name, List<Medicine> medicines)
+      public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
       {
-         
-         return null;
+            return searchService.ComponentByName(name,components);
       }
       
-      public List<Component> ComponentByDescription(String description)
+      public List<Model.Component> ComponentByDescription(String description, List<Model.Component> components)
       {
-         
-         return null;
+            return searchService.ComponentByDescription(description, components);
       }
       
       public List<Component> ComponentByMedicine()

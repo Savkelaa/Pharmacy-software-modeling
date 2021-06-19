@@ -10,14 +10,11 @@ namespace Controller
    public class BillController
    {
         BillService billService = new BillService();
+
         public int GenerateId()
         {
            return billService.GenerateId();
         }
-
-       
-
-
 
         public List<Bill> GetAll()
         {

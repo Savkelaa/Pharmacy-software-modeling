@@ -28,6 +28,13 @@ namespace Controller
          
       }
 
+        public void UpdateQuantity(Medicine m, int selectedQuantity)
+        {
+            medicineService.UpdateQuantity(m, selectedQuantity);
+        }
+
+
+
         public List<Medicine> GetAll()
         {
             return medicineService.GetAll();

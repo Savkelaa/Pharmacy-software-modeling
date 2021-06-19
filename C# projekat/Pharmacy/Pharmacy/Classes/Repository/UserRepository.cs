@@ -43,7 +43,14 @@ namespace Repository
             writeInJson();
         }
 
-//NAPRAVITI FUNKCIJU ZA UNOS DICIONARY JSON -- UPDATE OWNEDMEDICINECOUNT
+
+        public void UpdateOwnedMedicineCounter(Dictionary<String, int> MedicineOwned, String email)
+        {
+            int index = patients.FindIndex(obj => obj.Email == email);
+            patients[index].OwnedMedicineCounter = MedicineOwned ;
+            writeInJson();
+        }
+
 
         public void writeInJson()
         {
@@ -52,8 +59,7 @@ namespace Repository
         }
 
         public void Save(User newPatient)
-      {
-            
+        {            
             patients.Add(newPatient);
             writeInJson();
         }
@@ -63,17 +69,7 @@ namespace Repository
             return patients;
        }
       
-      public List<Medicine> GetNumberOfOwned(int patientId)
-      {
-         
-         return null;
-      }
-      
-      public List<Medicine> GetNumberOfWeekOwned(int patientId)
-      {
-         
-         return null;
-      }
+     
    
       
    

@@ -22,43 +22,43 @@ namespace Pharmacy.Interface
     {
         MedicineController medicineController = new MedicineController();
         SearchController searchController = new SearchController();
-        
+
         public AllMedicines()
         {
             InitializeComponent();
 
 
             ObservableCollection<Medicine> medicines = new ObservableCollection<Medicine>(medicineController.GetAll());
-           
+
             this.gridMedicines.ItemsSource = medicines;
-            
+
         }
 
         private void searchId_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById(gridMedicines, searchId.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineById(searchId.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
         private void searchName_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName(gridMedicines, searchName.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByName(searchName.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
         private void searchManufacturer_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer(gridMedicines, searchManufacturer.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByManufacturer(searchManufacturer.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
         private void searchQuantity_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity(gridMedicines, searchQuantity.Text, medicines));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByQuantity(searchQuantity.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
@@ -68,15 +68,34 @@ namespace Pharmacy.Interface
             try
             {
                 List<Medicine> medicines = medicineController.GetAll();
-                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange(gridMedicines, Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text),medicines));
+                ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByPriceRange(Convert.ToInt32(searchPrice1.Text), Convert.ToInt32(searchPrice2.Text), medicines));
                 this.gridMedicines.ItemsSource = searchMedicines;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error");
+                MessageBox.Show(ex.Message, "Error");
             }
         }
 
-        
+        private void comp1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp1.Text, medicines)));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
+
+        private void comp2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp2.Text, medicines)));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
+
+        private void comp3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            List<Medicine> medicines = medicineController.GetAll();
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp3.Text, medicines)));
+            this.gridMedicines.ItemsSource = searchMedicines;
+        }
     }
 }

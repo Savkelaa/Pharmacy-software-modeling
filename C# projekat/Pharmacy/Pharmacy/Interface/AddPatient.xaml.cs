@@ -47,6 +47,7 @@ namespace Pharmacy.Interface
             {
                 User newPatient = new User(jmbg.Text, email.Text, password.Text, name.Text, surname.Text, phone.Text, userType.Text, new Dictionary<String, int>()); //new Dictionary<String, int>()
                 userController.Save(newPatient);
+                MessageBox.Show("Successfully created new patient!");
             }
            else
             {

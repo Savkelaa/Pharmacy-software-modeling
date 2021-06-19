@@ -52,5 +52,11 @@ namespace Pharmacy.Interface
             var s = new DeleteMedicines();
             s.Show();
         }
+
+        private void Components_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AllComponents();
+            s.Show();
+        }
     }
 }
