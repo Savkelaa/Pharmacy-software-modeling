@@ -11,14 +11,13 @@ namespace Service
 {
    public class SearchService
    {
-        MedicineRepository medicineRepository = new MedicineRepository();
-     
+       
         public List<Medicine> MedicineById(String id, List<Medicine> medicines)
       {     
                 List<Medicine> searchedMedicines = new List<Medicine>();
                 foreach (Medicine m in medicines)
                 {
-                   if((m.Id.Contains(id)))
+                   if(m.Id.Contains(id))
                     {
                         searchedMedicines.Add(m);
                     }
@@ -88,7 +87,7 @@ namespace Service
             List<Medicine> searchedMedicines = new List<Medicine>();
             foreach (Medicine m in medicines)
             {
-                if ((Convert.ToString(m.Quantity).Contains(quantitySearch)))
+                if (Convert.ToString(m.Quantity).Contains(quantitySearch))
                 {
                     searchedMedicines.Add(m);
                 }
@@ -118,7 +117,7 @@ namespace Service
                 return medicines;
             }
 
-            return null;
+           return null;
       }
       
       public List<Model.Component> ComponentByName(String name, List<Model.Component> components)

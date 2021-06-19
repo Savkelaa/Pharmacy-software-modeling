@@ -12,7 +12,7 @@ namespace Repository
    public class UserRepository
    {
         private String path= "patients.json";
-        public List<User> patients = new List<User>();
+        public List<User> users = new List<User>();
 
         public UserRepository()
         {
@@ -21,13 +21,13 @@ namespace Repository
                 string json = r.ReadToEnd();
                 if (json != "")
                 {
-                    patients = JsonConvert.DeserializeObject<List<User>>(json);
+                   users = JsonConvert.DeserializeObject<List<User>>(json);
                 }
             }
         }
         public User getByEmail(String email)
         {
-            foreach (User u in GetAll())
+            foreach (User u in users)
             {
                 if(u.Email==email)
                 {
@@ -37,36 +37,36 @@ namespace Repository
             return null;
         }
 
-        public void SaveBill(List<User> korisnici)
+        public void UpdateBill(List<User> u)
         {
-            patients = korisnici;
+            users = u;
             writeInJson();
         }
 
 
         public void UpdateOwnedMedicineCounter(Dictionary<String, int> MedicineOwned, String email)
         {
-            int index = patients.FindIndex(obj => obj.Email == email);
-            patients[index].OwnedMedicineCounter = MedicineOwned ;
+            int index = users.FindIndex(obj => obj.Email == email);
+            users[index].OwnedMedicineCounter = MedicineOwned ;
             writeInJson();
         }
 
 
         public void writeInJson()
         {
-            String json = JsonConvert.SerializeObject(patients, Formatting.Indented);
+            String json = JsonConvert.SerializeObject(users, Formatting.Indented);
             File.WriteAllText(path, json);
         }
 
         public void Save(User newPatient)
         {            
-            patients.Add(newPatient);
+            users.Add(newPatient);
             writeInJson();
         }
       
       public List<User> GetAll()
       {
-            return patients;
+            return users;
        }
       
      

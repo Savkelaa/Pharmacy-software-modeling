@@ -14,27 +14,20 @@ namespace Service
       MedicineRepository medicineRepository = new MedicineRepository();
       RejectedMedicineRepository rejectedMedicineRepository = new RejectedMedicineRepository();
 
-        public void UpdateAccepted(Medicine medicine)
+        public void UpdateAccept(Medicine medicine)
         {
-            medicineRepository.UpdateAccepted(medicine);  
+            medicineRepository.UpdateAccept(medicine);  
         }
 
-        public void UpdateDeleted(String medicineId)
-        {
-          
-             medicineRepository.UpdateDeleted(medicineId);
-           
-           
-         }
-
-            public void Reject(int medicineId)
-        {
-         
+        public void UpdateDelete(String medicineId)
+        {     
+             medicineRepository.UpdateDelete(medicineId);
         }
 
-        public void UpdateQuantity(Medicine m, int selectedQuantity)
+
+        public void UpdateQuantity(Medicine m, int quantity)
         { 
-            medicineRepository.UpdateQuantity(m.Id, m.Quantity - selectedQuantity);
+            medicineRepository.UpdateQuantity(m.Id, m.Quantity - quantity);
         }
 
         public List<Medicine> GetAllProducts()

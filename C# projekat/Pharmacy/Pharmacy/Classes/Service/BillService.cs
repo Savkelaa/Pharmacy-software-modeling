@@ -9,8 +9,8 @@ namespace Service
 {
    public class BillService
    {
-        BillRepository billRepository = new BillRepository();
-        UserRepository userRepository = new UserRepository();
+        BillRepository billRepository = new BillRepository();   
+        UserService userService = new UserService();
 
       public int GenerateId()
         {
@@ -45,21 +45,9 @@ namespace Service
 
             Bill bill = new Bill(GenerateId(), "Pedja", DateTime.Now, medicineAndQuantity, totalPrice);
             billRepository.Save(bill);
-            SaveBill(u,bill);
+            userService.UpdateBill(u,bill);
         }
 
-        public void SaveBill(User patient, Bill bill)
-        {
-
-            List<User> korisnici = userRepository.GetAll();
-            foreach (User u in korisnici)
-            {
-                if (u.Email == patient.Email)
-                {
-                    u.Bills.Add(bill);   
-                }
-            }
-            userRepository.SaveBill(korisnici);
-        }
+       
     }
 }

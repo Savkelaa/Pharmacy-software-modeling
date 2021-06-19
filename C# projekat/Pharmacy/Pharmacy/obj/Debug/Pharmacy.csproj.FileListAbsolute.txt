@@ -99,7 +99,6 @@ C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\bin\Debug
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\bin\Debug\Pharmacy.pdb
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csprojAssemblyReference.cache
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AcceptedMedicines.g.cs
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AddMedicine.g.cs
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\AddPatient.g.cs
@@ -144,3 +143,4 @@ C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.pdb
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\SelectValue.g.cs
 C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Interface\SelectValue.baml
+C:\Users\Nikola\Desktop\Apoteka git\sims\C# projekat\Pharmacy\Pharmacy\obj\Debug\Pharmacy.csproj.AssemblyReference.cache

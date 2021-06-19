@@ -42,7 +42,7 @@ namespace Pharmacy.Interface
             try
             {
                 Medicine selectedItem = (Medicine)gridRequests.SelectedItems[0];
-                medicineController.UpdateAccepted(selectedItem);
+                medicineController.UpdateAccept(selectedItem);
                 this.gridRequests.ItemsSource = medicineController.GetAllRequests();
                 MessageBox.Show("The medicine has been successfully confirmed", "Accepted");
             }

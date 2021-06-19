@@ -15,19 +15,6 @@ namespace Service
       {
             return componentRepository.GetAll();
       }
-
-       
-
-        public void Save(Model.Component newComponent)
-      {
-         
-      }
-      
-      public void Delete(String componentName)
-      {
-         
-      }
-   
    
    }
 }

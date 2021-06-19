@@ -143,7 +143,6 @@
     <Compile Include="Classes\Repository\BillRepository.cs" />
     <Compile Include="Classes\Repository\ComponentRepository.cs" />
     <Compile Include="Classes\Repository\MedicineRepository.cs" />
-    <Compile Include="Classes\Repository\SearchRepository.cs" />
     <Compile Include="Classes\Repository\UserRepository.cs" />
     <Compile Include="Classes\Service\BillService.cs" />
     <Compile Include="Classes\Service\ComponentService.cs" />

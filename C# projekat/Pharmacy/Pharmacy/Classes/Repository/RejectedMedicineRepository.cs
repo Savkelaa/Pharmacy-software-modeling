@@ -40,20 +40,8 @@ namespace Repository
             WriteInJson();
 
         }
-        //public void Update(Medicine medicine)
-        //{
-        //    int index = medicines.FindIndex(obj => obj.Id == medicine.Id);
-        //    medicines[index].Accepted = true;
-        //    WriteInJson();
+   
 
-        //}
-
-        public void Delete(String medicineId)
-        {
-            int index = rejectedMedicines.FindIndex(obj => obj.Id == medicineId);
-            rejectedMedicines.RemoveAt(index);
-            WriteInJson();
-        }
 
 
 

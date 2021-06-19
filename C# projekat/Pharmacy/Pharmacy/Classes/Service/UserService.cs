@@ -102,8 +102,21 @@ namespace Service
             }
         }
 
+        public void UpdateBill(User u, Bill bill)
+        {
+            List<User> users = userRepository.GetAll();
+            foreach (User user in users)
+            {
+                if (user.Email == u.Email)
+                {
+                   user.Bills.Add(bill);
+                }
+            }
+            userRepository.UpdateBill(users);
+        }
 
-      public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
+
+        public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
       {
             User user = new User();
             user = userRepository.getByEmail(email);

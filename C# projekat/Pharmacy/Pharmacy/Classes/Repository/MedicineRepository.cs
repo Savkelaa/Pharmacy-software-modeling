@@ -47,14 +47,14 @@ namespace Repository
             WriteInJson();
          
       }
-        public void UpdateAccepted(Medicine medicine)
+        public void UpdateAccept(Medicine medicine)
         {
             int index = medicines.FindIndex(obj => obj.Id == medicine.Id);
             medicines[index].Accepted = true;
             WriteInJson();
         }
 
-        public void UpdateDeleted(String medicineId)
+        public void UpdateDelete(String medicineId)
         {
             int index = medicines.FindIndex(obj => obj.Id==medicineId);
             medicines[index].Deleted = true;
@@ -62,10 +62,10 @@ namespace Repository
             WriteInJson();
         }
 
-        public void UpdateQuantity(String medicineId,int newQuantity)
+        public void UpdateQuantity(String medicineId,int quantity)
         {
             int index = medicines.FindIndex(obj => obj.Id == medicineId);
-            medicines[index].Quantity = newQuantity;
+            medicines[index].Quantity = quantity;
             WriteInJson();
         }
 

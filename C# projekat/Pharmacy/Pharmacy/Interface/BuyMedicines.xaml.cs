@@ -92,13 +92,14 @@ namespace Pharmacy.Interface
 
          
 
-            if ((userController.CheckOwnedWeek(u.Email))  && (userController.CheckOwnedOne(u.Email, dictCart)))
+            if (userController.CheckOwnedWeek(u.Email)  && userController.CheckOwnedOne(u.Email, dictCart))
             {
                 billController.Buy(cartMedicines, u);
                 foreach (Medicine m in cartMedicines)
                 {
                     medicineController.UpdateQuantity(m, m.Quantity);
                 }
+                userController.updateOwnedMedicineCounter(u.Email);
                 MessageBox.Show("You have successfully purchased the medication.", "Successful");
                 this.Close();
             }

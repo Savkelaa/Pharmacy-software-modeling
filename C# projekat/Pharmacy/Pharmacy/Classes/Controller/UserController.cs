@@ -50,7 +50,7 @@ namespace Controller
         }
 
        
-        public void updateOwnedMedicine(String email)
+        public void updateOwnedMedicineCounter(String email)
         {
              userService.updateOwnedMedicineCounter(email);
         }

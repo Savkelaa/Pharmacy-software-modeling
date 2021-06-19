@@ -36,7 +36,7 @@ namespace Pharmacy.Interface
             String medicineId = textBox1.Text;
             try
             {
-                medicineController.UpdateDeleted(medicineId);
+                medicineController.UpdateDelete(medicineId);
             }
             catch (Exception ex)
             {

@@ -13,24 +13,20 @@ namespace Controller
 
       MedicineService medicineService = new MedicineService();
 
-      public void UpdateAccepted(Medicine medicine)
+      public void UpdateAccept(Medicine medicine)
       {
-           medicineService.UpdateAccepted(medicine);
+           medicineService.UpdateAccept(medicine);
       }
 
-      public void UpdateDeleted(String medicineId)
+      public void UpdateDelete(String medicineId)
       {
-           medicineService.UpdateDeleted(medicineId);
+           medicineService.UpdateDelete(medicineId);
       }
 
-        public void Reject(int medicineId)
-      {
-         
-      }
-
-        public void UpdateQuantity(Medicine m, int selectedQuantity)
+  
+        public void UpdateQuantity(Medicine m, int quantity)
         {
-            medicineService.UpdateQuantity(m, selectedQuantity);
+            medicineService.UpdateQuantity(m, quantity);
         }
 
 
@@ -81,17 +77,6 @@ namespace Controller
       }
 
         
-
-        public void AddMedicineToCart(int medicineId)
-      {
-         
-      }
-      
-      public List<Medicine> Buy()
-      {
-         
-         return null;
-      }
    
       
    

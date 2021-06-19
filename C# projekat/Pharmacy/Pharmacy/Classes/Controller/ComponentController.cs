@@ -14,17 +14,7 @@ namespace Controller
       {
             return componentService.GetAll();
       }
-      
-      public void Save(Model.Component newComponent)
-      {
-         
-      }
-      
-      public Boolean Delete(String componentName)
-      {
-         
-         return false;
-      }
+     
    
    
    }

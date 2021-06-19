@@ -30,7 +30,7 @@ namespace Pharmacy.Interface
             u = user;
             
             surname.Content = u.Name + " " + u.Surname;
-            userController.updateOwnedMedicine(u.Email);
+            userController.updateOwnedMedicineCounter(u.Email);
 
 
         }
