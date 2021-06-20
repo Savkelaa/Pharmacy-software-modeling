@@ -56,10 +56,10 @@ namespace Controller
             return searchService.ComponentByDescription(description, components);
       }
       
-      public List<Component> ComponentByMedicine()
+      public List<Component> ComponentByMedicine(String medicineName, List<Model.Component> components)
       {
          
-         return null;
+            return searchService.ComponentByMedicine(medicineName,components);
       }
    
       

@@ -20,7 +20,7 @@ namespace Model
 
         public Dictionary<String,int> OwnedMedicineCounter { get; set; }
 
-        public List<Bill> Bills  {get; set;}
+        public List<Bill> Bills {get; set;}
         
         public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type, Dictionary<string, int> ownedMedicineCounter)
         {
@@ -31,7 +31,6 @@ namespace Model
             Surname = surname;
             MobilePhone = mobilePhone;
             Type = type;
-            
             OwnedMedicineCounter = ownedMedicineCounter ;
             Bills = new List<Bill>();
         }

@@ -30,10 +30,15 @@
         <Label Content="Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,80,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="56"/>
         <Label Content="Description:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,24,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="94"/>
         <Label Content="Medicine:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,80,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="78"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="419,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontSize="16"/>
-        <TextBox x:Name="tbName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="419,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" TextChanged="tbName_TextChanged"/>
-        <TextBox x:Name="tbDesc" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="419,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbDesc_TextChanged"/>
-        <TextBox x:Name="tbMedicine" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="419,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbMedicine_TextChanged"/>
+        <TextBox x:Name="tbName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" TextChanged="tbName_TextChanged" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbDesc" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbDesc_TextChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="214,24,-217,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Label Content="1:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,82,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="28"/>
+        <Label Content="2:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,125,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="34" Width="28"/>
+        <Label Content="3:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,164,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="52"/>
+        <TextBox x:Name="tbMedicine1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,88,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine1_TextChanged"/>
+        <TextBox x:Name="tbMedicine2" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,133,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine2_TextChanged"/>
+        <TextBox x:Name="tbMedicine3" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,172,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine3_TextChanged"/>
 
     </Grid>
 </Window>
