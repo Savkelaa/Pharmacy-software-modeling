@@ -17,7 +17,7 @@ namespace Pharmacy.Interface
   
     public partial class DoctorHome : Window
     {
-        Frame wframe;
+        
 
         public DoctorHome()
         {

@@ -14,16 +14,16 @@
         <Label Content="Surname:" HorizontalAlignment="Left" Margin="50,198,0,0" VerticalAlignment="Top" Height="38" FontSize="14"/>
         <Label Content="Phone number:" HorizontalAlignment="Left" Margin="50,238,0,0" VerticalAlignment="Top" FontSize="14"/>
 
-        <TextBox x:Name="jmbg" HorizontalAlignment="Left" Height="24" Margin="172,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" />
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="24" Margin="172,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="password" HorizontalAlignment="Left" Height="22" Margin="172,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="22" Margin="172,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="surname" HorizontalAlignment="Left" Height="24" Margin="172,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="24" Margin="172,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="198,340,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="RegisterPatient" FontSize="16"/>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="83,340,0,0" VerticalAlignment="Top" Width="92" Height="42" Click="Back_Click" FontSize="16"/>
+        <TextBox x:Name="jmbg" HorizontalAlignment="Left" Height="24" Margin="172,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14" />
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="24" Margin="172,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="22" Margin="172,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="22" Margin="172,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14"/>
+        <TextBox x:Name="surname" HorizontalAlignment="Left" Height="24" Margin="172,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="24" Margin="172,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="14"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="249,340,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="RegisterPatient" FontSize="16"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="112,340,0,0" VerticalAlignment="Top" Width="92" Height="42" Click="Back_Click" FontSize="16"/>
         <Label Content="User type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,278,0,0" FontSize="14"/>
-        <TextBox x:Name="userType"  HorizontalAlignment="Left" Height="24" Margin="172,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="patient" IsEnabled="False" FontSize="14" />
+        <TextBox x:Name="userType"  HorizontalAlignment="Left" Height="24" Margin="172,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Text="patient" IsEnabled="False" FontSize="14" />
 
     </Grid>
 </Window>

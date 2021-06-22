@@ -48,23 +48,30 @@ namespace Pharmacy.Interface
             {
                 int id = Int32.Parse(o.ToString().Substring(0, 1));
                 string name= o.ToString().Substring(2, o.ToString().Length - 2);
-               
-                dictComponents.Add( id ,name);
+                try
+                {
+                    dictComponents.Add(id, name);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
 
 
             try
             {
-
                 Medicine medicineRequest = new Medicine(Id.Text, Name.Text, Manufacturer.Text, Convert.ToSingle(Price.Text), Convert.ToInt32(Quantity.Text), false, false,dictComponents);
                 medicineController.Save(medicineRequest);
+                MessageBox.Show("You have successfully sent the request", "Successful");
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             
-           // MessageBox.Show("You have successfully sent the request", "Successful");
+             
         }
     }
 }

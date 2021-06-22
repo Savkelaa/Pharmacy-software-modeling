@@ -8,7 +8,7 @@ namespace Model
 {
    public class Medicine
    {
-      public String Id { get; set; }
+        public String Id { get; set; }
         public String Name { get; set; }
         public String Manufacturer { get; set; }
         public float Price { get; set; }

@@ -43,7 +43,7 @@ namespace Pharmacy.Interface
         {
               List<Model.Component> components = componentController.GetAll();
               ObservableCollection<Model.Component> searchComponents = new ObservableCollection<Model.Component>(searchController.ComponentByDescription(tbDesc.Text, components));
-              
+            this.gridComponent.ItemsSource = searchComponents;
         }
 
         

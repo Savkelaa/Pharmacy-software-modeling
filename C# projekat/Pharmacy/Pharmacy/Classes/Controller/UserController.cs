@@ -19,10 +19,10 @@ namespace Controller
             return userService.GetAll();
         }
 
-        public User Registration(String email, String password)
+        public User Registration(String jmbg, String password)
         {
 
-            return userService.Registration(email, password);
+            return userService.Registration(jmbg, password);
         }
 
         public Boolean IsJmbgValid(String jmbg)

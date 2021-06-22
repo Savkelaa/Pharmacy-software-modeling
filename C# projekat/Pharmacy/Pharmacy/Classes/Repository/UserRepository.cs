@@ -1,5 +1,5 @@
 using System;
-using System;
+
 using System.Collections.Generic;
 using System.IO;
 using Model;
@@ -11,7 +11,7 @@ namespace Repository
 {
    public class UserRepository
    {
-        private String path= "patients.json";
+        private String path= "users.json";
         public List<User> users = new List<User>();
 
         public UserRepository()

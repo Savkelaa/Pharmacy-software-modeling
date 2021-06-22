@@ -1,15 +1,5 @@
 [
   {
-    "Id": "4",
-    "Name": "Magnezijum",
-    "Manufacturer": "Farmakomafija",
-    "Price": 500.0,
-    "Quantity": 10,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": true
-  },
-  {
     "Id": "8",
     "Name": "Hidrogen",
     "Manufacturer": "Farmakomafija",
@@ -40,245 +30,70 @@
     "Deleted": true
   },
   {
-    "Id": "14",
-    "Name": "Hidrogen",
+    "Id": "3",
+    "Name": "Humulin",
     "Manufacturer": "Farmakomafija",
-    "Price": 500.0,
-    "Quantity": 0,
-    "Components": {},
+    "Price": 350.0,
+    "Quantity": 24,
+    "Components": {
+      "3": "Cina",
+      "9": "Ferrum phosphoricum",
+      "1": "Okoubaka"
+    },
     "Accepted": true,
     "Deleted": false
   },
   {
-    "Id": "15",
-    "Name": "Masina",
-    "Manufacturer": "Dureks",
-    "Price": 241.0,
-    "Quantity": 12,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": true
-  },
-  {
-    "Id": "20",
-    "Name": "Insulin",
+    "Id": "25",
+    "Name": "Varfarin",
     "Manufacturer": "Farmakomafija",
-    "Price": 250.0,
-    "Quantity": 20,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "2323",
-    "Name": "dsfds",
-    "Manufacturer": "dsfsds",
-    "Price": 423.0,
-    "Quantity": 20,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "123",
-    "Name": "dsgsdg",
-    "Manufacturer": "sdgsdg",
-    "Price": 423.0,
-    "Quantity": 20,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "1312",
-    "Name": "eqwe",
-    "Manufacturer": "asda",
-    "Price": 321.0,
-    "Quantity": 20,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "34",
-    "Name": "dasdasd",
-    "Manufacturer": "asdsad",
-    "Price": 42.0,
-    "Quantity": 20,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "232",
-    "Name": "gsfs",
-    "Manufacturer": "dsff",
-    "Price": 100.0,
-    "Quantity": 0,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "242",
-    "Name": "werwetw",
-    "Manufacturer": "tsgsd",
-    "Price": 34.0,
-    "Quantity": 0,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "12412",
-    "Name": "wqedasd",
-    "Manufacturer": "qweda",
-    "Price": 243.0,
-    "Quantity": 0,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "412",
-    "Name": "asas",
-    "Manufacturer": "Faks",
-    "Price": 431.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": true,
-    "Deleted": false
-  },
-  {
-    "Id": "142",
-    "Name": "qfas",
-    "Manufacturer": "asdfafs",
     "Price": 23.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "142",
-    "Name": "qfas",
-    "Manufacturer": "asdfafs",
-    "Price": 23.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "32",
-    "Name": "asd",
-    "Manufacturer": "asfa",
-    "Price": 3.0,
-    "Quantity": 3,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "32",
-    "Name": "asd",
-    "Manufacturer": "asfa",
-    "Price": 3.0,
-    "Quantity": 3,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "241",
-    "Name": "asf",
-    "Manufacturer": "sf",
-    "Price": 2.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "241",
-    "Name": "asf",
-    "Manufacturer": "sf",
-    "Price": 2.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "241",
-    "Name": "asf",
-    "Manufacturer": "sf",
-    "Price": 2.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "412",
-    "Name": "qsdfa",
-    "Manufacturer": "sffds",
-    "Price": 23.0,
-    "Quantity": 2,
-    "Components": {},
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "24",
-    "Name": "Farba",
-    "Manufacturer": "Februar",
-    "Price": 32.0,
-    "Quantity": 2,
+    "Quantity": 15,
     "Components": {
-      "1": "1 Cin",
-      "2": "2 H2"
+      "9": "Ferrum phosphoricum",
+      "1": "Valerijana",
+      "8": "Croton tiglium"
     },
-    "Accepted": false,
+    "Accepted": true,
     "Deleted": false
   },
   {
-    "Id": "412",
-    "Name": "sdgsd",
-    "Manufacturer": "fdaf",
-    "Price": 241.0,
-    "Quantity": 2,
+    "Id": "1",
+    "Name": "Febricet",
+    "Manufacturer": "Farmakomafija",
+    "Price": 200.0,
+    "Quantity": 10,
     "Components": {
-      "1": "1 Cin",
-      "2": "2 H2"
+      "8": "Croton tiglium",
+      "3": "Cina"
     },
-    "Accepted": false,
+    "Accepted": true,
     "Deleted": false
   },
   {
-    "Id": "4215",
-    "Name": "asfa",
-    "Manufacturer": "asfaa",
-    "Price": 52.0,
-    "Quantity": 2,
+    "Id": "2",
+    "Name": "Kiselina",
+    "Manufacturer": "Farmakomafija",
+    "Price": 200.0,
+    "Quantity": 10,
     "Components": {
-      "1": "ink",
-      "2": "20"
-    },
-    "Accepted": false,
-    "Deleted": false
-  },
-  {
-    "Id": "2421",
-    "Name": "afsasf",
-    "Manufacturer": "asfasf",
-    "Price": 245.0,
-    "Quantity": 2,
-    "Components": {
-      "1": "Cink",
+      "8": "Croton tiglium",
       "2": "H20"
     },
-    "Accepted": false,
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "4",
+    "Name": "Bosentan",
+    "Manufacturer": "Farmakomafija",
+    "Price": 256.0,
+    "Quantity": 13,
+    "Components": {
+      "8": "Croton tiglium",
+      "7": "Cypripedium pubescens"
+    },
+    "Accepted": true,
     "Deleted": false
   }
 ]

@@ -18,21 +18,25 @@
             <ColumnDefinition Width="323*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="gridRequests"     Grid.Column="1" Grid.Row="1">
-            <!--AutoGenerateColumns="False" SelectionMode="Single"-->
-            <!--<DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" />
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
-                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
-                <DataGridTextColumn Header="Accepted" Binding="{Binding Accepted}" />
-                <DataGridTextColumn Header="Deleted" Binding="{Binding Deleted}" />
+        <DataGrid x:Name="gridRequests" SelectionMode="Single" AutoGenerateColumns="False" Grid.ColumnSpan="3" Margin="39,65,259,38" Grid.RowSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="20*"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="50*"/>
+                <DataGridTextColumn Header="Manufacturer" Binding="{Binding Manufacturer}" Width="70*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="50*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="50*"/>
+                <DataGridTemplateColumn Header="Components" Width="70*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding Components}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
 
-            </DataGrid.Columns>-->
+            </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Accept" Grid.Column="2" HorizontalAlignment="Left" Margin="99,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Accept_Click" FontSize="16"/>
-        <Button Content="Reject" Grid.Column="2" HorizontalAlignment="Left" Margin="99,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Reject_Click" FontSize="16"/>
+        <Button Content="Accept" Grid.Column="2" HorizontalAlignment="Left" Margin="121,66,0,0" VerticalAlignment="Top" Width="130" Height="60" Click="Accept_Click" FontSize="16" Grid.RowSpan="2"/>
+        <Button Content="Reject" Grid.Column="2" HorizontalAlignment="Left" Margin="121,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Height="60" Click="Reject_Click" FontSize="16"/>
     </Grid>
 
 </Window>

@@ -117,7 +117,7 @@ namespace Service
                 return medicines;
             }
 
-           return null;
+          
       }
       
       public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
@@ -140,7 +140,7 @@ namespace Service
                   return components;
             }
 
-            return null;
+            
         }
 
       public List<Component> ComponentByDescription(String description, List<Model.Component> components)
@@ -161,7 +161,7 @@ namespace Service
             {
                 return components;
             }
-            return null;
+         
       }
       
       public List<Model.Component> ComponentByMedicine(String medicineName, List<Model.Component> components)
@@ -193,7 +193,7 @@ namespace Service
                 return components;
             }
            
-            return null;
+           
       }
    
      

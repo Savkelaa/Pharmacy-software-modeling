@@ -11,9 +11,9 @@
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="165*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="LogInEmail" HorizontalAlignment="Left" Height="23" Margin="95.671,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="LogInJmbg" HorizontalAlignment="Left" Height="23" Margin="95.671,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="LogInPassw" HorizontalAlignment="Left" Height="23" Margin="95.671,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Label Content="Email" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19.671,74,0,0" Grid.Column="1"/>
+        <Label Content="JMBG" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19.671,74,0,0" Grid.Column="1"/>
         <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19.671,114,0,0" Grid.Column="1"/>
         <Button Content="Log in" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="130.671,169,0,0" Height="35" Click="LogIn" Grid.Column="1" />
 

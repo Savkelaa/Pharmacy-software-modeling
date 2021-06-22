@@ -18,27 +18,27 @@
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridComponent"   SelectionMode="Single"  AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="36,59,266,35" Grid.RowSpan="3"  >
+        <DataGrid x:Name="gridComponent"   SelectionMode="Single"  AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="10,59,187,35" Grid.RowSpan="3"  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="20*" />
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="40*" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="45*" />
                 <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="200*" />
 
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Search by:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,16,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="82"/>
-        <Label Content="Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,80,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="56"/>
-        <Label Content="Description:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,24,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="94"/>
-        <Label Content="Medicine:" Grid.Column="1" HorizontalAlignment="Left" Margin="318,80,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="78"/>
-        <TextBox x:Name="tbName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" TextChanged="tbName_TextChanged" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbDesc" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbDesc_TextChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Search by:" Grid.Column="1" HorizontalAlignment="Left" Margin="383,23,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="82"/>
+        <Label Content="Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="389,84,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="56" Grid.RowSpan="2"/>
+        <Label Content="Description:" Grid.Column="1" HorizontalAlignment="Left" Margin="389,28,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="94"/>
+        <Label Content="Medicine:" Grid.Column="1" HorizontalAlignment="Left" Margin="389,84,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="78"/>
+        <TextBox x:Name="tbName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="524,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" TextChanged="tbName_TextChanged" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbDesc" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="524,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbDesc_TextChanged" Grid.ColumnSpan="2"/>
         <Label Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="214,24,-217,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-        <Label Content="1:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,82,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="28"/>
-        <Label Content="2:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,125,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="34" Width="28"/>
-        <Label Content="3:" Grid.Column="1" HorizontalAlignment="Left" Margin="425,164,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="52"/>
-        <TextBox x:Name="tbMedicine1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,88,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine1_TextChanged"/>
-        <TextBox x:Name="tbMedicine2" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,133,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine2_TextChanged"/>
-        <TextBox x:Name="tbMedicine3" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="453,172,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine3_TextChanged"/>
+        <Label Content="1:" Grid.Column="1" HorizontalAlignment="Left" Margin="496,86,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="28"/>
+        <Label Content="2:" Grid.Column="1" HorizontalAlignment="Left" Margin="496,129,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="34" Width="28"/>
+        <Label Content="3:" Grid.Column="1" HorizontalAlignment="Left" Margin="496,168,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="31" Width="52"/>
+        <TextBox x:Name="tbMedicine1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="524,92,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine1_TextChanged"/>
+        <TextBox x:Name="tbMedicine2" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="524,137,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine2_TextChanged"/>
+        <TextBox x:Name="tbMedicine3" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="524,176,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine3_TextChanged"/>
 
     </Grid>
 </Window>

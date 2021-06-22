@@ -22,7 +22,7 @@ namespace Pharmacy
     {
 
         UserController userController = new UserController();
-      
+        public int exitCounter = 0;
 
         public MainWindow()
         {
@@ -31,11 +31,13 @@ namespace Pharmacy
 
         private void LogIn(object sender, RoutedEventArgs e)
         {
-            String email = LogInEmail.Text;
+            String jmbg =LogInJmbg.Text;
             String password = LogInPassw.Text;
 
+           
+
             User user = new User();
-            user =  userController.Registration(email, password);
+            user =  userController.Registration(jmbg, password);
 
 
             if (user != null)
@@ -51,15 +53,20 @@ namespace Pharmacy
                     s.Show();
                 }
                 else if (user.Type == "patient")
-                {
-                    
+                {                 
                     var s = new Interface.PatientHome(user);
                     s.Show();
                 }
             }
             else
             {
-                MessageBox.Show("Wrong password or email!", "Error");
+                exitCounter++;
+                if (exitCounter == 3)
+                {
+                    this.Close();
+                }
+                MessageBox.Show("Wrong password or jmbg!", "Error");
+               
             }
             
 
