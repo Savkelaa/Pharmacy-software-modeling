@@ -48,7 +48,7 @@
     "Name": "Varfarin",
     "Manufacturer": "Farmakomafija",
     "Price": 23.0,
-    "Quantity": 102,
+    "Quantity": 100,
     "Components": {
       "9": "Ferrum phosphoricum",
       "1": "Valerijana",
@@ -88,7 +88,7 @@
     "Name": "Bosentan",
     "Manufacturer": "Farmakomafija",
     "Price": 256.0,
-    "Quantity": 13,
+    "Quantity": 10,
     "Components": {
       "8": "Croton tiglium",
       "7": "Cypripedium pubescens"
@@ -105,6 +105,19 @@
     "Components": {
       "2": "H20",
       "1": " Valerijana"
+    },
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "343",
+    "Name": "Alkohol",
+    "Manufacturer": "Krasenkovic",
+    "Price": 200.0,
+    "Quantity": 18,
+    "Components": {
+      "2": "H20",
+      "4": "Calcium"
     },
     "Accepted": true,
     "Deleted": false

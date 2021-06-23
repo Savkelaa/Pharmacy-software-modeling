@@ -31,7 +31,7 @@
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
         <Button Content="Patients" Grid.Row="1" Grid.Column="1"  Click="Patients_Click" FontSize="16"  />
-        <Button Content="Medicines" Grid.Row="3" Grid.Column="1"  Click="Medicines_Click" FontSize="16"  />
+        <Button Content="Products" Grid.Row="3" Grid.Column="1"  Click="Medicines_Click" FontSize="16"  />
         <Button Content="Add Patient" Grid.Row="1" Grid.Column="3" Click="Add_Patient_Click" FontSize="16" />
         <Button Content="Medicines requests" Grid.Row="3" Grid.Column="3" Click="MedicinesRequests_Click" FontSize="16" />
         <Button Content="Components" Grid.Row="5" Grid.Column="1" Click="AllComponents_Click" FontSize="16" />

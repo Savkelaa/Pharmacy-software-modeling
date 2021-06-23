@@ -1357,5 +1357,24 @@
       "Febricet": 4
     },
     "TotalPrice": 800.0
+  },
+  {
+    "Id": 151,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T21:58:06.714188+02:00",
+    "MedicineAndQuantity": {
+      "Varfarin": 2
+    },
+    "TotalPrice": 46.0
+  },
+  {
+    "Id": 152,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T21:58:21.6212693+02:00",
+    "MedicineAndQuantity": {
+      "Bosentan": 3,
+      "Alkohol": 2
+    },
+    "TotalPrice": 1168.0
   }
 ]
