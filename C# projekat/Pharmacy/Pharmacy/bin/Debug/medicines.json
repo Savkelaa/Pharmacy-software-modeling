@@ -14,7 +14,7 @@
     "Name": "Omeprol",
     "Manufacturer": "Farmakomafija",
     "Price": 500.0,
-    "Quantity": 0,
+    "Quantity": 125,
     "Components": {},
     "Accepted": true,
     "Deleted": false
@@ -34,7 +34,7 @@
     "Name": "Humulin",
     "Manufacturer": "Farmakomafija",
     "Price": 350.0,
-    "Quantity": 24,
+    "Quantity": 94,
     "Components": {
       "3": "Cina",
       "9": "Ferrum phosphoricum",
@@ -48,7 +48,7 @@
     "Name": "Varfarin",
     "Manufacturer": "Farmakomafija",
     "Price": 23.0,
-    "Quantity": 15,
+    "Quantity": 114,
     "Components": {
       "9": "Ferrum phosphoricum",
       "1": "Valerijana",
@@ -62,7 +62,7 @@
     "Name": "Febricet",
     "Manufacturer": "Farmakomafija",
     "Price": 200.0,
-    "Quantity": 10,
+    "Quantity": 0,
     "Components": {
       "8": "Croton tiglium",
       "3": "Cina"
@@ -75,7 +75,7 @@
     "Name": "Kiselina",
     "Manufacturer": "Farmakomafija",
     "Price": 200.0,
-    "Quantity": 10,
+    "Quantity": 0,
     "Components": {
       "8": "Croton tiglium",
       "2": "H20"
@@ -88,7 +88,7 @@
     "Name": "Bosentan",
     "Manufacturer": "Farmakomafija",
     "Price": 256.0,
-    "Quantity": 13,
+    "Quantity": 0,
     "Components": {
       "8": "Croton tiglium",
       "7": "Cypripedium pubescens"

@@ -22,7 +22,7 @@ namespace Model
 
         public List<Bill> Bills {get; set;}
         
-        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type, Dictionary<string, int> ownedMedicineCounter)
+        public User(string jmbg, string email, string password, string name, string surname, string mobilePhone, string type, Dictionary<string, int> ownedMedicineCounter, List<Bill> bills )
         {
             Jmbg = jmbg;
             Email = email;
@@ -32,7 +32,7 @@ namespace Model
             MobilePhone = mobilePhone;
             Type = type;
             OwnedMedicineCounter = ownedMedicineCounter ;
-            Bills = new List<Bill>();
+            Bills = bills;
         }
 
 

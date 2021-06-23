@@ -11,6 +11,8 @@ namespace Service
    {
         BillRepository billRepository = new BillRepository();   
         UserService userService = new UserService();
+        UserRepository userRepository = new UserRepository();
+     
 
       public int GenerateId()
         {
@@ -44,10 +46,14 @@ namespace Service
             }
 
             Bill bill = new Bill(GenerateId(), "Pedja", DateTime.Now, medicineAndQuantity, totalPrice);
+            
             billRepository.Save(bill);
             userService.UpdateBill(u,bill);
+            userService.updateOwnedMedicineCounter(u.Email);
         }
 
        
+
+
     }
 }

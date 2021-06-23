@@ -37,9 +37,9 @@ namespace Controller
             return userService.IsEmailValid(email);
         }
 
-        public Boolean CheckOwnedWeek(String email)
+        public Boolean CheckOwnedWeek(String email, int cartQuantity)
         {
-            return userService.CheckOwnedWeek(email);
+            return userService.CheckOwnedWeek(email, cartQuantity);
         }
 
         public Boolean CheckOwnedOne(String email,Dictionary <String,int> dictCart)

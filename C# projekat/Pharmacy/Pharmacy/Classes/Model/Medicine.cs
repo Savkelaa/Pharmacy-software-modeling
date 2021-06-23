@@ -19,7 +19,10 @@ namespace Model
         public Dictionary<int, String> Components { get; set; }
         public bool Accepted { get; set; }
         public bool Deleted { get; set; }
+        public Medicine()
+        {
 
+        }
 
         public Medicine(string id, string name, string manufacturer, float price, int quantity,  bool accepted, bool deleted, Dictionary<int,String> components)
         {

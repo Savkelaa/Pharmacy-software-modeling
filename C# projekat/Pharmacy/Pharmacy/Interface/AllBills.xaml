@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="AllBills" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="gridBills" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="596" Margin="97,70,0,0"/>
-
+        <DataGrid x:Name="gridBills"  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="596" Margin="97,70,0,0">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Binding="{Binding Id}"  Width="20*"/>
+           
+            <DataGridTextColumn Header="Date and time" Binding="{Binding DateTime}" Width="72*"/>
+            <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice}" Width="35*"/>
+            
+            </DataGrid.Columns>
+             </DataGrid>
     </Grid>
 </Window>

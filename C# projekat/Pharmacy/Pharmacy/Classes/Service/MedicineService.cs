@@ -26,8 +26,14 @@ namespace Service
 
 
         public void UpdateQuantity(Medicine m, int quantity)
-        { 
-            medicineRepository.UpdateQuantity(m.Id, m.Quantity - quantity);
+        {
+            Medicine medicine = medicineRepository.getById(m.Id);
+
+
+            int newQuantity = medicine.Quantity - quantity;
+
+
+            medicineRepository.UpdateQuantity(m.Id, newQuantity);
         }
 
         public List<Medicine> GetAllProducts()

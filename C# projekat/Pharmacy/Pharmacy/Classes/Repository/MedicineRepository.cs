@@ -40,8 +40,20 @@ namespace Repository
       {
          return medicines;
       }
-      
-      public void Save(Medicine newRequest)
+
+        public Medicine getById(String id)
+        {
+            foreach (Medicine m in medicines)
+            {
+                if (m.Id == id)
+                {
+                    return m;
+                }
+            }
+            return null;
+        }
+
+        public void Save(Medicine newRequest)
       {
             medicines.Add(newRequest);
             WriteInJson();

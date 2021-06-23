@@ -38,7 +38,6 @@ namespace Repository
         {
             rejectedMedicines.Add(newMedicine);
             WriteInJson();
-
         }
    
 

@@ -76,18 +76,20 @@ namespace Service
 
         }
 
-        public Boolean CheckOwnedWeek(String email)
+        public Boolean CheckOwnedWeek(String email, int cartQuantity)
         {
             User user = new User();
             user = userRepository.getByEmail(email);
             int count = 0;
             DateTime sevenDays = DateTime.Today.AddDays(-7);
 
-            foreach (Bill b in user.Bills)
+            foreach (KeyValuePair<string, int> dictCounter in user.OwnedMedicineCounter)
             {
-                if (b.DateTime > sevenDays)
-                    count += b.MedicineAndQuantity.Count;
+                count += dictCounter.Value;
             }
+
+            count = count + cartQuantity;
+            
 
             if (count > 50)
             {
@@ -99,18 +101,7 @@ namespace Service
             }
         }
 
-        public void UpdateBill(User u, Bill bill)
-        {
-            List<User> users = userRepository.GetAll();
-            foreach (User user in users)
-            {
-                if (user.Email == u.Email)
-                {
-                    user.Bills.Add(bill);
-                }
-            }
-            userRepository.UpdateBill(users);
-        }
+        
 
 
         public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
@@ -122,30 +113,40 @@ namespace Service
             {
                 foreach (KeyValuePair<String, int> countCart in dictCart)
                 {
-                    if (countExisting.Key == countCart.Key)
-                    {
-                        user.OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
-                    }
+                   if (countExisting.Key == countCart.Key)
+                  {
+                       user.OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
+                  }
                     updateOwnedMedicineCounter(email);
                 }
             }
 
             foreach (KeyValuePair<String, int> countExisting in user.OwnedMedicineCounter)
             {
-                if (countExisting.Value > 5)
+                if (user.OwnedMedicineCounter[countExisting.Key] >5 ) 
                 {
                     return false;
-                }
-                else
-                {
-                    return true;
-                }
+                }    
             }
 
             return true;
         }
 
+        public void UpdateBill(User userrrr, Bill bill)
+        {
+            List<User> users = new List<User>(userRepository.GetAll());
+            foreach (User user in users)
+            {
+                if (user.Email == userrrr.Email)
+                {
+                    user.Bills.Add(bill);
+                    userrrr.Bills.Add(bill);
+                    userRepository.UpdateBill(users);
+                }
+            }
 
+            userRepository.UpdateBill(users);
+        }
 
         public void updateOwnedMedicineCounter(String email)
         {

@@ -59,8 +59,8 @@ namespace Pharmacy.Interface
                 if(s.isBought)
                 {
                     Medicine medicine = (Medicine)gridAccepted.SelectedItem;
-                    medicine.Quantity = s.quantity; 
-                    cart.Items.Add(medicine);
+                    Medicine newM = new Medicine(medicine.Id, medicine.Name, medicine.Manufacturer, medicine.Price, s.quantity, medicine.Accepted, medicine.Deleted, medicine.Components);
+                    cart.Items.Add(newM);
                 }
                
                 
@@ -85,32 +85,32 @@ namespace Pharmacy.Interface
            
             Dictionary<String, int> dictCart = new Dictionary<String, int>();
 
+            int cartQuantity = 0;
+
             foreach (Medicine m in cartMedicines)
             {
-                dictCart.Add(m.Name, m.Quantity);     
+                dictCart.Add(m.Name, m.Quantity);
+                cartQuantity += m.Quantity;
             }
 
-         
 
-            if (userController.CheckOwnedWeek(u.Email)  && userController.CheckOwnedOne(u.Email, dictCart))
+            if (userController.CheckOwnedWeek(u.Email, cartQuantity) == true && userController.CheckOwnedOne(u.Email, dictCart) == true)  
             {
                 billController.Buy(cartMedicines, u);
+
                 foreach (Medicine m in cartMedicines)
                 {
-                    medicineController.UpdateQuantity(m, m.Quantity);
+                    medicineController.UpdateQuantity(m,m.Quantity);
                 }
-                userController.updateOwnedMedicineCounter(u.Email);
+              
                 MessageBox.Show("You have successfully purchased the medication.", "Successful");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("You cannot buy more than 50 medications a week, or more than 5 of the same medicine.");
+                MessageBox.Show("You cannot buy more than 50 medicines in one week or more than 5 of the same medicine.");
             }
-
-
-
-
+ 
            
         }
     }
