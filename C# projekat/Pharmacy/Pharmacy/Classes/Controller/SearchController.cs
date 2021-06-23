@@ -40,10 +40,10 @@ namespace Controller
             return searchService.MedicineByQuantity(quantity, medicines);
         }
       
-      public List<Medicine> MedicineByComponents(string componentName, List<Medicine> medicines)
+      public List<Medicine> MedicineByComponents(string componentName1, string componentName2,List<Medicine> medicines)
       {
          
-         return searchService.MedicineByComponents(componentName, medicines); ;
+         return searchService.MedicineByComponents( componentName1, componentName2, medicines); ;
       }
       
       public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
@@ -56,10 +56,10 @@ namespace Controller
             return searchService.ComponentByDescription(description, components);
       }
       
-      public List<Component> ComponentByMedicine(String medicineName, List<Model.Component> components)
+      public List<Component> ComponentByMedicine(String medicineName1, String medicineName2, List<Model.Component> components)
       {
          
-            return searchService.ComponentByMedicine(medicineName,components);
+            return searchService.ComponentByMedicine(medicineName1, medicineName2, components);
       }
    
       

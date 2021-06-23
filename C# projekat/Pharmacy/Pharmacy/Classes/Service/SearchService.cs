@@ -1,34 +1,31 @@
 using Model;
+using Repository;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Controls;
 using Component = Model.Component;
-using Repository;
-using Service;
 
 namespace Service
 {
-   public class SearchService
-   {
+    public class SearchService
+    {
         MedicineRepository medicineRepository = new MedicineRepository();
         public List<Medicine> MedicineById(String id, List<Medicine> medicines)
-      {     
-                List<Medicine> searchedMedicines = new List<Medicine>();
-                foreach (Medicine m in medicines)
+        {
+            List<Medicine> searchedMedicines = new List<Medicine>();
+            foreach (Medicine m in medicines)
+            {
+                if (m.Id.Contains(id))
                 {
-                   if(m.Id.Contains(id))
-                    {
-                        searchedMedicines.Add(m);
-                    }
+                    searchedMedicines.Add(m);
                 }
-                return searchedMedicines;
-      }
-      
-      public List<Medicine> MedicineByName(String name, List<Medicine> medicines)
+            }
+            return searchedMedicines;
+        }
+
+        public List<Medicine> MedicineByName(String name, List<Medicine> medicines)
         {
             if (name.Length >= 3)
-            {            
+            {
                 List<Medicine> searchedMedicines = new List<Medicine>();
                 foreach (Medicine m in medicines)
                 {
@@ -41,14 +38,14 @@ namespace Service
             }
             else
             {
-                return medicines;   
+                return medicines;
             }
         }
-      
-      public List<Medicine> MedicineByManufacturer(String manufacturer, List<Medicine> medicines)
-        { 
-            if(manufacturer.Length >= 3)
-            { 
+
+        public List<Medicine> MedicineByManufacturer(String manufacturer, List<Medicine> medicines)
+        {
+            if (manufacturer.Length >= 3)
+            {
                 List<Medicine> searchedMedicines = new List<Medicine>();
                 foreach (Medicine m in medicines)
                 {
@@ -61,29 +58,29 @@ namespace Service
             }
             else
             {
-                return medicines;   
+                return medicines;
             }
         }
-      
-      public List<Medicine> MedicineByPriceRange(int priceFrom, int priceTo, List<Medicine> medicines)
+
+        public List<Medicine> MedicineByPriceRange(int priceFrom, int priceTo, List<Medicine> medicines)
         {
 
-            
+
             List<Medicine> searchedMedicines = new List<Medicine>();
             foreach (Medicine m in medicines)
             {
-                if (m.Price>= priceFrom && m.Price<=priceTo)
+                if (m.Price >= priceFrom && m.Price <= priceTo)
                 {
                     searchedMedicines.Add(m);
                 }
             }
             return searchedMedicines;
         }
-      
-      public List<Medicine> MedicineByQuantity(string quantitySearch, List<Medicine> medicines)
+
+        public List<Medicine> MedicineByQuantity(string quantitySearch, List<Medicine> medicines)
         {
-            
-            
+
+
             List<Medicine> searchedMedicines = new List<Medicine>();
             foreach (Medicine m in medicines)
             {
@@ -94,34 +91,68 @@ namespace Service
             }
             return searchedMedicines;
         }
-      
-      public List<Medicine> MedicineByComponents(string componentName, List<Medicine> medicines)
-      {
-            if (componentName.Length >= 3)
+
+        public List<Medicine> MedicineByComponents(String componentName1, String componentName2, List<Medicine> medicines)
+        {
+            if (componentName1.Length >= 3 || componentName2.Length >= 3)
             {
+                List<Medicine> searchedMedicines1 = new List<Medicine>();
+                List<Medicine> searchedMedicines2 = new List<Medicine>();
                 List<Medicine> searchedMedicines = new List<Medicine>();
+
+                //Pretrazi po jednom i po drugom i ubaci u nove liste
+
                 foreach (Medicine m in medicines)
                 {
-                   foreach (KeyValuePair<int, String> c in m.Components)
+                    foreach (KeyValuePair<int, String> c in m.Components)
                     {
-                        if(c.Value.Contains(componentName))
+                        if (c.Value.Contains(componentName1))
                         {
-                            searchedMedicines.Add(m);
+                            searchedMedicines1.Add(m);
+                        }
+                    }
+
+                    foreach (KeyValuePair<int, String> c in m.Components)
+                    {
+                        if (c.Value.Contains(componentName2))
+                        {
+                            searchedMedicines2.Add(m);
                         }
                     }
                 }
-                return searchedMedicines;
+
+                //poredi nove iste i ako se poklapa ubaci u listu koju ces da prikazes
+
+                foreach (Medicine medicine1 in searchedMedicines1)
+                {
+                    foreach (Medicine medicine2 in searchedMedicines2)
+                    {
+                        if (medicine1.Name == medicine2.Name)
+                        {
+                            searchedMedicines.Add(medicine1);
+                        }
+                    }
+                }
+
+
+                if (componentName2.Length < 3)
+                {
+                    return searchedMedicines1;
+                }
+                else
+                {
+                    return searchedMedicines;
+                }
+
             }
             else
             {
                 return medicines;
             }
+        }
 
-          
-      }
-      
-      public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
-      {
+        public List<Model.Component> ComponentByName(String name, List<Model.Component> components)
+        {
             if (name.Length >= 3)
             {
                 List<Model.Component> searchedComponents = new List<Model.Component>();
@@ -137,14 +168,12 @@ namespace Service
             }
             else
             {
-                  return components;
+                return components;
             }
-
-            
         }
 
-      public List<Component> ComponentByDescription(String description, List<Model.Component> components)
-      { 
+        public List<Component> ComponentByDescription(String description, List<Model.Component> components)
+        {
             if (description.Length >= 3)
             {
                 List<Model.Component> searchedComponents = new List<Model.Component>();
@@ -161,42 +190,77 @@ namespace Service
             {
                 return components;
             }
-         
-      }
-      
-      public List<Model.Component> ComponentByMedicine(String medicineName, List<Model.Component> components)
-      {
-            if (medicineName.Length >= 3)
+        }
+
+        public List<Model.Component> ComponentByMedicine(String medicineName1, String medicineName2, List<Model.Component> components)
+        {
+            if (medicineName1.Length >= 3 || medicineName2.Length >= 3)
             {
+                List<Model.Component> searchedComponents1 = new List<Model.Component>();
+                List<Model.Component> searchedComponents2 = new List<Model.Component>();
                 List<Model.Component> searchedComponents = new List<Model.Component>();
                 List<Medicine> allMedicines = new List<Medicine>(medicineRepository.GetAll());
 
 
                 foreach (Medicine m in allMedicines)
                 {
-                    if (m.Name.Contains(medicineName))
+                    if (m.Name.Contains(medicineName1))
                     {
-                        foreach(Component component in components)
+                        foreach (Component component in components)
+                        {
+                            foreach (KeyValuePair<int, string> c in m.Components)
                             {
-                            foreach(KeyValuePair<int, string> c in m.Components)
-                                {
-                                if (c.Value==component.Name)
-                                    searchedComponents.Add(component);
-                                }
-                             }                              
-                    } 
+                                if (c.Value == component.Name)
+                                    searchedComponents1.Add(component);
+                            }
+                        }
+                    }
+
+                    if (m.Name.Contains(medicineName2))
+                    {
+                        foreach (Component component in components)
+                        {
+                            foreach (KeyValuePair<int, string> c in m.Components)
+                            {
+                                if (c.Value == component.Name)
+                                    searchedComponents2.Add(component);
+                            }
+                        }
+                    }
+
+
                 }
-                return searchedComponents;
+
+                foreach (Component component1 in searchedComponents1)
+                {
+                    foreach (Component component2 in searchedComponents2)
+                    {
+                        if (component1.Name == component2.Name)
+                        {
+                            searchedComponents.Add(component1);
+                        }
+                    }
+                }
+
+                if (medicineName2.Length < 3)
+                {
+                    return searchedComponents1;
+                }
+                else
+                {
+                    return searchedComponents;
+                }
+
             }
             else
             {
                 return components;
             }
-           
-           
-      }
-   
-     
-   
-   }
+
+
+        }
+
+
+
+    }
 }

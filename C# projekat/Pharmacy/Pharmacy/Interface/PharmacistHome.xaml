@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="PharmacistHome" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4ED360" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
@@ -23,11 +29,11 @@
             <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="120*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Medicines" Grid.Row="1" Grid.Column="1"  Click="Medicines_Click" FontSize="16" />
+        <Button Content="All Medicines" Grid.Row="1" Grid.Column="1"  Click="Medicines_Click" FontSize="16" />
         <Button Content="Add Medicine" Grid.Row="1" Grid.Column="3"  Click="AddMedicine_Click" FontSize="16"/>
-        <Button Content="Accepted medicines" Grid.Row="3" Grid.Column="1"  Click="AcceptedMedicines_Click" FontSize="16" />
-        <Button Content="Rejected medicines" Grid.Row="5" Grid.Column="1"  Click="RejectedMedicines_Click" FontSize="16"/>
-        <Button Content="Delete medicines" Grid.Row="3" Grid.Column="3"  Click="DeleteMedicines_Click" FontSize="16"/>
-        <Button Content="All components" Grid.Row="5" Grid.Column="3"  Click="Components_Click" FontSize="16"/>
+        <Button Content="Accepted Medicines" Grid.Row="3" Grid.Column="1"  Click="AcceptedMedicines_Click" FontSize="16" />
+        <Button Content="Rejected Medicines" Grid.Row="5" Grid.Column="1"  Click="RejectedMedicines_Click" FontSize="16"/>
+        <Button Content="Delete Medicines" Grid.Row="3" Grid.Column="3"  Click="DeleteMedicines_Click" FontSize="16"/>
+        <Button Content="All Components" Grid.Row="5" Grid.Column="3"  Click="Components_Click" FontSize="16"/>
     </Grid>
 </Window>

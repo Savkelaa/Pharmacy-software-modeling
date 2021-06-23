@@ -76,22 +76,17 @@ namespace Pharmacy.Interface
         private void comp1_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp1.Text, medicines)));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByComponents(comp1.Text,comp2.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
         private void comp2_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp2.Text, medicines)));
+            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>(searchController.MedicineByComponents(comp2.Text,comp1.Text, medicines));
             this.gridMedicines.ItemsSource = searchMedicines;
         }
 
-        private void comp3_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            List<Medicine> medicines = medicineController.GetAll();
-            ObservableCollection<Medicine> searchMedicines = new ObservableCollection<Medicine>((searchController.MedicineByComponents(comp3.Text, medicines)));
-            this.gridMedicines.ItemsSource = searchMedicines;
-        }
+       
     }
 }

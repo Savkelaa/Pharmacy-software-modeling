@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="AllComponents" Height="450" Width="800">
     <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4ED360" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="128*"/>
             <ColumnDefinition Width="569*"/>
@@ -32,13 +39,10 @@
         <Label Content="Medicine:" Grid.Column="1" HorizontalAlignment="Left" Margin="480,93,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="30" Width="78"/>
         <TextBox x:Name="tbName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="482,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" TextChanged="tbName_TextChanged" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <TextBox x:Name="tbDesc" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="482,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontSize="16" Grid.Row="1" TextChanged="tbDesc_TextChanged" Grid.ColumnSpan="2"/>
-        <Label Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="214,24,-217,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
         <Label Content="1:" Grid.Column="1" HorizontalAlignment="Left" Margin="454,123,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="30" Width="28"/>
         <Label Content="2:" Grid.Column="1" HorizontalAlignment="Left" Margin="454,165,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="34" Width="28"/>
-        <Label Content="3:" Grid.Column="1" HorizontalAlignment="Left" Margin="454,205,0,0" VerticalAlignment="Top" FontSize="16" Grid.Row="1" Height="30" Width="52"/>
         <TextBox x:Name="tbMedicine1" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="482,129,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine1_TextChanged" Grid.ColumnSpan="2"/>
         <TextBox x:Name="tbMedicine2" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="482,173,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine2_TextChanged" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbMedicine3" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="482,213,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="tbMedicine3_TextChanged" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

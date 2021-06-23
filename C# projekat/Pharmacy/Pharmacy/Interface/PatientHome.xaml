@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="PatientHome" Height="450" Width="800">
     <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4ED360" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
@@ -25,7 +32,7 @@
         </Grid.ColumnDefinitions>
         <Button Content="Buy medicines" Grid.Row="1" Grid.Column="1"  Click="BuyMedicine_Click" FontSize="16" />
         <Button Content="All bills" Grid.Row="1" Grid.Column="3"  Click="AllBills_Click" FontSize="16"/>
-        <Label x:Name="surname" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="surname" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" Width="207"/>
         <Button Content="All products" Grid.Row="3" Grid.Column="1"  Click="AllProductsClick" FontSize="16" />
         <Button Content="All components" Grid.Row="3" Grid.Column="3"  Click="AllComponentsClick" FontSize="16" Grid.ColumnSpan="2" Margin="0,0,137,0" />
     </Grid>
