@@ -94,7 +94,7 @@ namespace Pharmacy.Interface
             }
 
 
-            if (userController.CheckOwnedWeek(u.Email, cartQuantity) == true && userController.CheckOwnedOne(u.Email, dictCart) == true)  
+            if ((userController.CheckOwnedWeek(u.Email, cartQuantity) == true) && (userController.CheckOwnedOne(u.Email, dictCart) == true))  
             {
                 billController.Buy(cartMedicines, u);
 

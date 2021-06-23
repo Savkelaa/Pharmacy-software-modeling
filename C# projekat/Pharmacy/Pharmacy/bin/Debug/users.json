@@ -32,7 +32,7 @@
     "OwnedMedicineCounter": {
       "Febricet": 11,
       "Humulin": 9,
-      "Varfarin": 3,
+      "Varfarin": 8,
       "Bosentan": 10,
       "Kiselina": 1
     },
@@ -126,6 +126,15 @@
           "Humulin": 3
         },
         "TotalPrice": 1050.0
+      },
+      {
+        "Id": 146,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-23T17:18:37.4076524+02:00",
+        "MedicineAndQuantity": {
+          "Varfarin": 5
+        },
+        "TotalPrice": 115.0
       }
     ]
   },
@@ -137,8 +146,20 @@
     "Surname": "Dragosavac",
     "MobilePhone": "0632355478",
     "Type": "patient",
-    "OwnedMedicineCounter": {},
-    "Bills": []
+    "OwnedMedicineCounter": {
+      "Febricet": 7
+    },
+    "Bills": [
+      {
+        "Id": 149,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-23T18:28:21.5063747+02:00",
+        "MedicineAndQuantity": {
+          "Febricet": 7
+        },
+        "TotalPrice": 1400.0
+      }
+    ]
   },
   {
     "Jmbg": "12432154235",
@@ -148,8 +169,20 @@
     "Surname": "Savic",
     "MobilePhone": "0645346521",
     "Type": "patient",
-    "OwnedMedicineCounter": {},
-    "Bills": []
+    "OwnedMedicineCounter": {
+      "Febricet": 4
+    },
+    "Bills": [
+      {
+        "Id": 150,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-23T18:48:08.9277756+02:00",
+        "MedicineAndQuantity": {
+          "Febricet": 4
+        },
+        "TotalPrice": 800.0
+      }
+    ]
   },
   {
     "Jmbg": "5235235234",
@@ -182,8 +215,20 @@
     "Surname": "Bogdanovic",
     "MobilePhone": "065434632",
     "Type": "patient",
-    "OwnedMedicineCounter": {},
-    "Bills": []
+    "OwnedMedicineCounter": {
+      "Bosentan": 7
+    },
+    "Bills": [
+      {
+        "Id": 147,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-23T18:22:04.0418113+02:00",
+        "MedicineAndQuantity": {
+          "Bosentan": 7
+        },
+        "TotalPrice": 1792.0
+      }
+    ]
   },
   {
     "Jmbg": "23124314",
@@ -370,5 +415,28 @@
     "Type": "patient",
     "OwnedMedicineCounter": {},
     "Bills": []
+  },
+  {
+    "Jmbg": "52135235141",
+    "Email": "marko@gmail.com",
+    "Password": "puzovic",
+    "Name": "Marko",
+    "Surname": "Puzovic",
+    "MobilePhone": "0653425125",
+    "Type": "patient",
+    "OwnedMedicineCounter": {
+      "Varfarin": 7
+    },
+    "Bills": [
+      {
+        "Id": 148,
+        "Pharmacist": "Pedja",
+        "DateTime": "2021-06-23T18:25:18.5460594+02:00",
+        "MedicineAndQuantity": {
+          "Varfarin": 7
+        },
+        "TotalPrice": 161.0
+      }
+    ]
   }
 ]

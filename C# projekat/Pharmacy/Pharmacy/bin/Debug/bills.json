@@ -1312,5 +1312,50 @@
       "Humulin": 3
     },
     "TotalPrice": 1050.0
+  },
+  {
+    "Id": 146,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T17:18:37.4076524+02:00",
+    "MedicineAndQuantity": {
+      "Varfarin": 5
+    },
+    "TotalPrice": 115.0
+  },
+  {
+    "Id": 147,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T18:22:04.0418113+02:00",
+    "MedicineAndQuantity": {
+      "Bosentan": 7
+    },
+    "TotalPrice": 1792.0
+  },
+  {
+    "Id": 148,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T18:25:18.5460594+02:00",
+    "MedicineAndQuantity": {
+      "Varfarin": 7
+    },
+    "TotalPrice": 161.0
+  },
+  {
+    "Id": 149,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T18:28:21.5063747+02:00",
+    "MedicineAndQuantity": {
+      "Febricet": 7
+    },
+    "TotalPrice": 1400.0
+  },
+  {
+    "Id": 150,
+    "Pharmacist": "Pedja",
+    "DateTime": "2021-06-23T18:48:08.9277756+02:00",
+    "MedicineAndQuantity": {
+      "Febricet": 4
+    },
+    "TotalPrice": 800.0
   }
 ]

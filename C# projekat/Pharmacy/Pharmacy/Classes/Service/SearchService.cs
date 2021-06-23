@@ -9,6 +9,9 @@ namespace Service
     public class SearchService
     {
         MedicineRepository medicineRepository = new MedicineRepository();
+        ComponentRepository componentRepository = new ComponentRepository();
+
+
         public List<Medicine> MedicineById(String id, List<Medicine> medicines)
         {
             List<Medicine> searchedMedicines = new List<Medicine>();

@@ -41,7 +41,7 @@ namespace Repository
          return medicines;
       }
 
-        public Medicine getById(String id)
+        public Medicine GetById(String id)
         {
             foreach (Medicine m in medicines)
             {

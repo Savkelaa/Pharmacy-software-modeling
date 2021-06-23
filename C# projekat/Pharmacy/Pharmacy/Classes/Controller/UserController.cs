@@ -9,6 +9,7 @@ namespace Controller
     public class UserController
     {
         UserService userService = new UserService();
+
         public void Save(User newPatient)
         {
             userService.Save(newPatient);

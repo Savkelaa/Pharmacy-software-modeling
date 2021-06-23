@@ -48,7 +48,7 @@
     "Name": "Varfarin",
     "Manufacturer": "Farmakomafija",
     "Price": 23.0,
-    "Quantity": 114,
+    "Quantity": 102,
     "Components": {
       "9": "Ferrum phosphoricum",
       "1": "Valerijana",
@@ -62,7 +62,7 @@
     "Name": "Febricet",
     "Manufacturer": "Farmakomafija",
     "Price": 200.0,
-    "Quantity": 0,
+    "Quantity": 9,
     "Components": {
       "8": "Croton tiglium",
       "3": "Cina"
@@ -75,7 +75,7 @@
     "Name": "Kiselina",
     "Manufacturer": "Farmakomafija",
     "Price": 200.0,
-    "Quantity": 0,
+    "Quantity": 20,
     "Components": {
       "8": "Croton tiglium",
       "2": "H20"
@@ -88,10 +88,23 @@
     "Name": "Bosentan",
     "Manufacturer": "Farmakomafija",
     "Price": 256.0,
-    "Quantity": 0,
+    "Quantity": 13,
     "Components": {
       "8": "Croton tiglium",
       "7": "Cypripedium pubescens"
+    },
+    "Accepted": true,
+    "Deleted": false
+  },
+  {
+    "Id": "90",
+    "Name": "Hydrogen",
+    "Manufacturer": "Krasenkovic",
+    "Price": 150.0,
+    "Quantity": 20,
+    "Components": {
+      "2": "H20",
+      "1": " Valerijana"
     },
     "Accepted": true,
     "Deleted": false

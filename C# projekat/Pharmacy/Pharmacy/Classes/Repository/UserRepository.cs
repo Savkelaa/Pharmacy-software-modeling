@@ -25,7 +25,7 @@ namespace Repository
                 }
             }
         }
-        public User getByEmail(String email)
+        public User GetByEmail(String email)
         {
             foreach (User u in users)
             {

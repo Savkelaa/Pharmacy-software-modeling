@@ -17,8 +17,14 @@
         <DataGrid x:Name="gridBills"  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="596" Margin="97,70,0,0">
         <DataGrid.Columns>
             <DataGridTextColumn Header="Id" Binding="{Binding Id}"  Width="20*"/>
-           
-            <DataGridTextColumn Header="Date and time" Binding="{Binding DateTime}" Width="72*"/>
+                <DataGridTemplateColumn Header="Components" Width="70*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding MedicineAndQuantity}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Date and time" Binding="{Binding DateTime}" Width="72*"/>
             <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice}" Width="35*"/>
             
             </DataGrid.Columns>

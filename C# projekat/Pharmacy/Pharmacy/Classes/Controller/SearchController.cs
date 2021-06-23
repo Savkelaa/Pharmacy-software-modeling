@@ -11,6 +11,7 @@ namespace Controller
    public class SearchController
    {
         SearchService searchService = new SearchService();
+
         public List<Medicine> MedicineById(String id, List<Medicine> medicines)
       {
            return searchService.MedicineById( id, medicines);
@@ -43,7 +44,7 @@ namespace Controller
       public List<Medicine> MedicineByComponents(string componentName1, string componentName2,List<Medicine> medicines)
       {
          
-         return searchService.MedicineByComponents( componentName1, componentName2, medicines); ;
+         return searchService.MedicineByComponents( componentName1, componentName2, medicines); 
       }
       
       public List<Model.Component> ComponentByName(String name, List<Model.Component> components)

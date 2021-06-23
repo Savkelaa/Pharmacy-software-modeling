@@ -79,7 +79,7 @@ namespace Service
         public Boolean CheckOwnedWeek(String email, int cartQuantity)
         {
             User user = new User();
-            user = userRepository.getByEmail(email);
+            user = userRepository.GetByEmail(email);
             int count = 0;
             DateTime sevenDays = DateTime.Today.AddDays(-7);
 
@@ -107,23 +107,38 @@ namespace Service
         public Boolean CheckOwnedOne(String email, Dictionary<String, int> dictCart)
         {
             User user = new User();
-            user = userRepository.getByEmail(email);
+            user = userRepository.GetByEmail(email);
 
-            foreach (KeyValuePair<String, int> countExisting in user.OwnedMedicineCounter)
+            Dictionary<String, int> copyOwnedMedicineCounter = new Dictionary<string, int>(user.OwnedMedicineCounter);
+            Dictionary<String, int> copy2OwnedMedicineCounter = new Dictionary<string, int>(user.OwnedMedicineCounter);
+
+            if (copyOwnedMedicineCounter.Count == 0)
+            {
+                copyOwnedMedicineCounter = dictCart;
+            }
+
+            foreach (KeyValuePair<String, int> countExisting in copyOwnedMedicineCounter)
             {
                 foreach (KeyValuePair<String, int> countCart in dictCart)
                 {
                    if (countExisting.Key == countCart.Key)
                   {
-                       user.OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
+                        if (copyOwnedMedicineCounter == dictCart)
+                        {
+                            copy2OwnedMedicineCounter = copyOwnedMedicineCounter;
+                        }
+                        else
+                        {
+                            copy2OwnedMedicineCounter[countExisting.Key] += dictCart[countCart.Key];
+                        }
                   }
-                    updateOwnedMedicineCounter(email);
+                   
                 }
             }
 
-            foreach (KeyValuePair<String, int> countExisting in user.OwnedMedicineCounter)
+            foreach (KeyValuePair<String, int> countExisting in copy2OwnedMedicineCounter)
             {
-                if (user.OwnedMedicineCounter[countExisting.Key] >5 ) 
+                if (copy2OwnedMedicineCounter[countExisting.Key] >5 ) 
                 {
                     return false;
                 }    
@@ -151,7 +166,7 @@ namespace Service
         public void updateOwnedMedicineCounter(String email)
         {
             User user = new User();
-            user = userRepository.getByEmail(email);
+            user = userRepository.GetByEmail(email);
             Dictionary<String, int> MedicineOwned = new Dictionary<string, int>();
 
 

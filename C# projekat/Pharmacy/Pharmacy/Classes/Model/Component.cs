@@ -9,7 +9,7 @@ namespace Model
         public int Id { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
-       // public int CountInMedicines { get; set; }
+        //public int CountInMedicines { get; set; }
 
         public Component(int id, string name, string description)
         {
